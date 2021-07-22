@@ -1,29 +1,15 @@
 #pragma once
 
-#include <utility>
-#include <vector>
-#include <string>
-
-class ERSPowerController
-{
-public:
-    std::wstring name;
-};
-
 class ERS
 {
-public:
-    ERS();
-    ~ERS();
+void ERS::ERS();
+void ERS::~ERS();
+ERS *ERS::`vector deleting destructor'(char *this, unsigned int a2);
+double ERS::getCoastTorque();
+double ERS::getOutputTorque();
+void ERS::init(Car *car);
+void ERS::reset();
+void ERS::setPowerController(int index);
+void ERS::step(float dt);
 
-    double getCoastTorque();
-    double getOutputTorque();
-    void init(Car *car);
-    
-    void reset();
-    void setPowerController(int index);
-    void step(float dt);
-
-	bool isHeatCharginBattery;
-    std::vector<ERSPowerController> ersPowerControllers;
 };

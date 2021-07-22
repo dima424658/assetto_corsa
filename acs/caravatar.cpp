@@ -1,96 +1,1157 @@
-#include "caravatar.h"
-
-
-std::wstring CarAvatar::getCurrentSkin()
+#include "caravatar.h
+std::wstring *CarAvatar::getCurrentSkin(CarAvatar *this, std::wstring *result)
 {
-    return currentSkin;
+  result->_Myres = 7;
+  result->_Mysize = 0;
+  result->_Bx._Buf[0] = 0;
+  std::wstring::assign(result, &this->currentSkin, 0, 0xFFFFFFFF);
+  return result;
 }
-
-void CarAvatar::armFirstLap()
+void __userpurge CarAvatar::CarAvatar(CarAvatar *this@<ecx>, __m128 a2@<xmm3>, __m128 a3@<xmm4>, Sim *isim, const std::wstring *unixName, const std::wstring *config, const std::wstring *skin)
 {
-    if (physics)
-        sim->physicsAvatar->executeOnPhysicsThread([this]() {
-        physics->transponder->armFirstLap();
-            });
+  int *v8; // ebx
+  std::wstring *v9; // esi
+  BackfireParams *v10; // eax
+  BackfireParams *v11; // eax
+  PhysicsCarStateProvider *v12; // eax
+  void (***v13)(_DWORD, int); // eax
+  void (***v14)(_DWORD, int); // ecx
+  void (***v15)(_DWORD, int); // edx
+  void (**v16)(_DWORD, int); // eax
+  Car *v17; // eax
+  Sim *v18; // ecx
+  const __m128i *v19; // eax
+  __m128i *v20; // ecx
+  Sim *v21; // ecx
+  Console *v22; // eax
+  Sim *v23; // ecx
+  Console *v24; // eax
+  Sim *v25; // ecx
+  Console *v26; // eax
+  std::wstring *v27; // esi
+  int v28; // ebx
+  std::wstring *i; // edi
+  std::wstring *v30; // ecx
+  bool v31; // cf
+  const wchar_t *v32; // eax
+  int v33; // eax
+  char v34; // al
+  const wchar_t *v35; // eax
+  std::wstring *v36; // esi
+  std::wstring *j; // edi
+  std::wstring *v38; // ecx
+  const wchar_t *v39; // eax
+  int v40; // eax
+  char v41; // al
+  const wchar_t *v42; // eax
+  std::wstring *v43; // eax
+  Sim *v44; // ecx
+  Console *v45; // eax
+  _BYTE multiplier[56]; // [esp-24h] [ebp-110h] BYREF
+  char v47; // [esp+37h] [ebp-B5h] BYREF
+  _BYTE *v48; // [esp+38h] [ebp-B4h] BYREF
+  std::wstring *_Right; // [esp+3Ch] [ebp-B0h]
+  CarAvatar *v50; // [esp+40h] [ebp-ACh]
+  mat44f result; // [esp+44h] [ebp-A8h] BYREF
+  std::wstring setName; // [esp+84h] [ebp-68h] BYREF
+  std::wstring iname; // [esp+9Ch] [ebp-50h] BYREF
+  DebugTimer dtPhysics; // [esp+B4h] [ebp-38h] BYREF
+  int v55; // [esp+E8h] [ebp-4h]
+
+  *(_DWORD *)&multiplier[52] = isim->game;
+  _Right = (std::wstring *)skin;
+  v50 = this;
+  *(_DWORD *)&multiplier[48] = 7;
+  *(_DWORD *)&multiplier[44] = 0;
+  *(_WORD *)&multiplier[28] = 0;
+  std::wstring::assign((std::wstring *)&multiplier[28], L"CAR_AVATAR", 0xAu);
+  GameObject::GameObject(this, *(std::wstring *)&multiplier[28], *(Game **)&multiplier[52]);
+  this->__vftable = (CarAvatar_vtbl *)&CarAvatar::`vftable';
+  this->evOnGearChanged.handlers._Myfirst = 0;
+  this->evOnGearChanged.handlers._Mylast = 0;
+  this->evOnGearChanged.handlers._Myend = 0;
+  v55 = 0;
+  this->evOnGearChanged.__vftable = (EventTriggerOnChange<int>_vtbl *)&EventTriggerOnChange<int>::`vftable';
+  this->evOnGearChanged.attachedFloat = 0;
+  this->evOnGearChanged.oldFloatValue = 0;
+  this->evOnLapCompleted.handlers._Myfirst = 0;
+  this->evOnLapCompleted.handlers._Mylast = 0;
+  this->evOnLapCompleted.handlers._Myend = 0;
+  this->evOnSectorSplit.handlers._Myfirst = 0;
+  this->evOnSectorSplit.handlers._Mylast = 0;
+  this->evOnSectorSplit.handlers._Myend = 0;
+  this->evOnTyreCompoundChanged.handlers._Myfirst = 0;
+  this->evOnTyreCompoundChanged.handlers._Mylast = 0;
+  this->evOnTyreCompoundChanged.handlers._Myend = 0;
+  this->evOnBackfireTriggered.handlers._Myfirst = 0;
+  this->evOnBackfireTriggered.handlers._Mylast = 0;
+  this->evOnBackfireTriggered.handlers._Myend = 0;
+  this->evOnDownshiftProtection.handlers._Myfirst = 0;
+  this->evOnDownshiftProtection.handlers._Mylast = 0;
+  this->evOnDownshiftProtection.handlers._Myend = 0;
+  this->externalTyreCompoundShortName._Myres = 7;
+  this->externalTyreCompoundShortName._Mysize = 0;
+  this->externalTyreCompoundShortName._Bx._Buf[0] = 0;
+  this->mirrorPosition.x = 0.0;
+  this->mirrorPosition.y = 0.0;
+  this->mirrorPosition.z = 0.0;
+  *(_DWORD *)&multiplier[52] = -1;
+  this->sim = isim;
+  *(_DWORD *)&multiplier[48] = 0;
+  this->unixName._Myres = 7;
+  this->unixName._Mysize = 0;
+  *(_DWORD *)&multiplier[44] = unixName;
+  LOBYTE(v55) = 7;
+  this->unixName._Bx._Buf[0] = 0;
+  std::wstring::assign(
+    &this->unixName,
+    *(const std::wstring **)&multiplier[44],
+    *(unsigned int *)&multiplier[48],
+    *(unsigned int *)&multiplier[52]);
+  this->configName._Myres = 7;
+  *(_DWORD *)&multiplier[52] = -1;
+  LOBYTE(v55) = 8;
+  this->configName._Mysize = 0;
+  *(_DWORD *)&multiplier[48] = 0;
+  *(_DWORD *)&multiplier[44] = config;
+  this->configName._Bx._Buf[0] = 0;
+  std::wstring::assign(
+    &this->configName,
+    *(const std::wstring **)&multiplier[44],
+    *(unsigned int *)&multiplier[48],
+    *(unsigned int *)&multiplier[52]);
+  this->guiName._Myres = 7;
+  this->guiName._Mysize = 0;
+  this->guiName._Bx._Buf[0] = 0;
+  this->guiShortName._Myres = 7;
+  this->guiShortName._Mysize = 0;
+  this->guiShortName._Bx._Buf[0] = 0;
+  LOBYTE(v55) = 11;
+  this->steerTransformHR = 0;
+  this->steerTransformLR = 0;
+  mat44f::mat44f(&this->orgSteerMatrix);
+  this->driverEyesPosition.x = 0.0;
+  this->driverEyesPosition.y = 0.0;
+  this->driverEyesPosition.z = 0.0;
+  mat44f::mat44f(&this->bodyMatrix);
+  CarPhysicsState::CarPhysicsState(&this->physicsState);
+  AIState::AIState(&this->aiState);
+  this->carAudioFMOD = 0;
+  CarPhysicsInfo::CarPhysicsInfo(&this->physicsInfo);
+  this->raceEngineer._Myptr = 0;
+  this->modelBoundaries.front = 0.0;
+  this->modelBoundaries.rear = 0.0;
+  this->modelBoundaries.left = 0.0;
+  this->modelBoundaries.right = 0.0;
+  this->modelBoundaries.top = 0.0;
+  this->modelBoundaries.bottom = 0.0;
+  this->wingsStatus._Myfirst = 0;
+  this->wingsStatus._Mylast = 0;
+  this->wingsStatus._Myend = 0;
+  this->onBoardExposure = 33.0;
+  this->outBoardExposure = 33.0;
+  this->dashBoardExposure = 0.0;
+  this->cameras._Myfirst = 0;
+  this->cameras._Mylast = 0;
+  this->cameras._Myend = 0;
+  *(_DWORD *)&multiplier[52] = 8;
+  LOBYTE(v55) = 16;
+  this->isBlackFlagged = 0;
+  this->netCarStateProvider = 0;
+  this->lodManager = 0;
+  this->constrainedObjectManager = 0;
+  Concurrency::details::_Concurrent_queue_base_v4::_Concurrent_queue_base_v4(
+    &this->chTyreCompound.queue,
+    *(unsigned int *)&multiplier[52]);
+  this->chTyreCompound.queue.__vftable = (Concurrency::concurrent_queue<std::pair<int,int>,std::allocator<std::pair<int,int> > >_vtbl *)&Concurrency::concurrent_queue<std::pair<int,int>,std::allocator<std::pair<int,int>>>::`vftable';
+  this->fuelInExhaust = 0.0;
+  this->graphicsOffset.x = 0.0;
+  this->graphicsOffset.y = 0.0;
+  this->graphicsOffset.z = 0.0;
+  this->graphicsPitchRotation = 0.0;
+  this->userFFGain = 1.0;
+  this->graphicSteerLockDegrees = 0.0;
+  this->backfireParams = 0;
+  this->meshCollider = 0;
+  mat44f::mat44f(&this->pitPosition);
+  this->driverInfo.name._Myres = 7;
+  this->driverInfo.name._Mysize = 0;
+  this->driverInfo.name._Bx._Buf[0] = 0;
+  this->driverInfo.team._Myres = 7;
+  this->driverInfo.team._Mysize = 0;
+  this->driverInfo.team._Bx._Buf[0] = 0;
+  this->driverInfo.nationality._Myres = 7;
+  this->driverInfo.nationality._Mysize = 0;
+  this->driverInfo.nationality._Bx._Buf[0] = 0;
+  this->driverInfo.nationCode._Myres = 7;
+  this->driverInfo.nationCode._Mysize = 0;
+  this->driverInfo.nationCode._Bx._Buf[0] = 0;
+  this->currentSkin._Myres = 7;
+  this->currentSkin._Mysize = 0;
+  this->currentSkin._Bx._Buf[0] = 0;
+  this->lastSkidPosition[0].x = 0.0;
+  this->lastSkidPosition[0].y = 0.0;
+  this->lastSkidPosition[0].z = 0.0;
+  this->lastSkidPosition[1].x = 0.0;
+  this->lastSkidPosition[1].y = 0.0;
+  this->lastSkidPosition[1].z = 0.0;
+  this->lastSkidPosition[2].x = 0.0;
+  this->lastSkidPosition[2].y = 0.0;
+  this->lastSkidPosition[2].z = 0.0;
+  this->lastSkidPosition[3].x = 0.0;
+  this->lastSkidPosition[3].y = 0.0;
+  this->lastSkidPosition[3].z = 0.0;
+  this->eventTriggers._Myfirst = 0;
+  this->eventTriggers._Mylast = 0;
+  this->eventTriggers._Myend = 0;
+  this->hideSteer = 0;
+  LOBYTE(v55) = 20;
+  CarRaceInfo::CarRaceInfo(&this->raceInfo);
+  v8 = (int *)&this->physicsCarStateProvider;
+  this->physicsCarStateProvider._Myptr = 0;
+  LOBYTE(v55) = 22;
+  Concurrency::details::_Concurrent_queue_base_v4::_Concurrent_queue_base_v4(&this->lapQueue.queue, 0x28u);
+  this->lapQueue.queue.__vftable = (Concurrency::concurrent_queue<OnLapCompletedEvent,std::allocator<OnLapCompletedEvent> >_vtbl *)&Concurrency::concurrent_queue<OnLapCompletedEvent,std::allocator<OnLapCompletedEvent>>::`vftable';
+  LOBYTE(v55) = 23;
+  Concurrency::details::_Concurrent_queue_base_v4::_Concurrent_queue_base_v4(&this->splitQueue.queue, 0x10u);
+  this->splitQueue.queue.__vftable = (Concurrency::concurrent_queue<OnSectorSplitEvent,std::allocator<OnSectorSplitEvent> >_vtbl *)&Concurrency::concurrent_queue<OnSectorSplitEvent,std::allocator<OnSectorSplitEvent>>::`vftable';
+  LOBYTE(v55) = 24;
+  this->beltOffNode = 0;
+  this->beltOnNode = 0;
+  this->carAnimations = 0;
+  this->filteredSpeed = 0.0;
+  this->currentEngineBrakeSetting = 0;
+  this->isHeatChargingBatteries = 1;
+  this->currentERSPowerIndex = 0;
+  this->currentERSRecovery = 5;
+  this->lastERSBatteryCharge = 1.0;
+  this->currentERSNormalizedRecharge = 0.0;
+  *(_WORD *)&this->showDownShiftProtetion = 0;
+  this->lastPitstopTime = 0.0;
+  *(_WORD *)&this->inPitlane = 0;
+  this->pitLaneEntryTime = 0.0;
+  this->pitLaneExitTime = 0.0;
+  std::_Container_base0::_Orphan_all(&INIReader::openedFiles);
+  *(_DWORD *)&multiplier[52] = v48;
+  *(_DWORD *)&multiplier[48] = &v47;
+  std::_Destroy_range<std::_Wrap_alloc<std::allocator<std::wstring>>>(
+    INIReader::openedFiles._Myfirst,
+    INIReader::openedFiles._Mylast);
+  INIReader::openedFiles._Mylast = INIReader::openedFiles._Myfirst;
+  std::_Container_base0::_Orphan_all(&Curve::openedFiles);
+  *(_DWORD *)&multiplier[52] = v48;
+  *(_DWORD *)&multiplier[48] = &v47;
+  std::_Destroy_range<std::_Wrap_alloc<std::allocator<std::wstring>>>(
+    Curve::openedFiles._Myfirst,
+    Curve::openedFiles._Mylast);
+  v9 = _Right;
+  Curve::openedFiles._Mylast = Curve::openedFiles._Myfirst;
+  if ( &this->currentSkin != _Right )
+    std::wstring::assign(&this->currentSkin, _Right, 0, 0xFFFFFFFF);
+  CarAvatar::checkACD(this);
+  CarAvatar::initCommon(this);
+  *(_DWORD *)&multiplier[52] = 7;
+  *(_DWORD *)&multiplier[48] = 0;
+  *(_WORD *)&multiplier[32] = 0;
+  std::wstring::assign((std::wstring *)&multiplier[32], v9, 0, 0xFFFFFFFF);
+  CarAvatar::init3D(this, *(std::wstring *)&multiplier[32]);
+  v10 = (BackfireParams *)operator new(36);
+  v48 = v10;
+  LOBYTE(v55) = 25;
+  if ( v10 )
+    BackfireParams::BackfireParams(v10, this);
+  else
+    v11 = 0;
+  this->backfireParams = v11;
+  LOBYTE(v55) = 24;
+  iname._Myres = 7;
+  iname._Mysize = 0;
+  iname._Bx._Buf[0] = 0;
+  std::wstring::assign(&iname, L"PHYSICS LOAD", 0xCu);
+  LOBYTE(v55) = 26;
+  DebugTimer::DebugTimer(&dtPhysics, &iname);
+  LOBYTE(v55) = 28;
+  if ( iname._Myres >= 8 )
+    operator delete(iname._Bx._Ptr);
+  iname._Myres = 7;
+  iname._Mysize = 0;
+  iname._Bx._Buf[0] = 0;
+  CarAvatar::initPhysics(this, (char)v8, a2, a3);
+  dxtemplateThreadingImplementation<dxtemplateJobListContainer<dxFakeLull,dxFakeMutex,dxFakeAtomicsProvider>,dxtemplateJobListSelfHandler<dxSelfWakeup,dxtemplateJobListContainer<dxFakeLull,dxFakeMutex,dxFakeAtomicsProvider>>>::CleanupForRestart((TyreTester *)&dtPhysics);
+  v12 = (PhysicsCarStateProvider *)operator new(8);
+  v48 = v12;
+  LOBYTE(v55) = 29;
+  if ( v12 )
+  {
+    PhysicsCarStateProvider::PhysicsCarStateProvider(v12, this->physics);
+    v14 = v13;
+  }
+  else
+  {
+    v14 = 0;
+  }
+  LOBYTE(v55) = 28;
+  if ( v8 == (int *)&v48 )
+  {
+    if ( !v14 )
+      goto LABEL_17;
+    v16 = *v14;
+  }
+  else
+  {
+    v15 = (void (***)(_DWORD, int))*v8;
+    *v8 = (int)v14;
+    if ( !v15 )
+      goto LABEL_17;
+    v16 = *v15;
+    v14 = v15;
+  }
+  (*v16)(v14, 1);
+LABEL_17:
+  this->physicsStateProvider = (ICarPhysicsStateProvider *)*v8;
+  setName._Myres = 7;
+  setName._Mysize = 0;
+  setName._Bx._Buf[0] = 0;
+  std::wstring::assign(&setName, L"PIT", 3u);
+  v17 = this->physics;
+  v18 = this->sim;
+  LOBYTE(v55) = 30;
+  v19 = (const __m128i *)TrackAvatar::getSpawnPosition(v18->track, &result, &setName, v17->physicsGUID);
+  v20 = (__m128i *)this->physics;
+  LOBYTE(v55) = 28;
+  v20[684] = _mm_loadu_si128(v19);
+  v20[685] = _mm_loadu_si128(v19 + 1);
+  v20[686] = _mm_loadu_si128(v19 + 2);
+  v20[687] = _mm_loadu_si128(v19 + 3);
+  if ( setName._Myres >= 8 )
+    operator delete(setName._Bx._Ptr);
+  CarAvatar::initCommonPostPhysics(this);
+  if ( !this->physics->physicsGUID )
+  {
+    *(_DWORD *)&multiplier[52] = 1065353216;
+    *(_DWORD *)&multiplier[48] = 0;
+    *(_DWORD *)&multiplier[44] = 0;
+    *(_DWORD *)&multiplier[40] = &this->onBoardExposure;
+    v48 = &multiplier[16];
+    *(_DWORD *)&multiplier[36] = 7;
+    *(_DWORD *)&multiplier[32] = 0;
+    *(_WORD *)&multiplier[16] = 0;
+    std::wstring::assign((std::wstring *)&multiplier[16], L"exposure", 8u);
+    v21 = this->sim;
+    LOBYTE(v55) = 31;
+    v22 = Sim::getConsole(v21);
+    LOBYTE(v55) = 28;
+    Console::addVar(
+      v22,
+      *(std::wstring *)&multiplier[16],
+      *(float **)&multiplier[40],
+      *(IVarCallback **)&multiplier[44],
+      multiplier[48],
+      *(float *)&multiplier[52]);
+    *(_DWORD *)&multiplier[52] = 1065353216;
+    *(_DWORD *)&multiplier[48] = 0;
+    v48 = &multiplier[24];
+    *(_DWORD *)&multiplier[24] = &std::_Func_impl<std::_Callable_obj<_lambda_565518731701ea86f9e2b7418fd05c55_,0>,std::allocator<std::_Func_class<void,SVar *,float>>,void,SVar *,float>::`vftable';
+    *(_DWORD *)&multiplier[28] = this;
+    *(_DWORD *)&multiplier[40] = &multiplier[24];
+    LOBYTE(v55) = 33;
+    _Right = (std::wstring *)multiplier;
+    *(_DWORD *)&multiplier[20] = 7;
+    *(_DWORD *)&multiplier[16] = 0;
+    *(_WORD *)multiplier = 0;
+    std::wstring::assign((std::wstring *)multiplier, L"editBoxes", 9u);
+    v23 = this->sim;
+    LOBYTE(v55) = 34;
+    v24 = Sim::getConsole(v23);
+    LOBYTE(v55) = 28;
+    Console::addVarLambda(
+      v24,
+      *(std::wstring *)multiplier,
+      *(std::function<void __cdecl(SVar *,float)> *)&multiplier[24],
+      multiplier[48],
+      *(float *)&multiplier[52]);
+    *(_DWORD *)&multiplier[52] = 1065353216;
+    *(_DWORD *)&multiplier[48] = 0;
+    v48 = &multiplier[24];
+    *(_DWORD *)&multiplier[24] = &std::_Func_impl<std::_Callable_obj<_lambda_a28d178ead218845b69cab3e78423b9b_,0>,std::allocator<std::_Func_class<void,SVar *,float>>,void,SVar *,float>::`vftable';
+    *(_DWORD *)&multiplier[28] = this;
+    *(_DWORD *)&multiplier[40] = &multiplier[24];
+    LOBYTE(v55) = 36;
+    _Right = (std::wstring *)multiplier;
+    *(_DWORD *)&multiplier[20] = 7;
+    *(_DWORD *)&multiplier[16] = 0;
+    *(_WORD *)multiplier = 0;
+    std::wstring::assign((std::wstring *)multiplier, L"editCMesh", 9u);
+    v25 = this->sim;
+    LOBYTE(v55) = 37;
+    v26 = Sim::getConsole(v25);
+    LOBYTE(v55) = 28;
+    Console::addVarLambda(
+      v26,
+      *(std::wstring *)multiplier,
+      *(std::function<void __cdecl(SVar *,float)> *)&multiplier[24],
+      multiplier[48],
+      *(float *)&multiplier[52]);
+  }
+  v27 = INIReader::openedFiles._Myfirst;
+  v28 = 0;
+  for ( i = INIReader::openedFiles._Mylast; v27 != i; ++v27 )
+  {
+    v30 = Car::getConfigPath(this->physics, &setName, v27);
+    v31 = v27->_Myres < 8;
+    LOBYTE(v55) = 38;
+    if ( v31 )
+      v32 = (const wchar_t *)v27;
+    else
+      v32 = v27->_Bx._Ptr;
+    v33 = std::wstring::compare(v30, 0, v30->_Mysize, v32, v27->_Mysize);
+    LOBYTE(v55) = 28;
+    v34 = v33 != 0;
+    v47 = v34;
+    if ( setName._Myres >= 8 )
+    {
+      operator delete(setName._Bx._Ptr);
+      v34 = v47;
+    }
+    if ( v34 )
+    {
+      if ( v27->_Myres < 8 )
+        v35 = (const wchar_t *)v27;
+      else
+        v35 = v27->_Bx._Ptr;
+      _printf("ERROR: File %S should have been loaded from config data folder\n", v35);
+      ++v28;
+    }
+  }
+  v36 = Curve::openedFiles._Myfirst;
+  for ( j = Curve::openedFiles._Mylast; v36 != j; ++v36 )
+  {
+    v38 = Car::getConfigPath(this->physics, &setName, v36);
+    v31 = v36->_Myres < 8;
+    LOBYTE(v55) = 39;
+    if ( v31 )
+      v39 = (const wchar_t *)v36;
+    else
+      v39 = v36->_Bx._Ptr;
+    v40 = std::wstring::compare(v38, 0, v38->_Mysize, v39, v36->_Mysize);
+    LOBYTE(v55) = 28;
+    v41 = v40 != 0;
+    v47 = v41;
+    if ( setName._Myres >= 8 )
+    {
+      operator delete(setName._Bx._Ptr);
+      v41 = v47;
+    }
+    if ( v41 )
+    {
+      if ( v36->_Myres < 8 )
+        v42 = (const wchar_t *)v36;
+      else
+        v42 = v36->_Bx._Ptr;
+      _printf("ERROR: File %S should have been loaded from config data folder\n", v42);
+      ++v28;
+    }
+  }
+  if ( v28 )
+  {
+    setName._Myres = 7;
+    setName._Mysize = 0;
+    setName._Bx._Buf[0] = 0;
+    std::wstring::assign(
+      &setName,
+      L"ERROR on new car config system. Contact Lord Kunos. DO NOT TRY TO FIX BY REMOVING THIS CHECK OR I WILL EAT YOUR PU"
+       "PPIES WITH A NICE CHIANTI...ssrsrsrsr",
+      0x97u);
+    v43 = &setName;
+    LOBYTE(v55) = 40;
+    if ( setName._Myres >= 8 )
+      v43 = (std::wstring *)setName._Bx._Ptr;
+    _printf("Kunos Simulazioni: CRITICAL ERROR\n%S\n", v43->_Bx._Buf);
+    ksGenerateCrash();
+    LOBYTE(v55) = 28;
+    if ( setName._Myres >= 8 )
+      operator delete(setName._Bx._Ptr);
+  }
+  if ( !this->guid || (Sim::unloadMeshResources(this->sim, this->carNode), !this->guid) )
+  {
+    *(_DWORD *)&multiplier[52] = 1065353216;
+    *(_DWORD *)&multiplier[48] = 0;
+    v48 = &multiplier[24];
+    *(_DWORD *)&multiplier[24] = &std::_Func_impl<std::_Callable_obj<_lambda_8e02e02662553d85cf5d2285711298ae_,0>,std::allocator<std::_Func_class<void,SVar *,float>>,void,SVar *,float>::`vftable';
+    *(_DWORD *)&multiplier[28] = this;
+    *(_DWORD *)&multiplier[40] = &multiplier[24];
+    LOBYTE(v55) = 42;
+    _Right = (std::wstring *)multiplier;
+    *(_DWORD *)&multiplier[20] = 7;
+    *(_DWORD *)&multiplier[16] = 0;
+    *(_WORD *)multiplier = 0;
+    std::wstring::assign((std::wstring *)multiplier, L"restrictor", 0xAu);
+    v44 = this->sim;
+    LOBYTE(v55) = 43;
+    v45 = Sim::getConsole(v44);
+    LOBYTE(v55) = 28;
+    Console::addVarLambda(
+      v45,
+      *(std::wstring *)multiplier,
+      *(std::function<void __cdecl(SVar *,float)> *)&multiplier[24],
+      multiplier[48],
+      *(float *)&multiplier[52]);
+  }
+  LOBYTE(v55) = 24;
+  DebugTimer::~DebugTimer(&dtPhysics);
 }
-
-void CarAvatar::checkACD()
+void CarAvatar::CarAvatar(CarAvatar *this, Sim *isim, const std::wstring *unixName, const std::wstring *config, const std::wstring *skin, ICarPhysicsStateProvider *physicsStateProvider)
 {
-    std::wstring carFolder = std::wstring{ L"content\\cars\\" } + unixName; // eax
-    std::wstring acd = carFolder + L"\\data.acd";
-    std::wstring filesMask = carFolder + L"\\data\\*.*"; // eax
+  NetCarStateProvider *v7; // eax
+  Event<OnSectorSplitEvent> *v8; // ecx
+  BackfireParams *v9; // eax
+  BackfireParams *v10; // eax
+  _BYTE v11[28]; // [esp-1Ch] [ebp-40h] BYREF
+  CarAvatar *v12; // [esp+14h] [ebp-10h]
+  int v13; // [esp+20h] [ebp-4h]
 
-    std::vector<std::wstring> files = Path::getFiles(filesMask);
+  v12 = this;
+  *(_DWORD *)&v11[24] = isim->game;
+  *(_DWORD *)&v11[20] = 7;
+  *(_DWORD *)&v11[16] = 0;
+  *(_WORD *)v11 = 0;
+  std::wstring::assign((std::wstring *)v11, L"CAR_AVATAR", 0xAu);
+  GameObject::GameObject(this, *(std::wstring *)v11, *(Game **)&v11[24]);
+  this->__vftable = (CarAvatar_vtbl *)&CarAvatar::`vftable';
+  this->evOnGearChanged.handlers._Myfirst = 0;
+  this->evOnGearChanged.handlers._Mylast = 0;
+  this->evOnGearChanged.handlers._Myend = 0;
+  v13 = 0;
+  this->evOnGearChanged.__vftable = (EventTriggerOnChange<int>_vtbl *)&EventTriggerOnChange<int>::`vftable';
+  this->evOnGearChanged.attachedFloat = 0;
+  this->evOnGearChanged.oldFloatValue = 0;
+  this->evOnLapCompleted.handlers._Myfirst = 0;
+  this->evOnLapCompleted.handlers._Mylast = 0;
+  this->evOnLapCompleted.handlers._Myend = 0;
+  this->evOnSectorSplit.handlers._Myfirst = 0;
+  this->evOnSectorSplit.handlers._Mylast = 0;
+  this->evOnSectorSplit.handlers._Myend = 0;
+  this->evOnTyreCompoundChanged.handlers._Myfirst = 0;
+  this->evOnTyreCompoundChanged.handlers._Mylast = 0;
+  this->evOnTyreCompoundChanged.handlers._Myend = 0;
+  this->evOnBackfireTriggered.handlers._Myfirst = 0;
+  this->evOnBackfireTriggered.handlers._Mylast = 0;
+  this->evOnBackfireTriggered.handlers._Myend = 0;
+  this->evOnDownshiftProtection.handlers._Myfirst = 0;
+  this->evOnDownshiftProtection.handlers._Mylast = 0;
+  this->evOnDownshiftProtection.handlers._Myend = 0;
+  this->externalTyreCompoundShortName._Myres = 7;
+  this->externalTyreCompoundShortName._Mysize = 0;
+  this->externalTyreCompoundShortName._Bx._Buf[0] = 0;
+  *(_DWORD *)&v11[24] = -1;
+  this->mirrorPosition.x = 0.0;
+  this->mirrorPosition.y = 0.0;
+  this->mirrorPosition.z = 0.0;
+  this->sim = isim;
+  *(_DWORD *)&v11[20] = 0;
+  *(_DWORD *)&v11[16] = unixName;
+  this->unixName._Myres = 7;
+  this->unixName._Mysize = 0;
+  LOBYTE(v13) = 7;
+  this->unixName._Bx._Buf[0] = 0;
+  std::wstring::assign(
+    &this->unixName,
+    *(const std::wstring **)&v11[16],
+    *(unsigned int *)&v11[20],
+    *(unsigned int *)&v11[24]);
+  this->configName._Myres = 7;
+  *(_DWORD *)&v11[24] = -1;
+  LOBYTE(v13) = 8;
+  this->configName._Mysize = 0;
+  *(_DWORD *)&v11[20] = 0;
+  *(_DWORD *)&v11[16] = config;
+  this->configName._Bx._Buf[0] = 0;
+  std::wstring::assign(
+    &this->configName,
+    *(const std::wstring **)&v11[16],
+    *(unsigned int *)&v11[20],
+    *(unsigned int *)&v11[24]);
+  this->guiName._Myres = 7;
+  this->guiName._Mysize = 0;
+  this->guiName._Bx._Buf[0] = 0;
+  this->guiShortName._Myres = 7;
+  this->guiShortName._Mysize = 0;
+  this->guiShortName._Bx._Buf[0] = 0;
+  LOBYTE(v13) = 11;
+  this->steerTransformHR = 0;
+  this->steerTransformLR = 0;
+  mat44f::mat44f(&this->orgSteerMatrix);
+  this->driverEyesPosition.x = 0.0;
+  this->driverEyesPosition.y = 0.0;
+  this->driverEyesPosition.z = 0.0;
+  mat44f::mat44f(&this->bodyMatrix);
+  CarPhysicsState::CarPhysicsState(&this->physicsState);
+  AIState::AIState(&this->aiState);
+  this->carAudioFMOD = 0;
+  CarPhysicsInfo::CarPhysicsInfo(&this->physicsInfo);
+  this->raceEngineer._Myptr = 0;
+  this->modelBoundaries.front = 0.0;
+  this->modelBoundaries.rear = 0.0;
+  this->modelBoundaries.left = 0.0;
+  this->modelBoundaries.right = 0.0;
+  this->modelBoundaries.top = 0.0;
+  this->modelBoundaries.bottom = 0.0;
+  this->wingsStatus._Myfirst = 0;
+  this->wingsStatus._Mylast = 0;
+  this->wingsStatus._Myend = 0;
+  this->onBoardExposure = 33.0;
+  this->outBoardExposure = 33.0;
+  this->dashBoardExposure = 0.0;
+  this->cameras._Myfirst = 0;
+  this->cameras._Mylast = 0;
+  this->cameras._Myend = 0;
+  *(_DWORD *)&v11[24] = 8;
+  LOBYTE(v13) = 16;
+  this->isBlackFlagged = 0;
+  this->netCarStateProvider = 0;
+  this->lodManager = 0;
+  this->constrainedObjectManager = 0;
+  Concurrency::details::_Concurrent_queue_base_v4::_Concurrent_queue_base_v4(
+    &this->chTyreCompound.queue,
+    *(unsigned int *)&v11[24]);
+  this->chTyreCompound.queue.__vftable = (Concurrency::concurrent_queue<std::pair<int,int>,std::allocator<std::pair<int,int> > >_vtbl *)&Concurrency::concurrent_queue<std::pair<int,int>,std::allocator<std::pair<int,int>>>::`vftable';
+  this->fuelInExhaust = 0.0;
+  this->graphicsOffset.x = 0.0;
+  this->graphicsOffset.y = 0.0;
+  this->graphicsOffset.z = 0.0;
+  this->graphicsPitchRotation = 0.0;
+  this->userFFGain = 1.0;
+  this->graphicSteerLockDegrees = 0.0;
+  this->backfireParams = 0;
+  this->meshCollider = 0;
+  mat44f::mat44f(&this->pitPosition);
+  this->driverInfo.name._Myres = 7;
+  this->driverInfo.name._Mysize = 0;
+  this->driverInfo.name._Bx._Buf[0] = 0;
+  this->driverInfo.team._Myres = 7;
+  this->driverInfo.team._Mysize = 0;
+  this->driverInfo.team._Bx._Buf[0] = 0;
+  this->driverInfo.nationality._Myres = 7;
+  this->driverInfo.nationality._Mysize = 0;
+  this->driverInfo.nationality._Bx._Buf[0] = 0;
+  this->driverInfo.nationCode._Myres = 7;
+  this->driverInfo.nationCode._Mysize = 0;
+  this->driverInfo.nationCode._Bx._Buf[0] = 0;
+  this->currentSkin._Myres = 7;
+  this->currentSkin._Mysize = 0;
+  this->currentSkin._Bx._Buf[0] = 0;
+  this->lastSkidPosition[0].x = 0.0;
+  this->lastSkidPosition[0].y = 0.0;
+  this->lastSkidPosition[0].z = 0.0;
+  this->lastSkidPosition[1].x = 0.0;
+  this->lastSkidPosition[1].y = 0.0;
+  this->lastSkidPosition[1].z = 0.0;
+  this->lastSkidPosition[2].x = 0.0;
+  this->lastSkidPosition[2].y = 0.0;
+  this->lastSkidPosition[2].z = 0.0;
+  this->lastSkidPosition[3].x = 0.0;
+  this->lastSkidPosition[3].y = 0.0;
+  this->lastSkidPosition[3].z = 0.0;
+  this->eventTriggers._Myfirst = 0;
+  this->eventTriggers._Mylast = 0;
+  this->eventTriggers._Myend = 0;
+  LOBYTE(v13) = 20;
+  this->hideSteer = 0;
+  CarRaceInfo::CarRaceInfo(&this->raceInfo);
+  this->physicsCarStateProvider._Myptr = 0;
+  LOBYTE(v13) = 22;
+  Concurrency::details::_Concurrent_queue_base_v4::_Concurrent_queue_base_v4(&this->lapQueue.queue, 0x28u);
+  this->lapQueue.queue.__vftable = (Concurrency::concurrent_queue<OnLapCompletedEvent,std::allocator<OnLapCompletedEvent> >_vtbl *)&Concurrency::concurrent_queue<OnLapCompletedEvent,std::allocator<OnLapCompletedEvent>>::`vftable';
+  LOBYTE(v13) = 23;
+  Concurrency::details::_Concurrent_queue_base_v4::_Concurrent_queue_base_v4(&this->splitQueue.queue, 0x10u);
+  this->splitQueue.queue.__vftable = (Concurrency::concurrent_queue<OnSectorSplitEvent,std::allocator<OnSectorSplitEvent> >_vtbl *)&Concurrency::concurrent_queue<OnSectorSplitEvent,std::allocator<OnSectorSplitEvent>>::`vftable';
+  *(_DWORD *)&v11[24] = 0;
+  *(_DWORD *)&v11[20] = &NetCarStateProvider `RTTI Type Descriptor';
+  *(_DWORD *)&v11[16] = &ICarPhysicsStateProvider `RTTI Type Descriptor';
+  *(_DWORD *)&v11[12] = 0;
+  *(_DWORD *)&v11[8] = physicsStateProvider;
+  LOBYTE(v13) = 24;
+  this->beltOffNode = 0;
+  this->beltOnNode = 0;
+  this->carAnimations = 0;
+  this->filteredSpeed = 0.0;
+  this->currentEngineBrakeSetting = 0;
+  this->isHeatChargingBatteries = 1;
+  this->currentERSPowerIndex = 0;
+  this->currentERSRecovery = 5;
+  this->lastERSBatteryCharge = 1.0;
+  this->currentERSNormalizedRecharge = 0.0;
+  *(_WORD *)&this->showDownShiftProtetion = 0;
+  this->lastPitstopTime = 0.0;
+  *(_WORD *)&this->inPitlane = 0;
+  this->pitLaneEntryTime = 0.0;
+  this->pitLaneExitTime = 0.0;
+  v7 = (NetCarStateProvider *)__RTDynamicCast(
+                                *(_DWORD *)&v11[8],
+                                *(_DWORD *)&v11[12],
+                                *(_DWORD *)&v11[16],
+                                *(_DWORD *)&v11[20],
+                                *(_DWORD *)&v11[24]);
+  this->netCarStateProvider = v7;
+  if ( v7 )
+  {
+    *(_DWORD *)&v11[24] = this;
+    *(_DWORD *)v11 = &std::_Func_impl<std::_Callable_obj<_lambda_ddf010f992ae9fee9851716917f561ff_,0>,std::allocator<std::_Func_class<void,OnSectorSplitEvent const &>>,void,OnSectorSplitEvent const &>::`vftable';
+    *(_DWORD *)&v11[4] = this;
+    *(_DWORD *)&v11[16] = v11;
+    v8 = &this->netCarStateProvider->evOnSectorSplit;
+    LOBYTE(v13) = 24;
+    Event<float>::addHandler((Event<SessionInfo> *)v8, *(std::function<void __cdecl(SessionInfo const &)> *)v11, this);
+  }
+  CarAvatar::initCommon(this);
+  *(_DWORD *)&v11[24] = 7;
+  *(_DWORD *)&v11[20] = 0;
+  *(_WORD *)&v11[4] = 0;
+  std::wstring::assign((std::wstring *)&v11[4], skin, 0, 0xFFFFFFFF);
+  CarAvatar::init3D(this, *(std::wstring *)&v11[4]);
+  v9 = (BackfireParams *)operator new(36);
+  LOBYTE(v13) = 26;
+  if ( v9 )
+    BackfireParams::BackfireParams(v9, this);
+  else
+    v10 = 0;
+  LOBYTE(v13) = 24;
+  this->backfireParams = v10;
+  this->physicsStateProvider = physicsStateProvider;
+  CarAvatar::initCommonPostPhysics(this);
+  if ( this->guid )
+    Sim::unloadMeshResources(this->sim, this->carNode);
+}
+void CarAvatar::~CarAvatar(CarAvatar *this)
+{
+  Car *v2; // eax
+  Car *v3; // ecx
+  Node *v4; // ecx
+  Node *v5; // ecx
+  PhysicsCarStateProvider *v6; // ecx
+  std::vector<IEventTrigger *> *v7; // edi
+  std::vector<CameraCarDefinition> *v8; // edi
+  std::vector<WingState> *v9; // edi
+  RaceEngineer *v10; // ecx
 
-    if (!files.empty() && Path::fileExists(acd))
-        for (auto filename : files)
+  this->__vftable = (CarAvatar_vtbl *)&CarAvatar::`vftable';
+  v2 = this->physics;
+  if ( v2 )
+  {
+    if ( &v2->telemetry.driverName != (std::wstring *)&this->driverInfo )
+      std::wstring::assign(&v2->telemetry.driverName, &this->driverInfo.name, 0, 0xFFFFFFFF);
+    v3 = this->physics;
+    if ( v3 )
+      ((void (*)(Car *, int))v3->~Car)(v3, 1);
+  }
+  if ( this->backfireParams )
+    operator delete(this->backfireParams);
+  v4 = this->beltOffNode;
+  if ( v4 )
+    ((void (*)(Node *, int))v4->~Node)(v4, 1);
+  v5 = this->beltOnNode;
+  if ( v5 )
+    ((void (*)(Node *, int))v5->~Node)(v5, 1);
+  Concurrency::concurrent_queue<OnSectorSplitEvent,std::allocator<OnSectorSplitEvent>>::~concurrent_queue<OnSectorSplitEvent,std::allocator<OnSectorSplitEvent>>(&this->splitQueue.queue);
+  Concurrency::concurrent_queue<OnLapCompletedEvent,std::allocator<OnLapCompletedEvent>>::~concurrent_queue<OnLapCompletedEvent,std::allocator<OnLapCompletedEvent>>(&this->lapQueue.queue);
+  v6 = this->physicsCarStateProvider._Myptr;
+  if ( v6 )
+    ((void (*)(PhysicsCarStateProvider *, int))v6->~ICarPhysicsStateProvider)(v6, 1);
+  CarRaceInfo::~CarRaceInfo(&this->raceInfo);
+  v7 = &this->eventTriggers;
+  if ( this->eventTriggers._Myfirst )
+  {
+    std::_Container_base0::_Orphan_all(&this->eventTriggers);
+    operator delete(v7->_Myfirst);
+    v7->_Myfirst = 0;
+    this->eventTriggers._Mylast = 0;
+    this->eventTriggers._Myend = 0;
+  }
+  if ( this->currentSkin._Myres >= 8 )
+    operator delete(this->currentSkin._Bx._Ptr);
+  this->currentSkin._Myres = 7;
+  this->currentSkin._Mysize = 0;
+  this->currentSkin._Bx._Buf[0] = 0;
+  SetupItemText::~SetupItemText(&this->driverInfo);
+  Concurrency::concurrent_queue<std::pair<int,int>,std::allocator<std::pair<int,int>>>::~concurrent_queue<std::pair<int,int>,std::allocator<std::pair<int,int>>>(&this->chTyreCompound.queue);
+  v8 = &this->cameras;
+  if ( this->cameras._Myfirst )
+  {
+    std::_Container_base0::_Orphan_all(&this->cameras);
+    operator delete(v8->_Myfirst);
+    v8->_Myfirst = 0;
+    this->cameras._Mylast = 0;
+    this->cameras._Myend = 0;
+  }
+  v9 = &this->wingsStatus;
+  if ( this->wingsStatus._Myfirst )
+  {
+    std::_Container_base0::_Orphan_all(&this->wingsStatus);
+    operator delete(v9->_Myfirst);
+    v9->_Myfirst = 0;
+    this->wingsStatus._Mylast = 0;
+    this->wingsStatus._Myend = 0;
+  }
+  v10 = this->raceEngineer._Myptr;
+  if ( v10 )
+    ((void (*)(RaceEngineer *, int))v10->~RaceEngineer)(v10, 1);
+  CarPhysicsInfo::~CarPhysicsInfo(&this->physicsInfo);
+  dxtemplateThreadingImplementation<dxtemplateJobListContainer<dxFakeLull,dxFakeMutex,dxFakeAtomicsProvider>,dxtemplateJobListSelfHandler<dxSelfWakeup,dxtemplateJobListContainer<dxFakeLull,dxFakeMutex,dxFakeAtomicsProvider>>>::CleanupForRestart((TyreTester *)&this->physicsState.speed);
+  if ( this->guiShortName._Myres >= 8 )
+    operator delete(this->guiShortName._Bx._Ptr);
+  this->guiShortName._Myres = 7;
+  this->guiShortName._Mysize = 0;
+  this->guiShortName._Bx._Buf[0] = 0;
+  if ( this->guiName._Myres >= 8 )
+    operator delete(this->guiName._Bx._Ptr);
+  this->guiName._Myres = 7;
+  this->guiName._Mysize = 0;
+  this->guiName._Bx._Buf[0] = 0;
+  if ( this->configName._Myres >= 8 )
+    operator delete(this->configName._Bx._Ptr);
+  this->configName._Myres = 7;
+  this->configName._Mysize = 0;
+  this->configName._Bx._Buf[0] = 0;
+  if ( this->unixName._Myres >= 8 )
+    operator delete(this->unixName._Bx._Ptr);
+  this->unixName._Myres = 7;
+  this->unixName._Mysize = 0;
+  this->unixName._Bx._Buf[0] = 0;
+  if ( this->externalTyreCompoundShortName._Myres >= 8 )
+    operator delete(this->externalTyreCompoundShortName._Bx._Ptr);
+  this->externalTyreCompoundShortName._Myres = 7;
+  this->externalTyreCompoundShortName._Mysize = 0;
+  this->externalTyreCompoundShortName._Bx._Buf[0] = 0;
+  if ( this->evOnDownshiftProtection.handlers._Myfirst )
+  {
+    std::_Container_base0::_Orphan_all((std::_Container_base0 *)&this->evOnDownshiftProtection);
+    std::vector<std::pair<void *,std::function<void __cdecl (OnReplayStatusChanged const &)>>>::_Destroy(
+      (std::vector<std::pair<void *,std::function<void __cdecl(OnPhysicsStepCompleted const &)> >> *)&this->evOnDownshiftProtection,
+      (std::pair<void *,std::function<void __cdecl(OnPhysicsStepCompleted const &)> > *)this->evOnDownshiftProtection.handlers._Myfirst,
+      (std::pair<void *,std::function<void __cdecl(OnPhysicsStepCompleted const &)> > *)this->evOnDownshiftProtection.handlers._Mylast);
+    operator delete(this->evOnDownshiftProtection.handlers._Myfirst);
+    this->evOnDownshiftProtection.handlers._Myfirst = 0;
+    this->evOnDownshiftProtection.handlers._Mylast = 0;
+    this->evOnDownshiftProtection.handlers._Myend = 0;
+  }
+  if ( this->evOnBackfireTriggered.handlers._Myfirst )
+  {
+    std::_Container_base0::_Orphan_all((std::_Container_base0 *)&this->evOnBackfireTriggered);
+    std::vector<std::pair<void *,std::function<void __cdecl (OnReplayStatusChanged const &)>>>::_Destroy(
+      (std::vector<std::pair<void *,std::function<void __cdecl(OnPhysicsStepCompleted const &)> >> *)&this->evOnBackfireTriggered,
+      (std::pair<void *,std::function<void __cdecl(OnPhysicsStepCompleted const &)> > *)this->evOnBackfireTriggered.handlers._Myfirst,
+      (std::pair<void *,std::function<void __cdecl(OnPhysicsStepCompleted const &)> > *)this->evOnBackfireTriggered.handlers._Mylast);
+    operator delete(this->evOnBackfireTriggered.handlers._Myfirst);
+    this->evOnBackfireTriggered.handlers._Myfirst = 0;
+    this->evOnBackfireTriggered.handlers._Mylast = 0;
+    this->evOnBackfireTriggered.handlers._Myend = 0;
+  }
+  if ( this->evOnTyreCompoundChanged.handlers._Myfirst )
+  {
+    std::_Container_base0::_Orphan_all((std::_Container_base0 *)&this->evOnTyreCompoundChanged);
+    std::vector<std::pair<void *,std::function<void __cdecl (double const &)>>>::_Destroy(
+      (std::vector<Task> *)&this->evOnTyreCompoundChanged,
+      (Task *)this->evOnTyreCompoundChanged.handlers._Myfirst,
+      (Task *)this->evOnTyreCompoundChanged.handlers._Mylast);
+    operator delete(this->evOnTyreCompoundChanged.handlers._Myfirst);
+    this->evOnTyreCompoundChanged.handlers._Myfirst = 0;
+    this->evOnTyreCompoundChanged.handlers._Mylast = 0;
+    this->evOnTyreCompoundChanged.handlers._Myend = 0;
+  }
+  if ( this->evOnSectorSplit.handlers._Myfirst )
+  {
+    std::_Container_base0::_Orphan_all((std::_Container_base0 *)&this->evOnSectorSplit);
+    std::vector<std::pair<void *,std::function<void __cdecl (double const &)>>>::_Destroy(
+      (std::vector<Task> *)&this->evOnSectorSplit,
+      (Task *)this->evOnSectorSplit.handlers._Myfirst,
+      (Task *)this->evOnSectorSplit.handlers._Mylast);
+    operator delete(this->evOnSectorSplit.handlers._Myfirst);
+    this->evOnSectorSplit.handlers._Myfirst = 0;
+    this->evOnSectorSplit.handlers._Mylast = 0;
+    this->evOnSectorSplit.handlers._Myend = 0;
+  }
+  if ( this->evOnLapCompleted.handlers._Myfirst )
+  {
+    std::_Container_base0::_Orphan_all((std::_Container_base0 *)&this->evOnLapCompleted);
+    std::vector<std::pair<void *,std::function<void __cdecl (OnReplayStatusChanged const &)>>>::_Destroy(
+      (std::vector<std::pair<void *,std::function<void __cdecl(OnPhysicsStepCompleted const &)> >> *)&this->evOnLapCompleted,
+      (std::pair<void *,std::function<void __cdecl(OnPhysicsStepCompleted const &)> > *)this->evOnLapCompleted.handlers._Myfirst,
+      (std::pair<void *,std::function<void __cdecl(OnPhysicsStepCompleted const &)> > *)this->evOnLapCompleted.handlers._Mylast);
+    operator delete(this->evOnLapCompleted.handlers._Myfirst);
+    this->evOnLapCompleted.handlers._Myfirst = 0;
+    this->evOnLapCompleted.handlers._Mylast = 0;
+    this->evOnLapCompleted.handlers._Myend = 0;
+  }
+  if ( this->evOnGearChanged.handlers._Myfirst )
+  {
+    std::_Container_base0::_Orphan_all((std::_Container_base0 *)&this->evOnGearChanged.Event<OnValueChanged>);
+    std::vector<std::pair<void *,std::function<void __cdecl (double const &)>>>::_Destroy(
+      (std::vector<Task> *)&this->evOnGearChanged.Event<OnValueChanged>,
+      (Task *)this->evOnGearChanged.handlers._Myfirst,
+      (Task *)this->evOnGearChanged.handlers._Mylast);
+    operator delete(this->evOnGearChanged.handlers._Myfirst);
+    this->evOnGearChanged.handlers._Myfirst = 0;
+    this->evOnGearChanged.handlers._Mylast = 0;
+    this->evOnGearChanged.handlers._Myend = 0;
+  }
+  GameObject::~GameObject(this);
+}
+CarAvatar *CarAvatar::`scalar deleting destructor'(CarAvatar *this, unsigned int a2)
+{
+  CarAvatar::~CarAvatar(this);
+  if ( (a2 & 1) != 0 )
+    operator delete(this);
+  return this;
+}
+void CarAvatar::armFirstLap(CarAvatar *this)
+{
+  Sim *v1; // ecx
+  std::function<void __cdecl(void)> v2; // [esp-18h] [ebp-30h] BYREF
+  int v3; // [esp+14h] [ebp-4h]
+
+  if ( this->physics )
+  {
+    v2._Space._Pfn[0] = (void (__cdecl *)())&std::_Func_impl<std::_Callable_obj<_lambda_daa80ed1d4a2de0d5f8abda97d44e615_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
+    v2._Space._Pfn[1] = (void (__cdecl *)())this;
+    v2._Impl = (std::_Func_base<void> *)&v2;
+    v1 = this->sim;
+    v3 = -1;
+    PhysicsAvatar::executeOnPhysicsThread(v1->physicsAvatar, v2);
+  }
+}
+void CarAvatar::checkACD(CarAvatar *this)
+{
+  std::wstring *v1; // ebx
+  std::wstring *v2; // eax
+  std::wstring *v3; // eax
+  const std::wstring *v4; // eax
+  std::wstring *v5; // esi
+  char v6; // al
+  std::wstring *v7; // edi
+  std::wstring *v8; // eax
+  std::wstring *v9; // eax
+  const std::wstring *v10; // eax
+  std::_Wrap_alloc<std::allocator<std::_Tree_node<std::pair<std::wstring const ,std::map<std::wstring,INISection> >,void *> > > v11; // [esp+13h] [ebp-C9h] BYREF
+  std::vector<std::wstring> files; // [esp+14h] [ebp-C8h] BYREF
+  std::wstring v13; // [esp+24h] [ebp-B8h] BYREF
+  std::wstring v14; // [esp+3Ch] [ebp-A0h] BYREF
+  std::wstring v15; // [esp+54h] [ebp-88h] BYREF
+  std::wstring v16; // [esp+6Ch] [ebp-70h] BYREF
+  std::wstring result; // [esp+84h] [ebp-58h] BYREF
+  std::wstring acd; // [esp+9Ch] [ebp-40h] BYREF
+  std::wstring v19; // [esp+B4h] [ebp-28h] BYREF
+  int v20; // [esp+D8h] [ebp-4h]
+
+  v1 = &this->unixName;
+  v2 = std::operator+<wchar_t>(&result, L"content\\cars\\", &this->unixName);
+  v20 = 0;
+  std::operator+<wchar_t>(&acd, v2, L"\\data.acd");
+  LOBYTE(v20) = 2;
+  if ( result._Myres >= 8 )
+    operator delete(result._Bx._Ptr);
+  result._Myres = 7;
+  result._Bx._Buf[0] = 0;
+  result._Mysize = 0;
+  v3 = std::operator+<wchar_t>(&v16, L"content\\cars\\", v1);
+  LOBYTE(v20) = 3;
+  v4 = std::operator+<wchar_t>(&v13, v3, L"\\data\\*.*");
+  LOBYTE(v20) = 4;
+  Path::getFiles(&files, v4);
+  if ( v13._Myres >= 8 )
+    operator delete(v13._Bx._Ptr);
+  v13._Myres = 7;
+  v13._Mysize = 0;
+  v13._Bx._Buf[0] = 0;
+  LOBYTE(v20) = 7;
+  if ( v16._Myres >= 8 )
+    operator delete(v16._Bx._Ptr);
+  v5 = files._Myfirst;
+  v16._Myres = 7;
+  v16._Mysize = 0;
+  v16._Bx._Buf[0] = 0;
+  if ( files._Myfirst != files._Mylast )
+  {
+    v6 = Path::fileExists((unsigned int)v1, &acd, 0);
+    v5 = files._Myfirst;
+    if ( v6 )
+    {
+      v7 = files._Mylast;
+      if ( files._Myfirst != files._Mylast )
+      {
+        do
         {
-            FolderEncrypter encrypter;
-            encrypter.check(acd, filename, carFolder + L"/data/" + filename);
-
-            //dxtemplateThreadingImplementation<dxtemplateJobListContainer<dxFakeLull, dxFakeMutex, dxFakeAtomicsProvider>, dxtemplateJobListSelfHandler<dxSelfWakeup, dxtemplateJobListContainer<dxFakeLull, dxFakeMutex, dxFakeAtomicsProvider>>>::CleanupForRestart((TyreTester*)&v11);
+          FolderEncrypter::FolderEncrypter(&v11);
+          LOBYTE(v20) = 8;
+          v8 = std::operator+<wchar_t>(&v19, L"content/cars/", v1);
+          LOBYTE(v20) = 9;
+          v9 = std::operator+<wchar_t>(&v15, v8, L"/data/");
+          LOBYTE(v20) = 10;
+          v10 = std::operator+<wchar_t>(&v14, v9, v5);
+          LOBYTE(v20) = 11;
+          FolderEncrypter::check((FolderEncrypter *)&v11, &acd, v5, v10);
+          if ( v14._Myres >= 8 )
+            operator delete(v14._Bx._Ptr);
+          v14._Myres = 7;
+          v14._Mysize = 0;
+          v14._Bx._Buf[0] = 0;
+          if ( v15._Myres >= 8 )
+            operator delete(v15._Bx._Ptr);
+          v15._Myres = 7;
+          v15._Mysize = 0;
+          v15._Bx._Buf[0] = 0;
+          if ( v19._Myres >= 8 )
+            operator delete(v19._Bx._Ptr);
+          LOBYTE(v20) = 7;
+          dxtemplateThreadingImplementation<dxtemplateJobListContainer<dxFakeLull,dxFakeMutex,dxFakeAtomicsProvider>,dxtemplateJobListSelfHandler<dxSelfWakeup,dxtemplateJobListContainer<dxFakeLull,dxFakeMutex,dxFakeAtomicsProvider>>>::CleanupForRestart((TyreTester *)&v11);
+          ++v5;
         }
-}
-
-void CarAvatar::cycleAbsMode(int value)
-{
-    std::wstring imessage = L"ABS"; // [esp+10h] [ebp-58h] BYREF
-    std::wstring text = L"Not available"; // [esp+28h] [ebp-40h] BYREF
-
-    if (physics && physics->abs.isPresent)
-    {
-        sim->physicsAvatar->executeOnPhysicsThread([=]() {
-            auto& abs = physics->abs;
-            if (abs.isPresent)
-                abs.cycleMode(value);
-            });
+        while ( v5 != v7 );
+        v5 = files._Myfirst;
+      }
     }
-    else
-    {
-        sim->systemMessage->addMessage(imessage, acTranslate(text), SystemMessageType::eABS);
-    }
+  }
+  LOBYTE(v20) = 2;
+  if ( v5 )
+  {
+    std::_Container_base0::_Orphan_all(&files);
+    std::_Destroy_range<std::_Wrap_alloc<std::allocator<std::wstring>>>(files._Myfirst, files._Mylast);
+    operator delete(files._Myfirst);
+    files._Myfirst = 0;
+    files._Mylast = 0;
+    files._Myend = 0;
+  }
+  if ( acd._Myres >= 8 )
+    operator delete(acd._Bx._Ptr);
 }
-
-bool CarAvatar::cycleERSHeatCharging()
+void CarAvatar::cycleAbsMode(CarAvatar *this, int value)
 {
-    isHeatChargingBatteries = !isHeatChargingBatteries;
-    if (!physics)
-        sim->physicsAvatar->executeOnPhysicsThread([=]()
-            {
-                physics->ers.isHeatCharginBattery = isHeatChargingBatteries;
-            });
+  Car *v3; // eax
+  Sim *v4; // ecx
+  const std::wstring *v5; // eax
+  Sim *v6; // ecx
+  std::function<void __cdecl(void)> v7; // [esp-18h] [ebp-80h] BYREF
+  std::wstring imessage; // [esp+10h] [ebp-58h] BYREF
+  std::wstring text; // [esp+28h] [ebp-40h] BYREF
+  std::wstring result; // [esp+40h] [ebp-28h] BYREF
+  int v11; // [esp+64h] [ebp-4h]
 
-    return isHeatChargingBatteries;
+  v3 = this->physics;
+  if ( v3 && v3->abs.isPresent )
+  {
+    v7._Space._Pfn[0] = (void (__cdecl *)())&std::_Func_impl<std::_Callable_obj<_lambda_ed9b0c7d4a2ab4496f48907287b21811_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
+    *(_QWORD *)&v7._Space._Alias[4] = __PAIR64__(value, (unsigned int)this);
+    v7._Impl = (std::_Func_base<void> *)&v7;
+    v4 = this->sim;
+    v11 = -1;
+    PhysicsAvatar::executeOnPhysicsThread(v4->physicsAvatar, v7);
+  }
+  else
+  {
+    text._Myres = 7;
+    text._Mysize = 0;
+    text._Bx._Buf[0] = 0;
+    std::wstring::assign(&text, L"Not available", 0xDu);
+    v11 = 0;
+    imessage._Myres = 7;
+    imessage._Mysize = 0;
+    imessage._Bx._Buf[0] = 0;
+    std::wstring::assign(&imessage, L"ABS", 3u);
+    LOBYTE(v11) = 1;
+    v5 = acTranslate(&result, &text);
+    v6 = this->sim;
+    LOBYTE(v11) = 2;
+    SystemMessage::addMessage(v6->systemMessage, &imessage, v5, eABS);
+    if ( result._Myres >= 8 )
+      operator delete(result._Bx._Ptr);
+    result._Myres = 7;
+    result._Mysize = 0;
+    result._Bx._Buf[0] = 0;
+    if ( imessage._Myres >= 8 )
+      operator delete(imessage._Bx._Ptr);
+    imessage._Myres = 7;
+    imessage._Mysize = 0;
+    imessage._Bx._Buf[0] = 0;
+    if ( text._Myres >= 8 )
+      operator delete(text._Bx._Ptr);
+  }
 }
-
-std::pair<int, std::wstring> CarAvatar::cycleERSPower(int value)
+bool CarAvatar::cycleERSHeatCharging(CarAvatar *this)
 {
-    std::pair<int, std::wstring> result;
+  bool v2; // al
+  bool v3; // zf
+  Sim *v4; // ecx
+  std::function<void __cdecl(void)> v6; // [esp-18h] [ebp-3Ch] BYREF
+  unsigned int v7; // [esp+10h] [ebp-14h]
+  int v8; // [esp+20h] [ebp-4h]
 
-    if (value <= 0)
-        --currentERSPowerIndex;
-    else
-        ++currentERSPowerIndex;
-        
-    if (currentERSPowerIndex < physicsInfo.ersPowerControllerCount && currentERSPowerIndex < 0)
-            currentERSPowerIndex = physicsInfo.ersPowerControllerCount - 1;
-    else
-        currentERSPowerIndex = 0;
-    
-    if (physics)
-    {
-        sim->physicsAvatar->executeOnPhysicsThread([this /*, currentERSPowerIndex*/](){
-            physics->ers.setPowerController(currentERSPowerIndex);
-        });
-        
-        result.second = physics->ers.ersPowerControllers[currentERSPowerIndex].name;
-    }
-
-    result.first = currentERSPowerIndex;
-    return result;
+  v2 = !this->isHeatChargingBatteries;
+  v3 = this->physics == 0;
+  this->isHeatChargingBatteries = v2;
+  if ( !v3 )
+  {
+    LOBYTE(v7) = v2;
+    v6._Space._Pfn[0] = (void (__cdecl *)())&std::_Func_impl<std::_Callable_obj<_lambda_669d89450dd93c78a74bec5352a6580c_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
+    *(_QWORD *)&v6._Space._Alias[4] = __PAIR64__((unsigned int)this, v7);
+    v6._Impl = (std::_Func_base<void> *)&v6;
+    v4 = this->sim;
+    v8 = -1;
+    PhysicsAvatar::executeOnPhysicsThread(v4->physicsAvatar, v6);
+  }
+  return this->isHeatChargingBatteries;
 }
+std::pair<int,std::wstring > *CarAvatar::cycleERSPower(CarAvatar *this, std::pair<int,std::wstring > *result, int value)
+{
+  std::wstring *v4; // ebx
+  int v5; // eax
+  int v6; // ecx
+  int v7; // esi
+  Sim *v8; // ecx
+  ERSPowerController *v9; // ecx
+  std::pair<int,std::wstring > *v10; // eax
+  std::function<void __cdecl(void)> v11; // [esp-18h] [ebp-40h] BYREF
+  int v12; // [esp+18h] [ebp-10h]
+  int v13; // [esp+24h] [ebp-4h]
 
-int CarAvatar::cycleERSRecovery(int value)
+  v4 = &result->second;
+  result->first = 0;
+  result->second._Myres = 7;
+  result->second._Mysize = 0;
+  result->second._Bx._Buf[0] = 0;
+  v13 = 0;
+  v12 = 1;
+  if ( value <= 0 )
+    --this->currentERSPowerIndex;
+  else
+    ++this->currentERSPowerIndex;
+  v5 = this->currentERSPowerIndex;
+  v6 = this->physicsInfo.ersPowerControllerCount;
+  if ( v5 < v6 )
+  {
+    if ( v5 < 0 )
+      this->currentERSPowerIndex = v6 - 1;
+  }
+  else
+  {
+    this->currentERSPowerIndex = 0;
+  }
+  if ( this->physics )
+  {
+    v7 = this->currentERSPowerIndex;
+    v11._Space._Pfn[0] = (void (__cdecl *)())&std::_Func_impl<std::_Callable_obj<_lambda_9745b16dcbba23b6956612d27d7f384e_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
+    *(_QWORD *)&v11._Space._Alias[4] = __PAIR64__((unsigned int)this, v7);
+    v11._Impl = (std::_Func_base<void> *)&v11;
+    v8 = this->sim;
+    v13 = 0;
+    PhysicsAvatar::executeOnPhysicsThread(v8->physicsAvatar, v11);
+    v9 = &this->physics->ers.ersPowerControllers._Myfirst[v7];
+    if ( v4 != (std::wstring *)v9 )
+      std::wstring::assign(v4, &v9->name, 0, 0xFFFFFFFF);
+  }
+  v10 = result;
+  result->first = this->currentERSPowerIndex;
+  return v10;
+}
+int CarAvatar::cycleERSRecovery(CarAvatar *this, int value)
 {
   int v3; // eax
   int v4; // ecx
@@ -124,8 +1185,7 @@ int CarAvatar::cycleERSRecovery(int value)
   }
   return this->currentERSRecovery;
 }
-
-int CarAvatar::cycleEngineBrake(int value)
+int CarAvatar::cycleEngineBrake(CarAvatar *this, int value)
 {
   int v3; // eax
   int v4; // ecx
@@ -161,8 +1221,7 @@ int CarAvatar::cycleEngineBrake(int value)
   }
   return v5;
 }
-
-void CarAvatar::cycleTcMode(int value)
+void CarAvatar::cycleTcMode(CarAvatar *this, int value)
 {
   Car *v3; // eax
   Sim *v4; // ecx
@@ -214,8 +1273,7 @@ void CarAvatar::cycleTcMode(int value)
       operator delete(text._Bx._Ptr);
   }
 }
-
-void CarAvatar::forcePosition(const mat44f *matrix)
+void CarAvatar::forcePosition(CarAvatar *this, const mat44f *matrix)
 {
   PitStop *v3; // eax
   __m128 v4; // xmm5
@@ -250,8 +1308,7 @@ void CarAvatar::forcePosition(const mat44f *matrix)
     PhysicsAvatar::executeOnPhysicsThread(this->sim->physicsAvatar, v8);
   }
 }
-
-std::pair<unsigned int,unsigned int> *CarAvatar::getABSMode(std::pair<unsigned int,unsigned int> *result)
+std::pair<unsigned int,unsigned int> *CarAvatar::getABSMode(CarAvatar *this, std::pair<unsigned int,unsigned int> *result)
 {
   Car *v2; // ecx
   std::pair<unsigned int,unsigned int> *v3; // eax
@@ -270,8 +1327,7 @@ std::pair<unsigned int,unsigned int> *CarAvatar::getABSMode(std::pair<unsigned i
   }
   return v3;
 }
-
-int CarAvatar::getAILapsToComplete()
+int CarAvatar::getAILapsToComplete(CarAvatar *this)
 {
   Car *v1; // eax
   int result; // eax
@@ -283,8 +1339,7 @@ int CarAvatar::getAILapsToComplete()
     result = -1;
   return result;
 }
-
-DriverModel *CarAvatar::getActiveDriverModel()
+DriverModel *CarAvatar::getActiveDriverModel(CarAvatar *this)
 {
   DriverModel *result; // eax
 
@@ -294,8 +1349,7 @@ DriverModel *CarAvatar::getActiveDriverModel()
     result = this->driverModel_LR;
   return result;
 }
-
-bool CarAvatar::getAutoBlip()
+bool CarAvatar::getAutoBlip(CarAvatar *this)
 {
   Car *v1; // eax
   bool result; // al
@@ -307,8 +1361,7 @@ bool CarAvatar::getAutoBlip()
     result = 0;
   return result;
 }
-
-bool CarAvatar::getAutoShifter()
+bool CarAvatar::getAutoShifter(CarAvatar *this)
 {
   Car *v1; // eax
   bool result; // al
@@ -320,8 +1373,7 @@ bool CarAvatar::getAutoShifter()
     result = 0;
   return result;
 }
-
-double CarAvatar::getBallastKG()
+double CarAvatar::getBallastKG(CarAvatar *this)
 {
   Car *v1; // eax
   double result; // st7
@@ -337,8 +1389,7 @@ double CarAvatar::getBallastKG()
     result = 0.0;
   return result;
 }
-
-CarColliderManager *CarAvatar::getColliderManager()
+CarColliderManager *CarAvatar::getColliderManager(CarAvatar *this)
 {
   Car *v1; // eax
   CarColliderManager *result; // eax
@@ -350,8 +1401,7 @@ CarColliderManager *CarAvatar::getColliderManager()
     result = 0;
   return result;
 }
-
-ICarControlsProvider *CarAvatar::getControlsProvider()
+ICarControlsProvider *CarAvatar::getControlsProvider(CarAvatar *this)
 {
   Car *v1; // ecx
   ICarControlsProvider *result; // eax
@@ -363,8 +1413,7 @@ ICarControlsProvider *CarAvatar::getControlsProvider()
     result = 0;
   return result;
 }
-
-int CarAvatar::getCurrentCompoundIdealPressure(uint16_t tyreIndex)
+int CarAvatar::getCurrentCompoundIdealPressure(CarAvatar *this, unsigned __int16 tyreIndex)
 {
   Car *v2; // esi
   int v3; // edi
@@ -384,8 +1433,7 @@ int CarAvatar::getCurrentCompoundIdealPressure(uint16_t tyreIndex)
   }
   return result;
 }
-
-std::wstring *CarAvatar::getCurrentCompoundShortName()
+std::wstring *CarAvatar::getCurrentCompoundShortName(CarAvatar *this, std::wstring *result)
 {
   Car *v2; // esi
   int v3; // ebx
@@ -408,8 +1456,7 @@ std::wstring *CarAvatar::getCurrentCompoundShortName()
   std::wstring::assign(result, v4, 0, 0xFFFFFFFF);
   return result;
 }
-
-int CarAvatar::getCurrentCompoundStaticPressure(unsigned uint16_t tyreIndex)
+int CarAvatar::getCurrentCompoundStaticPressure(CarAvatar *this, unsigned __int16 tyreIndex)
 {
   Car *v2; // esi
   int v3; // edi
@@ -429,8 +1476,7 @@ int CarAvatar::getCurrentCompoundStaticPressure(unsigned uint16_t tyreIndex)
   }
   return result;
 }
-
-void CarAvatar::getDistancesOnSpline(CarAvatar *car, float *frontDistance, float *backDistance)
+void CarAvatar::getDistancesOnSpline(CarAvatar *this, CarAvatar *car, float *frontDistance, float *backDistance)
 {
   AISpline *v4; // eax
   float track_length; // [esp+4h] [ebp+4h]
@@ -446,8 +1492,7 @@ void CarAvatar::getDistancesOnSpline(CarAvatar *car, float *frontDistance, float
   *frontDistance = *frontDistance * track_length;
   *backDistance = *backDistance * track_length;
 }
-
-std::pair<int,std::wstring > *CarAvatar::getERSPower()
+std::pair<int,std::wstring > *CarAvatar::getERSPower(CarAvatar *this, std::pair<int,std::wstring > *result)
 {
   std::wstring *v3; // ecx
   ERSPowerController *v4; // edx
@@ -466,8 +1511,7 @@ std::pair<int,std::wstring > *CarAvatar::getERSPower()
   }
   return result;
 }
-
-double CarAvatar::getEdlOutLevel()
+double CarAvatar::getEdlOutLevel(CarAvatar *this)
 {
   Car *v1; // eax
   double result; // st7
@@ -479,8 +1523,7 @@ double CarAvatar::getEdlOutLevel()
     result = 0.0;
   return result;
 }
-
-double CarAvatar::getFFMult()
+double CarAvatar::getFFMult(CarAvatar *this)
 {
   Car *v1; // eax
   double result; // st7
@@ -492,8 +1535,7 @@ double CarAvatar::getFFMult()
     result = 0.0;
   return result;
 }
-
-double CarAvatar::getGraphicSteerDeg()
+double CarAvatar::getGraphicSteerDeg(CarAvatar *this)
 {
   Car *v1; // eax
   double result; // st7
@@ -504,8 +1546,7 @@ double CarAvatar::getGraphicSteerDeg()
     result = result / v1->steerLock * this->graphicSteerLockDegrees;
   return result;
 }
-
-vec3f *CarAvatar::getGraphicsOffset()
+vec3f *CarAvatar::getGraphicsOffset(CarAvatar *this, vec3f *result)
 {
   vec3f *v2; // eax
   __int64 v3; // xmm0_8
@@ -518,13 +1559,11 @@ vec3f *CarAvatar::getGraphicsOffset()
   result->z = v4;
   return v2;
 }
-
-int CarAvatar::getGuid()
+int CarAvatar::getGuid(CarAvatar *this)
 {
   return this->guid;
 }
-
-double CarAvatar::getKmPerLiter()
+double CarAvatar::getKmPerLiter(CarAvatar *this)
 {
   Car *v1; // eax
 
@@ -533,8 +1572,7 @@ double CarAvatar::getKmPerLiter()
     return 0.0;
   return (float)(v1->fuelLapEvaluator.totalM * 0.001 / v1->fuelLapEvaluator.totalLiters);
 }
-
-double CarAvatar::getPackerRange(int index)
+double CarAvatar::getPackerRange(CarAvatar *this, int index)
 {
   Car *v2; // ecx
   ISuspension *v3; // ecx
@@ -547,8 +1585,7 @@ double CarAvatar::getPackerRange(int index)
   v3->getPackerRange(v3);
   return result;
 }
-
-PitStopTime *CarAvatar::getPitstopTime(float fuel_requested, bool changeTyres, bool repairBody, bool repairEngine, bool repairSus, bool useRandomizer)
+PitStopTime *CarAvatar::getPitstopTime(CarAvatar *this, PitStopTime *result, float fuel_requested, bool changeTyres, bool repairBody, bool repairEngine, bool repairSus, bool useRandomizer)
 {
   Car *v8; // ecx
   float *v9; // eax
@@ -576,8 +1613,7 @@ PitStopTime *CarAvatar::getPitstopTime(float fuel_requested, bool changeTyres, b
   }
   return v10;
 }
-
-double CarAvatar::getRestrictor()
+double CarAvatar::getRestrictor(CarAvatar *this)
 {
   double result; // st7
   NetCarStateProvider *v2; // eax
@@ -591,8 +1627,7 @@ double CarAvatar::getRestrictor()
     result = 0.0;
   return result;
 }
-
-vec3f *CarAvatar::getRoadDirection()
+vec3f *CarAvatar::getRoadDirection(CarAvatar *this, vec3f *result)
 {
   Sim *v2; // eax
   AISpline *v3; // eax
@@ -604,8 +1639,7 @@ vec3f *CarAvatar::getRoadDirection()
   Spline::getSplineDirection(&v3->spline, result, &point);
   return result;
 }
-
-std::wstring *CarAvatar::getScreenName()
+std::wstring *CarAvatar::getScreenName(CarAvatar *this, std::wstring *result)
 {
   Car *v2; // ecx
 
@@ -619,8 +1653,7 @@ std::wstring *CarAvatar::getScreenName()
     std::wstring::assign(result, L"REMOTE_CAR", 0xAu);
   return result;
 }
-
-SetupManager *CarAvatar::getSetupManager()
+SetupManager *CarAvatar::getSetupManager(CarAvatar *this)
 {
   Car *v1; // eax
   SetupManager *result; // eax
@@ -632,8 +1665,7 @@ SetupManager *CarAvatar::getSetupManager()
     result = 0;
   return result;
 }
-
-unsigned int CarAvatar::getSpawnPositionIndex(std::wstring setName)
+unsigned int CarAvatar::getSpawnPositionIndex(CarAvatar *this, std::wstring setName)
 {
   unsigned int result; // eax
   unsigned int v3; // esi
@@ -647,8 +1679,7 @@ unsigned int CarAvatar::getSpawnPositionIndex(std::wstring setName)
   }
   return result;
 }
-
-double CarAvatar::getStabilityControl()
+double CarAvatar::getStabilityControl(CarAvatar *this)
 {
   Car *v1; // eax
   double result; // st7
@@ -660,8 +1691,7 @@ double CarAvatar::getStabilityControl()
     result = 0.0;
   return result;
 }
-
-std::vector<DebugLine> *CarAvatar::getSuspensionDebugLines(std::vector<DebugLine> *result, int index)
+std::vector<DebugLine> *CarAvatar::getSuspensionDebugLines(CarAvatar *this, std::vector<DebugLine> *result, int index)
 {
   ISuspension *v4; // ecx
 
@@ -669,8 +1699,7 @@ std::vector<DebugLine> *CarAvatar::getSuspensionDebugLines(std::vector<DebugLine
   v4->getDebugLines(v4, result, &this->physicsState.worldMatrix, &this->physicsState.suspensionMatrix[index]);
   return result;
 }
-
-std::pair<unsigned int,unsigned int> *CarAvatar::getTCMode()
+std::pair<unsigned int,unsigned int> *CarAvatar::getTCMode(CarAvatar *this, std::pair<unsigned int,unsigned int> *result)
 {
   Car *v2; // ecx
   std::pair<unsigned int,unsigned int> *v3; // eax
@@ -689,8 +1718,7 @@ std::pair<unsigned int,unsigned int> *CarAvatar::getTCMode()
   }
   return v3;
 }
-
-double CarAvatar::getTimeDifferenceOnSpline(CarAvatar *car)
+double CarAvatar::getTimeDifferenceOnSpline(CarAvatar *this, CarAvatar *car)
 {
   CarAvatar *v2; // edi
   float v4; // xmm1_4
@@ -740,8 +1768,7 @@ double CarAvatar::getTimeDifferenceOnSpline(CarAvatar *car)
   }
   return result;
 }
-
-TimeTransponder *CarAvatar::getTimeTransponder()
+TimeTransponder *CarAvatar::getTimeTransponder(CarAvatar *this)
 {
   Car *v1; // eax
   TimeTransponder *result; // eax
@@ -753,8 +1780,7 @@ TimeTransponder *CarAvatar::getTimeTransponder()
     result = 0;
   return result;
 }
-
-std::wstring *CarAvatar::getTyreCompound(unsigned int index, bool fullname)
+std::wstring *CarAvatar::getTyreCompound(CarAvatar *this, std::wstring *result, unsigned int index, bool fullname)
 {
   int v4; // edx
   std::wstring *v5; // eax
@@ -790,18 +1816,15 @@ std::wstring *CarAvatar::getTyreCompound(unsigned int index, bool fullname)
   }
   return v6;
 }
-
-int CarAvatar::getTyreCompoundIndex(unsigned int tyre_index)
+int CarAvatar::getTyreCompoundIndex(CarAvatar *this, unsigned int tyre_index)
 {
   return this->currentTyreCompoundIndex[tyre_index];
 }
-
-double CarAvatar::getUserFFGain()
+double CarAvatar::getUserFFGain(CarAvatar *this)
 {
   return this->userFFGain;
 }
-
-double CarAvatar::getWingAngle(int wingIndex)
+double CarAvatar::getWingAngle(CarAvatar *this, int wingIndex)
 {
   Car *v2; // ecx
   int v3; // eax
@@ -819,9 +1842,7 @@ double CarAvatar::getWingAngle(int wingIndex)
     result = v4[v3].status.angle;
   return result;
 }
-
-//----- (005C93D0) --------------------------------------------------------
-void CarAvatar::goToSpawnPosition(const std::wstring *setName)
+void CarAvatar::goToSpawnPosition(CarAvatar *this, const std::wstring *setName)
 {
   const std::wstring *v3; // eax
   unsigned int v4; // eax
@@ -840,9 +1861,7 @@ void CarAvatar::goToSpawnPosition(const std::wstring *setName)
     FuelLapEvaluator::setIgnoreLap(&v5->fuelLapEvaluator, 1);
   CarAvatar::forcePosition(this, &pos);
 }
-
-//----- (005C9450) --------------------------------------------------------
-long double CarAvatar::hasPenalty()
+long double CarAvatar::hasPenalty(CarAvatar *this)
 {
   Car *v1; // ecx
   long double result; // st7
@@ -854,9 +1873,7 @@ long double CarAvatar::hasPenalty()
     result = 0.0;
   return result;
 }
-
-//----- (005C9470) --------------------------------------------------------
-void CarAvatar::init3D(std::wstring skin)
+void CarAvatar::init3D(CarAvatar *this, std::wstring skin)
 {
   unsigned int v3; // ebx
   std::wstring *v4; // ecx
@@ -1370,8 +2387,7 @@ LABEL_86:
   if ( skin._Myres >= 8 )
     operator delete(skin._Bx._Ptr);
 }
-
-void __usercall CarAvatar::initCameraCar(@<ecx>, __m128 a2@<xmm0>)
+void __usercall CarAvatar::initCameraCar(CarAvatar *this@<ecx>, __m128 a2@<xmm0>)
 {
   std::wstring *v3; // eax
   const std::wstring *v4; // eax
@@ -1897,8 +2913,7 @@ void __usercall CarAvatar::initCameraCar(@<ecx>, __m128 a2@<xmm0>)
   v85 = -1;
   INIReader::~INIReader(&v78);
 }
-
-void CarAvatar::initCommon()
+void CarAvatar::initCommon(CarAvatar *this)
 {
   char v2; // bl
   std::wstring *v3; // ebp
@@ -2374,8 +3389,7 @@ LABEL_48:
   if ( carINIPath._Myres >= 8 )
     operator delete(carINIPath._Bx._Ptr);
 }
-
-void CarAvatar::initCommonPostPhysics()
+void CarAvatar::initCommonPostPhysics(CarAvatar *this)
 {
   float v2; // xmm1_4
   char v3; // bl
@@ -3327,8 +4341,7 @@ void CarAvatar::initCommonPostPhysics()
   v155 = -1;
   INIReader::~INIReader(&smini);
 }
-
-void __usercall CarAvatar::initControls(@<ecx>, char a2@<bl>)
+void __usercall CarAvatar::initControls(CarAvatar *this@<ecx>, char a2@<bl>)
 {
   DICarControl *v3; // eax
   ICarControlsProvider *v4; // eax
@@ -3443,15 +4456,7 @@ void __usercall CarAvatar::initControls(@<ecx>, char a2@<bl>)
     INIReaderDocuments::~INIReaderDocuments(&ini);
   }
 }
-// 5CD623: variable 'v4' is possibly undefined
-// 5CD688: variable 'v7' is possibly undefined
-// 5CD6E4: variable 'v10' is possibly undefined
-// 5CD740: variable 'v13' is possibly undefined
-// 78E1CE: using guessed type int __cdecl operator new(_DWORD);
-// 78E1D4: using guessed type int __cdecl operator delete(_DWORD);
-
-//----- (005CD7B0) --------------------------------------------------------
-void __usercall CarAvatar::initDriver(@<ecx>, unsigned int a2@<ebx>)
+void __usercall CarAvatar::initDriver(CarAvatar *this@<ecx>, unsigned int a2@<ebx>)
 {
   std::wstring *v3; // eax
   const std::wstring *v4; // eax
@@ -3522,13 +4527,7 @@ void __usercall CarAvatar::initDriver(@<ecx>, unsigned int a2@<ebx>)
     this->bodyTransform->addChild(this->bodyTransform, this->driverModel_LR->driver_root);
   }
 }
-// 5CD8B4: variable 'v7' is possibly undefined
-// 5CD920: variable 'v10' is possibly undefined
-// 78E1CE: using guessed type int __cdecl operator new(_DWORD);
-// 78E1D4: using guessed type int __cdecl operator delete(_DWORD);
-
-//----- (005CD980) --------------------------------------------------------
-void CarAvatar::initGhostCar(bool isRecording, BOOL isPlaying)
+void CarAvatar::initGhostCar(CarAvatar *this, bool isRecording, BOOL isPlaying)
 {
   Car *v4; // eax
   GhostCarRecorder *v5; // eax
@@ -3574,12 +4573,7 @@ void CarAvatar::initGhostCar(bool isRecording, BOOL isPlaying)
     *(_DWORD *)(v10 + 36) = this;
   }
 }
-// 5CDA01: variable 'v6' is possibly undefined
-// 5CDA49: variable 'v9' is possibly undefined
-// 78E1CE: using guessed type int __cdecl operator new(_DWORD);
-
-//----- (005CDA80) --------------------------------------------------------
-void CarAvatar::initMirrorMaterials()
+void CarAvatar::initMirrorMaterials(CarAvatar *this)
 {
   ICollisionObject *v2; // eax
   ICollisionObject *v3; // eax
@@ -3607,11 +4601,7 @@ void CarAvatar::initMirrorMaterials()
     v4[9].__vftable = (ICollisionObject_vtbl *)this;
   }
 }
-// 5CDAE2: variable 'v3' is possibly undefined
-// 78E1CE: using guessed type int __cdecl operator new(_DWORD);
-
-//----- (005CDB20) --------------------------------------------------------
-void __usercall CarAvatar::initPhysics(@<ecx>, char a2@<bl>, __m128 a3@<xmm3>, __m128 a4@<xmm4>)
+void __usercall CarAvatar::initPhysics(CarAvatar *this@<ecx>, char a2@<bl>, __m128 a3@<xmm3>, __m128 a4@<xmm4>)
 {
   CarAvatar *v4; // edi
   int v5; // eax
@@ -4394,34 +5384,7 @@ LABEL_73:
   v138 = -1;
   ErrorBlob::~ErrorBlob(&v119);
 }
-// 5CDC1C: variable 'v9' is possibly undefined
-// 5CE34C: variable 'v60' is possibly undefined
-// 5CE819: variable 'v90' is possibly undefined
-// 5CEA07: variable 'v92' is possibly undefined
-// 78E1CE: using guessed type int __cdecl operator new(_DWORD);
-// 78E1D4: using guessed type int __cdecl operator delete(_DWORD);
-// 78E358: using guessed type int __cdecl __RTDynamicCast(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD);
-// 89278C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_21d2bc46b57398bfae7fef3b7ac4d66f_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-// 8927AC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_6e1b510aee438ddd7ada08f7ff0b30e0_,0>,std::allocator<std::_Func_class<void,OnLapCompletedEvent const &>>,void,OnLapCompletedEvent const &>::`vftable';
-// 8927CC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_d99b5d3b5c4cdd889728c1c781509766_,0>,std::allocator<std::_Func_class<void,OnSectorSplitEvent const &>>,void,OnSectorSplitEvent const &>::`vftable';
-// 8927EC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_b2a641b87b72d2a0d3338d9f168de1ea_,0>,std::allocator<std::_Func_class<void,std::pair<int,int> const &>>,void,std::pair<int,int> const &>::`vftable';
-// 89280C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_00b212ba64b49c859d631241c9189281_,0>,std::allocator<std::_Func_class<void,OnNewSessionEvent const &>>,void,OnNewSessionEvent const &>::`vftable';
-// 89282C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_7d5b8bdd81bacc0d5b732cf601aab567_,0>,std::allocator<std::_Func_class<bool,std::wstring>>,bool,std::wstring>::`vftable';
-// 89284C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_9f8ec50c785701d61ef10e4025ebf7de_,0>,std::allocator<std::_Func_class<std::wstring,>>,std::wstring,>::`vftable';
-// 17CC400: using guessed type __int128 _xmm;
-// 17CC450: using guessed type __int128 _xmm;
-// 17CC460: using guessed type __int128 _xmm;
-// 17CC4F0: using guessed type __int128 _xmm;
-// 17CC5A0: using guessed type __int128 _xmm;
-// 184053C: using guessed type struct Mesh Mesh `RTTI Type Descriptor';
-// 1847280: using guessed type struct ISuspension ISuspension `RTTI Type Descriptor';
-// 184729C: using guessed type struct Suspension Suspension `RTTI Type Descriptor';
-// 185F62C: using guessed type struct Node Node `RTTI Type Descriptor';
-// 18600E0: using guessed type struct GameObject GameObject `RTTI Type Descriptor';
-// 1861E2C: using guessed type struct PhysicsAvatar PhysicsAvatar `RTTI Type Descriptor';
-
-//----- (005CF0A0) --------------------------------------------------------
-bool CarAvatar::isAbsAvailable()
+bool CarAvatar::isAbsAvailable(CarAvatar *this)
 {
   Car *v1; // eax
   bool result; // al
@@ -4433,9 +5396,7 @@ bool CarAvatar::isAbsAvailable()
     result = 0;
   return result;
 }
-
-//----- (005CF0C0) --------------------------------------------------------
-bool CarAvatar::isAbsEnabled()
+bool CarAvatar::isAbsEnabled(CarAvatar *this)
 {
   Car *v1; // eax
 
@@ -4444,9 +5405,7 @@ bool CarAvatar::isAbsEnabled()
     return 0;
   return v1->abs.isActive && v1->abs.isPresent;
 }
-
-//----- (005CF0F0) --------------------------------------------------------
-bool CarAvatar::isAbsInAction()
+bool CarAvatar::isAbsInAction(CarAvatar *this)
 {
   float *v1; // edx
 
@@ -4455,15 +5414,11 @@ bool CarAvatar::isAbsInAction()
     return 0;
   return this->physicsState.brake > 0.1 && (v1[716] != 1.0 || v1[1124] != 1.0 || v1[1532] != 1.0 || v1[1940] != 1.0);
 }
-
-//----- (005CF170) --------------------------------------------------------
-bool CarAvatar::isConnected()
+bool CarAvatar::isConnected(CarAvatar *this)
 {
   return this->carNode->isActive;
 }
-
-//----- (005CF180) --------------------------------------------------------
-bool CarAvatar::isCurrentLapValid()
+bool CarAvatar::isCurrentLapValid(CarAvatar *this)
 {
   Car *v2; // ecx
   bool result; // al
@@ -4474,9 +5429,7 @@ bool CarAvatar::isCurrentLapValid()
     result = TimeTransponder::getCuts(&v2->transponder) == 0;
   return result;
 }
-
-//----- (005CF1C0) --------------------------------------------------------
-bool CarAvatar::isEdlEnabled()
+bool CarAvatar::isEdlEnabled(CarAvatar *this)
 {
   Car *v1; // eax
 
@@ -4485,9 +5438,7 @@ bool CarAvatar::isEdlEnabled()
     return 0;
   return v1->edl.isActive && v1->edl.isPresent;
 }
-
-//----- (005CF1F0) --------------------------------------------------------
-BOOL CarAvatar::isInPit()
+BOOL CarAvatar::isInPit(CarAvatar *this)
 {
   float v1; // xmm1_4
   float v2; // xmm2_4
@@ -4506,15 +5457,11 @@ BOOL CarAvatar::isInPit()
     v3 = fsqrt(v4);
   return v3 < 1.5;
 }
-
-//----- (005CF260) --------------------------------------------------------
-bool CarAvatar::isInPitlane()
+bool CarAvatar::isInPitlane(CarAvatar *this)
 {
   return this->inPitlane;
 }
-
-//----- (005CF270) --------------------------------------------------------
-BOOL CarAvatar::isInSpawnPosition(const std::wstring *setName)
+BOOL CarAvatar::isInSpawnPosition(CarAvatar *this, const std::wstring *setName)
 {
   Sim *v3; // ebx
   GameObject **v4; // esi
@@ -4560,12 +5507,7 @@ LABEL_4:
     v7 = fsqrt(v8);
   return v7 < 1.0;
 }
-// 78E358: using guessed type int __cdecl __RTDynamicCast(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD);
-// 18600E0: using guessed type struct GameObject GameObject `RTTI Type Descriptor';
-// 1861908: using guessed type struct TrackAvatar TrackAvatar `RTTI Type Descriptor';
-
-//----- (005CF350) --------------------------------------------------------
-bool CarAvatar::isMinSpeedPenaltyClearDisabled()
+bool CarAvatar::isMinSpeedPenaltyClearDisabled(CarAvatar *this)
 {
   Car *v1; // ecx
   bool result; // al
@@ -4577,15 +5519,7 @@ bool CarAvatar::isMinSpeedPenaltyClearDisabled()
     result = 0;
   return result;
 }
-
-//----- (005CF370) --------------------------------------------------------
-bool Kers::isPresent(Kers *this)
-{
-  return this->present;
-}
-
-//----- (005CF380) --------------------------------------------------------
-bool CarAvatar::isRequestingPitStop()
+bool CarAvatar::isRequestingPitStop(CarAvatar *this)
 {
   Car *v1; // eax
   bool result; // al
@@ -4597,9 +5531,7 @@ bool CarAvatar::isRequestingPitStop()
     result = 0;
   return result;
 }
-
-//----- (005CF3A0) --------------------------------------------------------
-bool CarAvatar::isTcAvailable()
+bool CarAvatar::isTcAvailable(CarAvatar *this)
 {
   Car *v1; // eax
   bool result; // al
@@ -4611,9 +5543,7 @@ bool CarAvatar::isTcAvailable()
     result = 0;
   return result;
 }
-
-//----- (005CF3C0) --------------------------------------------------------
-bool CarAvatar::isTcEnabled()
+bool CarAvatar::isTcEnabled(CarAvatar *this)
 {
   Car *v1; // eax
 
@@ -4622,9 +5552,7 @@ bool CarAvatar::isTcEnabled()
     return 0;
   return v1->tractionControl.isActive && v1->tractionControl.isPresent;
 }
-
-//----- (005CF3F0) --------------------------------------------------------
-bool CarAvatar::isTcInAction()
+bool CarAvatar::isTcInAction(CarAvatar *this)
 {
   Car *v1; // eax
   bool result; // al
@@ -4636,21 +5564,11 @@ bool CarAvatar::isTcInAction()
     result = 0;
   return result;
 }
-
-//----- (005CF410) --------------------------------------------------------
-bool CarAvatar::isVisible()
+bool CarAvatar::isVisible(CarAvatar *this)
 {
   return this->bodyTransform->isActive;
 }
-
-//----- (005CF420) --------------------------------------------------------
-bool Sim::isVrRoom(Sim *this)
-{
-  return this->isRoomVR;
-}
-
-//----- (005CF430) --------------------------------------------------------
-void CarAvatar::lockControlsUntilTime(long double time, long double start, bool forceToPits)
+void CarAvatar::lockControlsUntilTime(CarAvatar *this, long double time, long double start, bool forceToPits)
 {
   std::function<void __cdecl(void)> v5; // [esp-18h] [ebp-34h] BYREF
   CarAvatar::lockControlsUntilTime::__l13::<lambda_d1ac94c667261f9685880a1644e28d33> _Func; // [esp+4h] [ebp-18h] BYREF
@@ -4665,9 +5583,7 @@ void CarAvatar::lockControlsUntilTime(long double time, long double start, bool 
     PhysicsAvatar::executeOnPhysicsThread(this->sim->physicsAvatar, v5);
   }
 }
-
-//----- (005CF490) --------------------------------------------------------
-void __userpurge CarAvatar::makeBodyMatrix(@<ecx>, int a2@<edi>, int a3@<esi>, const mat44f *bm, mat44f *res)
+void __userpurge CarAvatar::makeBodyMatrix(CarAvatar *this@<ecx>, int a2@<edi>, int a3@<esi>, const mat44f *bm, mat44f *res)
 {
   float v6; // xmm3_4
   float v7; // xmm5_4
@@ -4730,54 +5646,7 @@ void __userpurge CarAvatar::makeBodyMatrix(@<ecx>, int a2@<edi>, int a3@<esi>, c
     *(_OWORD *)&res->M41 = v16;
   }
 }
-// 5CF490: could not find valid save-restore pair for edi
-// 5CF490: could not find valid save-restore pair for esi
-// 78E7F2: using guessed type __m128 __stdcall __libm_sse2_cosf(_DWORD, _DWORD);
-// 78E7F8: using guessed type __m128 __libm_sse2_sinf(void);
-
-//----- (005CF6B0) --------------------------------------------------------
-void __cdecl makeTyresDoubleFacedShadows(Node *node)
-{
-  int v1; // eax
-  int v2; // esi
-  Node **v3; // esi
-  int v4; // edi
-  unsigned int v5; // ebx
-
-  v1 = __RTDynamicCast(node, 0, &Node `RTTI Type Descriptor', &Mesh `RTTI Type Descriptor', 0);
-  v2 = v1;
-  if ( v1
-    && !std::wstring::compare(
-          (std::wstring *)(*(_DWORD *)(*(_DWORD *)(v1 + 248) + 24) + 4),
-          0,
-          *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(v1 + 248) + 24) + 20),
-          L"ksTyres",
-          7u) )
-  {
-    *(_BYTE *)(*(_DWORD *)(v2 + 248) + 100) = 1;
-  }
-  v3 = node->nodes._Myfirst;
-  v4 = 0;
-  v5 = (unsigned int)((char *)node->nodes._Mylast - (char *)v3 + 3) >> 2;
-  if ( v3 > node->nodes._Mylast )
-    v5 = 0;
-  if ( v5 )
-  {
-    do
-    {
-      makeTyresDoubleFacedShadows(*v3);
-      ++v4;
-      ++v3;
-    }
-    while ( v4 != v5 );
-  }
-}
-// 78E358: using guessed type int __cdecl __RTDynamicCast(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD);
-// 184053C: using guessed type struct Mesh Mesh `RTTI Type Descriptor';
-// 185F62C: using guessed type struct Node Node `RTTI Type Descriptor';
-
-//----- (005CF740) --------------------------------------------------------
-double CarAvatar::modifyUserFFGain(float offset)
+double CarAvatar::modifyUserFFGain(CarAvatar *this, float offset)
 {
   float v3; // xmm0_4
   float v4; // xmm1_4
@@ -4808,11 +5677,7 @@ double CarAvatar::modifyUserFFGain(float offset)
   }
   return this->userFFGain;
 }
-// 892B4C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_db015e9c94bad3e0f44628fbe783c09e_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-// 17CC21C: using guessed type const float FLOAT_200_0;
-
-//----- (005CF800) --------------------------------------------------------
-void CarAvatar::onNewSession()
+void CarAvatar::onNewSession(CarAvatar *this)
 {
   Session *v2; // eax
   Sim *v3; // ecx
@@ -4841,11 +5706,7 @@ void CarAvatar::onNewSession()
     PhysicsAvatar::executeOnPhysicsThread(v3->physicsAvatar, v4);
   }
 }
-// 78E1D4: using guessed type int __cdecl operator delete(_DWORD);
-// 892AAC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_33c5f6518538af62fe8724a8493e6b8e_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005CF900) --------------------------------------------------------
-void CarAvatar::onPostLoad(unsigned int a2@<ebx>)
+void __usercall CarAvatar::onPostLoad(CarAvatar *this@<ecx>, unsigned int a2@<ebx>)
 {
   ICollisionObject *v3; // eax
   ICollisionObject *v4; // eax
@@ -4902,17 +5763,7 @@ void CarAvatar::onPostLoad(unsigned int a2@<ebx>)
     Event<std::wstring>::addHandler((Event<OnPhysicsStepCompleted> *)(v8 + 64), v9[0], this);
   }
 }
-// 5CF94E: variable 'v4' is possibly undefined
-// 78E1CE: using guessed type int __cdecl operator new(_DWORD);
-// 78E358: using guessed type int __cdecl __RTDynamicCast(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD);
-// 8928CC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_be99df9070aa0c099bca5887c9856fd4_,0>,std::allocator<std::_Func_class<void,int const &>>,void,int const &>::`vftable';
-// 8928EC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_62b6e2b8032ba7c6f0fdf3e52f500a08_,0>,std::allocator<std::_Func_class<void,bool const &>>,void,bool const &>::`vftable';
-// 89290C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_7eaf1073bac1e48eea38acd85c1f65ee_,0>,std::allocator<std::_Func_class<void,bool const &>>,void,bool const &>::`vftable';
-// 18472DC: using guessed type struct ReplayManager ReplayManager `RTTI Type Descriptor';
-// 18600E0: using guessed type struct GameObject GameObject `RTTI Type Descriptor';
-
-//----- (005CFA40) --------------------------------------------------------
-void CarAvatar::onStartReplay(const bool *mode)
+void CarAvatar::onStartReplay(CarAvatar *this, const bool *mode)
 {
   SkidMarkBuffer **v3; // esi
   int v4; // ebx
@@ -4977,12 +5828,7 @@ LABEL_8:
     }
   }
 }
-// 78E358: using guessed type int __cdecl __RTDynamicCast(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD);
-// 18472F8: using guessed type struct ReplayRecorder ReplayRecorder `RTTI Type Descriptor';
-// 18600E0: using guessed type struct GameObject GameObject `RTTI Type Descriptor';
-
-//----- (005CFB40) --------------------------------------------------------
-void CarAvatar::onStopReplay(const bool *mode)
+void CarAvatar::onStopReplay(CarAvatar *this, const bool *mode)
 {
   GameObject **i; // esi
   ICarPhysicsStateProvider *v4; // eax
@@ -5018,13 +5864,7 @@ void CarAvatar::onStopReplay(const bool *mode)
   }
   this->nonReplayPhysicsStateProvider = 0;
 }
-// 78E1D4: using guessed type int __cdecl operator delete(_DWORD);
-// 78E358: using guessed type int __cdecl __RTDynamicCast(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD);
-// 18472F8: using guessed type struct ReplayRecorder ReplayRecorder `RTTI Type Descriptor';
-// 18600E0: using guessed type struct GameObject GameObject `RTTI Type Descriptor';
-
-//----- (005CFC50) --------------------------------------------------------
-INIReader *CarAvatar::openINI(INIReader *result, const std::wstring *filename)
+INIReader *CarAvatar::openINI(CarAvatar *this, INIReader *result, const std::wstring *filename)
 {
   std::wstring *v4; // esi
   std::wstring *v5; // eax
@@ -5102,10 +5942,7 @@ LABEL_20:
     operator delete(config_data_folder_file._Bx._Ptr);
   return result;
 }
-// 78E1D4: using guessed type int __cdecl operator delete(_DWORD);
-
-//----- (005CFFC0) --------------------------------------------------------
-void CarAvatar::resetFlames()
+void CarAvatar::resetFlames(CarAvatar *this)
 {
   GameObject **v2; // esi
   Flames *v3; // eax
@@ -5124,19 +5961,12 @@ void CarAvatar::resetFlames()
     Flames::reset(v3);
   }
 }
-// 78E358: using guessed type int __cdecl __RTDynamicCast(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD);
-// 1847330: using guessed type struct Flames Flames `RTTI Type Descriptor';
-// 18600E0: using guessed type struct GameObject GameObject `RTTI Type Descriptor';
-
-//----- (005D0000) --------------------------------------------------------
-void CarAvatar::resetMultVolume()
+void CarAvatar::resetMultVolume(CarAvatar *this)
 {
   this->carAudioFMOD->mixVolumes.tyresMult = 1.0;
   this->carAudioFMOD->mixVolumes.engineMult = 1.0;
 }
-
-//----- (005D0030) --------------------------------------------------------
-void CarAvatar::resetPenalty(bool isTotalReset)
+void CarAvatar::resetPenalty(CarAvatar *this, bool isTotalReset)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5154,10 +5984,7 @@ void CarAvatar::resetPenalty(bool isTotalReset)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892B0C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_056f802c574fdbb7f83b7b9158a49803_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D00B0) --------------------------------------------------------
-void CarAvatar::resetTimeTransponder()
+void CarAvatar::resetTimeTransponder(CarAvatar *this)
 {
   Sim *v1; // ecx
   std::function<void __cdecl(void)> v2; // [esp-18h] [ebp-30h] BYREF
@@ -5173,10 +6000,7 @@ void CarAvatar::resetTimeTransponder()
     PhysicsAvatar::executeOnPhysicsThread(v1->physicsAvatar, v2);
   }
 }
-// 892AAC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_33c5f6518538af62fe8724a8493e6b8e_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0120) --------------------------------------------------------
-void CarAvatar::setAbsEnabled(bool mode, bool force)
+void CarAvatar::setAbsEnabled(CarAvatar *this, bool mode, bool force)
 {
   Sim *v3; // ecx
   std::function<void __cdecl(void)> v4; // [esp-18h] [ebp-34h] BYREF
@@ -5195,10 +6019,7 @@ void CarAvatar::setAbsEnabled(bool mode, bool force)
     PhysicsAvatar::executeOnPhysicsThread(v3->physicsAvatar, v4);
   }
 }
-// 89294C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_4901d67fd949aea2695f20fd3ff4f918_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D01B0) --------------------------------------------------------
-void CarAvatar::setAutoBlip(bool mode)
+void CarAvatar::setAutoBlip(CarAvatar *this, bool mode)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5216,10 +6037,7 @@ void CarAvatar::setAutoBlip(bool mode)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 8929CC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_9178bbef4882a0348f3bb36b5f6a03f4_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0230) --------------------------------------------------------
-void CarAvatar::setAutoClutchEnabled(bool mode)
+void CarAvatar::setAutoClutchEnabled(CarAvatar *this, bool mode)
 {
   Car *v3; // ecx
   ICarControlsProvider *v4; // eax
@@ -5240,9 +6058,7 @@ void CarAvatar::setAutoClutchEnabled(bool mode)
     }
   }
 }
-
-//----- (005D0290) --------------------------------------------------------
-void CarAvatar::setAutoShifter(bool mode)
+void CarAvatar::setAutoShifter(CarAvatar *this, bool mode)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5260,10 +6076,7 @@ void CarAvatar::setAutoShifter(bool mode)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892A0C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_b6dea921543dec5aeabe68da18dd931c_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0310) --------------------------------------------------------
-void CarAvatar::setBallastKG(float ballast)
+void CarAvatar::setBallastKG(CarAvatar *this, float ballast)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5281,10 +6094,7 @@ void CarAvatar::setBallastKG(float ballast)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892BEC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_3f31443afbdaf5b80a4187021ab89a3b_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0390) --------------------------------------------------------
-void CarAvatar::setBlackFlag(PenaltyDescription descr)
+void CarAvatar::setBlackFlag(CarAvatar *this, PenaltyDescription descr)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-2Ch] BYREF
@@ -5300,10 +6110,7 @@ void CarAvatar::setBlackFlag(PenaltyDescription descr)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892B8C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_8da18ebd38ce3b17e93a086d8b386755_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0400) --------------------------------------------------------
-void CarAvatar::setControlsLock(bool value)
+void CarAvatar::setControlsLock(CarAvatar *this, bool value)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5321,10 +6128,7 @@ void CarAvatar::setControlsLock(bool value)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892A2C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_87512cd7822b1b0942f6a06efe0f503e_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0480) --------------------------------------------------------
-void CarAvatar::setControlsProvider(ICarControlsProvider *controls)
+void CarAvatar::setControlsProvider(CarAvatar *this, ICarControlsProvider *controls)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-2Ch] BYREF
@@ -5340,10 +6144,7 @@ void CarAvatar::setControlsProvider(ICarControlsProvider *controls)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 8928AC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_b6b080bf082dbf8c438fa78df5fb4ceb_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D04F0) --------------------------------------------------------
-void CarAvatar::setDamageLevel(float lvl)
+void CarAvatar::setDamageLevel(CarAvatar *this, float lvl)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5361,10 +6162,7 @@ void CarAvatar::setDamageLevel(float lvl)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892A6C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_9d2a8902c54476f1d9eaae39e5d5e3dc_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0570) --------------------------------------------------------
-void CarAvatar::setDriverInfo(const DriverInfo *info)
+void CarAvatar::setDriverInfo(CarAvatar *this, const DriverInfo *info)
 {
   DriverInfo *v3; // edi
   Sim *v4; // ecx
@@ -5396,9 +6194,7 @@ void CarAvatar::setDriverInfo(const DriverInfo *info)
     SetupItemText::~SetupItemText((DriverInfo *)&_Val.info);
   }
 }
-
-//----- (005D0690) --------------------------------------------------------
-void CarAvatar::setFFMult(float mult)
+void CarAvatar::setFFMult(CarAvatar *this, float mult)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5416,10 +6212,7 @@ void CarAvatar::setFFMult(float mult)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892B2C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_c661273354399506f15d61a79db73e0f_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0710) --------------------------------------------------------
-void CarAvatar::setGentleStop(bool mode)
+void CarAvatar::setGentleStop(CarAvatar *this, bool mode)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5437,10 +6230,7 @@ void CarAvatar::setGentleStop(bool mode)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892A4C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_b76d4e82898b94b9125c3d59067df2bc_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0790) --------------------------------------------------------
-void CarAvatar::setGraphicsOffset(vec3f np)
+void CarAvatar::setGraphicsOffset(CarAvatar *this, vec3f np)
 {
   float v2; // eax
 
@@ -5448,15 +6238,11 @@ void CarAvatar::setGraphicsOffset(vec3f np)
   *(_QWORD *)&this->graphicsOffset.x = *(_QWORD *)&np.x;
   this->graphicsOffset.z = v2;
 }
-
-//----- (005D07B0) --------------------------------------------------------
-void CarAvatar::setGraphicsPitchRotation(float v)
+void CarAvatar::setGraphicsPitchRotation(CarAvatar *this, float v)
 {
   this->graphicsPitchRotation = v;
 }
-
-//----- (005D07D0) --------------------------------------------------------
-void CarAvatar::setHeadlights(bool value)
+void CarAvatar::setHeadlights(CarAvatar *this, bool value)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5474,10 +6260,7 @@ void CarAvatar::setHeadlights(bool value)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892C8C: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_172641183db25f7a95167a564fb472cc_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0850) --------------------------------------------------------
-void CarAvatar::setMultVolume(int value, bool active)
+void CarAvatar::setMultVolume(CarAvatar *this, int value, bool active)
 {
   CarAudioFMOD *v3; // eax
 
@@ -5498,9 +6281,7 @@ void CarAvatar::setMultVolume(int value, bool active)
     v3->mixVolumes.engineMult = 1.0;
   }
 }
-
-//----- (005D08A0) --------------------------------------------------------
-void CarAvatar::setNewPhysicsState(CarPhysicsState *ps, float dt)
+void CarAvatar::setNewPhysicsState(CarAvatar *this, CarPhysicsState *ps, float dt)
 {
   float v3; // xmm1_4
   float v4; // xmm2_4
@@ -5546,9 +6327,7 @@ void CarAvatar::setNewPhysicsState(CarPhysicsState *ps, float dt)
   }
   qmemcpy(&this->physicsState, ps, sizeof(this->physicsState));
 }
-
-//----- (005D0990) --------------------------------------------------------
-void CarAvatar::setP2PActivations(int activations)
+void CarAvatar::setP2PActivations(CarAvatar *this, int activations)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-2Ch] BYREF
@@ -5564,10 +6343,7 @@ void CarAvatar::setP2PActivations(int activations)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892CCC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_bd429c1645364981527be4f3a5f25577_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0A00) --------------------------------------------------------
-void CarAvatar::setP2PStartingActivations(int pos)
+void CarAvatar::setP2PStartingActivations(CarAvatar *this, int pos)
 {
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-28h] BYREF
   CarAvatar::setP2PStartingActivations::__l6::<lambda_1083ce7b5f8a49dc0b490fdb5c9697c2> _Func; // [esp+4h] [ebp-Ch] BYREF
@@ -5581,9 +6357,7 @@ void CarAvatar::setP2PStartingActivations(int pos)
     PhysicsAvatar::executeOnPhysicsThread(this->sim->physicsAvatar, v3);
   }
 }
-
-//----- (005D0A50) --------------------------------------------------------
-void CarAvatar::setRestrictor(float v)
+void CarAvatar::setRestrictor(CarAvatar *this, float v)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5601,10 +6375,7 @@ void CarAvatar::setRestrictor(float v)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-// 892CAC: using guessed type void *std::_Func_impl<std::_Callable_obj<_lambda_f728251f2d5ca677207215f6bc43a2e5_,0>,std::allocator<std::_Func_class<void,>>,void,>::`vftable';
-
-//----- (005D0AD0) --------------------------------------------------------
-void CarAvatar::setSlipStreamEffects(float receive, float generationSpeedFactor)
+void CarAvatar::setSlipStreamEffects(CarAvatar *this, float receive, float generationSpeedFactor)
 {
   Car *v3; // ecx
 
@@ -5612,9 +6383,7 @@ void CarAvatar::setSlipStreamEffects(float receive, float generationSpeedFactor)
   if ( v3 )
     Car::setSlipStreamEffects(v3, receive, generationSpeedFactor);
 }
-
-//----- (005D0B00) --------------------------------------------------------
-void CarAvatar::setSpawnPositionIndex(const std::wstring *setName, int index)
+void CarAvatar::setSpawnPositionIndex(CarAvatar *this, const std::wstring *setName, int index)
 {
   Sim *v4; // ecx
   const __m128i *v5; // eax
@@ -5651,10 +6420,7 @@ void CarAvatar::setSpawnPositionIndex(const std::wstring *setName, int index)
   }
   CarRaceInfo::setSpawnPositionIndex(&this->raceInfo, setName, index);
 }
-// 78E1D4: using guessed type int __cdecl operator delete(_DWORD);
-
-//----- (005D0C70) --------------------------------------------------------
-void CarAvatar::setStabilityControl(float gain)
+void CarAvatar::setStabilityControl(CarAvatar *this, float gain)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5672,8 +6438,7 @@ void CarAvatar::setStabilityControl(float gain)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-
-void CarAvatar::setTcEnabled(bool mode, bool force)
+void CarAvatar::setTcEnabled(CarAvatar *this, bool mode, bool force)
 {
   Sim *v3; // ecx
   std::function<void __cdecl(void)> v4; // [esp-18h] [ebp-34h] BYREF
@@ -5692,8 +6457,7 @@ void CarAvatar::setTcEnabled(bool mode, bool force)
     PhysicsAvatar::executeOnPhysicsThread(v3->physicsAvatar, v4);
   }
 }
-
-void CarAvatar::setTurboBoost(float value)
+void CarAvatar::setTurboBoost(CarAvatar *this, float value)
 {
   Car *v3; // ecx
   std::wostream *v4; // eax
@@ -5762,8 +6526,7 @@ void CarAvatar::setTurboBoost(float value)
     std::wios::~wios<wchar_t,std::char_traits<wchar_t>>(v12.gap68);
   }
 }
-
-void CarAvatar::setTyreCompound(unsigned int index, const std::wstring *name)
+void CarAvatar::setTyreCompound(CarAvatar *this, unsigned int index, const std::wstring *name)
 {
   CarAvatar *v3; // ebp
   std::wstring *v4; // esi
@@ -5803,8 +6566,7 @@ void CarAvatar::setTyreCompound(unsigned int index, const std::wstring *name)
     }
   }
 }
-
-void CarAvatar::setUserFFGain(float gain)
+void CarAvatar::setUserFFGain(CarAvatar *this, float gain)
 {
   Sim *v2; // ecx
   std::function<void __cdecl(void)> v3; // [esp-18h] [ebp-34h] BYREF
@@ -5823,8 +6585,7 @@ void CarAvatar::setUserFFGain(float gain)
     PhysicsAvatar::executeOnPhysicsThread(v2->physicsAvatar, v3);
   }
 }
-
-void CarAvatar::setVisible(bool vis)
+void CarAvatar::setVisible(CarAvatar *this, bool vis)
 {
   int v3; // esi
   Node *v4; // eax
@@ -5839,8 +6600,7 @@ void CarAvatar::setVisible(bool vis)
   }
   while ( v3 < 4 );
 }
-
-void CarAvatar::update(int a2@<edi>, int a3@<esi>, float deltaT)
+void __userpurge CarAvatar::update(CarAvatar *this@<ecx>, int a2@<edi>, int a3@<esi>, float deltaT)
 {
   BackfireParams *v5; // ecx
   IEventTrigger **i; // esi
@@ -6041,4 +6801,347 @@ void CarAvatar::update(int a2@<edi>, int a3@<esi>, float deltaT)
   }
   this->filteredSpeed = (float)((float)(this->physicsState.speed.value - this->filteredSpeed) * v31)
                       + this->filteredSpeed;
+}
+void CarAvatar::updateERSCharge(CarAvatar *this)
+{
+  Car *v1; // eax
+  float v2; // xmm2_4
+  float v3; // xmm1_4
+
+  v1 = this->physics;
+  if ( v1->ers.present || v1->kers.present )
+  {
+    v2 = this->physicsState.kersCharge;
+    v3 = v2 - this->lastERSBatteryCharge;
+    if ( v3 <= 0.0 )
+      this->currentERSNormalizedRecharge = 0.0;
+    else
+      this->currentERSNormalizedRecharge = v3;
+    this->lastERSBatteryCharge = v2;
+  }
+}
+void CarAvatar::updateFromChannels(CarAvatar *this, float dt)
+{
+  std::pair<void *,std::function<void __cdecl(OnLapCompletedEvent const &)> > *v3; // esi
+  std::_Func_base<void,OnLapCompletedEvent const &> **v4; // ebx
+  std::pair<void *,std::function<void __cdecl(OnSectorSplitEvent const &)> > *v5; // esi
+  std::_Func_base<void,OnSectorSplitEvent const &> **v6; // ebx
+  BufferedChannel<std::pair<int,int> > *v7; // ebx
+  std::wstring *v8; // eax
+  const std::wstring *v9; // eax
+  std::pair<void *,std::function<void __cdecl(OnTyreCompoundChanged const &)> > *v10; // esi
+  std::_Func_base<void,OnTyreCompoundChanged const &> **v11; // ebx
+  Node *v12; // esi
+  const __m128i *v13; // eax
+  Car *v14; // eax
+  mat44f *v15; // [esp-4h] [ebp-ECh]
+  std::pair<int,int> tcc; // [esp+20h] [ebp-C8h] BYREF
+  OnLapCompletedEvent lapcompleted; // [esp+28h] [ebp-C0h] BYREF
+  mat44f result; // [esp+50h] [ebp-98h] BYREF
+  OnTyreCompoundChanged ev; // [esp+90h] [ebp-58h] BYREF
+  OnSectorSplitEvent sev; // [esp+C8h] [ebp-20h] BYREF
+  int v21; // [esp+E4h] [ebp-4h]
+
+  lapcompleted.splits._Myfirst = 0;
+  lapcompleted.splits._Mylast = 0;
+  lapcompleted.splits._Myend = 0;
+  lapcompleted.cuts = 0;
+  lapcompleted.carIndex = 0;
+  lapcompleted.lapTime = 0;
+  lapcompleted.lapCount = 0;
+  lapcompleted.eventTime = 0.0;
+  lapcompleted.isValid = 0;
+  v21 = 0;
+  if ( Concurrency::details::_Concurrent_queue_base_v4::_Internal_pop_if_present(&this->lapQueue.queue, &lapcompleted) )
+  {
+    while ( 1 )
+    {
+      v3 = this->evOnLapCompleted.handlers._Myfirst;
+      if ( v3 != this->evOnLapCompleted.handlers._Mylast )
+        break;
+LABEL_6:
+      if ( !Concurrency::details::_Concurrent_queue_base_v4::_Internal_pop_if_present(
+              &this->lapQueue.queue,
+              &lapcompleted) )
+        goto LABEL_7;
+    }
+    v4 = &v3->second._Impl;
+    while ( *v4 )
+    {
+      (*v4)->_Do_call(*v4, &lapcompleted);
+      ++v3;
+      v4 += 8;
+      if ( v3 == this->evOnLapCompleted.handlers._Mylast )
+        goto LABEL_6;
+    }
+LABEL_33:
+    std::_Xbad_function_call();
+    JUMPOUT(0x5D3A57);
+  }
+LABEL_7:
+  if ( Concurrency::details::_Concurrent_queue_base_v4::_Internal_pop_if_present(&this->splitQueue.queue, &sev) )
+  {
+    while ( 1 )
+    {
+      v5 = this->evOnSectorSplit.handlers._Myfirst;
+      if ( v5 != this->evOnSectorSplit.handlers._Mylast )
+        break;
+LABEL_12:
+      if ( !Concurrency::details::_Concurrent_queue_base_v4::_Internal_pop_if_present(&this->splitQueue.queue, &sev) )
+        goto LABEL_13;
+    }
+    v6 = &v5->second._Impl;
+    while ( *v6 )
+    {
+      (*v6)->_Do_call(*v6, &sev);
+      ++v5;
+      v6 += 8;
+      if ( v5 == this->evOnSectorSplit.handlers._Mylast )
+        goto LABEL_12;
+    }
+    goto LABEL_33;
+  }
+LABEL_13:
+  tcc.first = 0;
+  v7 = &this->chTyreCompound;
+  tcc.second = 0;
+  while ( Concurrency::details::_Concurrent_queue_base_v4::_Internal_pop_if_present(&v7->queue, &tcc) )
+  {
+    this->currentTyreCompoundIndex[tcc.first] = tcc.second;
+    ev.compoundName._Myres = 7;
+    ev.compoundName._Mysize = 0;
+    ev.compoundName._Bx._Buf[0] = 0;
+    ev.shortName._Myres = 7;
+    ev.shortName._Mysize = 0;
+    ev.shortName._Bx._Buf[0] = 0;
+    ev.tyreIndex = tcc.first;
+    v8 = this->physicsInfo.tyreCompounds._Myfirst;
+    ev.compoundIndex = tcc.second;
+    LOBYTE(v21) = 1;
+    v9 = &v8[tcc.second];
+    if ( &ev.compoundName != v9 )
+      std::wstring::assign(&ev.compoundName, v9, 0, 0xFFFFFFFF);
+    v10 = this->evOnTyreCompoundChanged.handlers._Myfirst;
+    if ( v10 != this->evOnTyreCompoundChanged.handlers._Mylast )
+    {
+      v11 = &v10->second._Impl;
+      do
+      {
+        if ( !*v11 )
+          goto LABEL_33;
+        (*v11)->_Do_call(*v11, &ev);
+        ++v10;
+        v11 += 8;
+      }
+      while ( v10 != this->evOnTyreCompoundChanged.handlers._Mylast );
+      v7 = &this->chTyreCompound;
+    }
+    LOBYTE(v21) = 0;
+    if ( ev.shortName._Myres >= 8 )
+      operator delete(ev.shortName._Bx._Ptr);
+    ev.shortName._Myres = 7;
+    ev.shortName._Mysize = 0;
+    ev.shortName._Bx._Buf[0] = 0;
+    if ( ev.compoundName._Myres >= 8 )
+      operator delete(ev.compoundName._Bx._Ptr);
+  }
+  if ( this->physics )
+  {
+    v12 = this->meshCollider;
+    if ( v12 )
+    {
+      if ( v12->isActive )
+      {
+        v13 = (const __m128i *)mat44f::createIdentity(&result);
+        *(__m128i *)&v12->matrix.M11 = _mm_loadu_si128(v13);
+        *(__m128i *)&v12->matrix.M21 = _mm_loadu_si128(v13 + 1);
+        *(__m128i *)&v12->matrix.M31 = _mm_loadu_si128(v13 + 2);
+        *(__m128i *)&v12->matrix.M41 = _mm_loadu_si128(v13 + 3);
+        v14 = this->physics;
+        *(__m128i *)&result.M11 = _mm_loadu_si128((const __m128i *)&v14->meshColliderBodyMatrix);
+        *(__m128i *)&result.M21 = _mm_loadu_si128((const __m128i *)&v14->meshColliderBodyMatrix.M21);
+        *(__m128i *)&result.M31 = _mm_loadu_si128((const __m128i *)&v14->meshColliderBodyMatrix.M31);
+        v15 = &this->meshCollider->matrix;
+        *(__m128i *)&result.M41 = _mm_loadu_si128((const __m128i *)&v14->meshColliderBodyMatrix.M41);
+        mul(v15, &result, &this->physicsState.worldMatrix);
+      }
+    }
+  }
+  v21 = -1;
+  if ( lapcompleted.splits._Myfirst )
+  {
+    std::_Container_base0::_Orphan_all(&lapcompleted.splits);
+    operator delete(lapcompleted.splits._Myfirst);
+  }
+}
+void CarAvatar::updateInPitlaneState(CarAvatar *this, float dt)
+{
+  unsigned int v3; // edx
+  bool *v4; // eax
+  Sim *v5; // eax
+  Sim *v6; // ecx
+  float exit; // xmm0_4
+
+  v3 = 0;
+  this->inPitlane = 0;
+  v4 = &this->physicsState.tyreSurfaceDef[0].isPitlane;
+  while ( !*v4 )
+  {
+    ++v3;
+    v4 += 188;
+    if ( v3 >= 4 )
+      goto LABEL_6;
+  }
+  this->inPitlane = 1;
+LABEL_6:
+  if ( this->inPitlane )
+  {
+    if ( !this->wasInPitlane )
+    {
+      v5 = this->sim;
+      this->wasInPitlane = 1;
+      this->pitLaneEntryTime = v5->game->gameTime.now;
+    }
+  }
+  else if ( this->wasInPitlane )
+  {
+    v6 = this->sim;
+    this->wasInPitlane = 0;
+    exit = v6->game->gameTime.now;
+    this->pitLaneExitTime = exit;
+    RaceManager::checkMandatoryPit(v6->raceManager, this->guid, this->pitLaneEntryTime, exit);
+  }
+}
+void CarAvatar::updateSkidMarks(CarAvatar *this, float dt)
+{
+  float *edx2; // edx
+  unsigned int v3; // ebx
+  SkidMarkBuffer **v4; // esi
+  float *v5; // edi
+  float v6; // xmm1_4
+  Node *v7; // eax
+  int v8; // eax
+  float v9; // xmm4_4
+  float v10; // xmm3_4
+  float v11; // xmm2_4
+  float v12; // xmm3_4
+  float v13; // xmm5_4
+  float v14; // xmm2_4
+  float v15; // xmm6_4
+  SkidMarkBuffer *v16; // eax
+  unsigned int v17; // xmm5_4
+  float v18; // xmm7_4
+  float v19; // xmm3_4
+  unsigned int v20; // xmm6_4
+  float v21; // xmm2_4
+  float v22; // xmm5_4
+  float v23; // xmm7_4
+  float v24; // xmm1_4
+  float v25; // xmm6_4
+  float v26; // xmm4_4
+  float v27; // xmm2_4
+  float v28; // xmm0_4
+  int v29; // eax
+  float v30; // xmm1_4
+  float v31; // xmm5_4
+  float v32; // xmm0_4
+  float v33; // xmm0_4
+  float *v34; // [esp+18h] [ebp-88h]
+  CarAvatar *v35; // [esp+1Ch] [ebp-84h]
+  float v36; // [esp+20h] [ebp-80h]
+  float v37; // [esp+24h] [ebp-7Ch]
+  vec3f v38; // [esp+28h] [ebp-78h] BYREF
+  unsigned __int64 v39; // [esp+34h] [ebp-6Ch]
+  __int64 v40; // [esp+3Ch] [ebp-64h]
+  int v41; // [esp+44h] [ebp-5Ch]
+  vec3f v2; // [esp+48h] [ebp-58h] BYREF
+  vec3f v1; // [esp+54h] [ebp-4Ch] BYREF
+  mat44f v44; // [esp+60h] [ebp-40h] BYREF
+
+  v35 = this;
+  if ( this->carNode->isActive )
+  {
+    edx2 = &this->physicsState.tyreSurfaceDef[0].gripMod;
+    v3 = 0;
+    v34 = &this->physicsState.tyreSurfaceDef[0].gripMod;
+    v4 = this->skidMarkBuffers;
+    v5 = &this->lastSkidPosition[0].z;
+    v6 = (float)((float)((float)(this->physicsState.load[1] + this->physicsState.load[0]) + this->physicsState.load[2])
+               + this->physicsState.load[3])
+       * 0.125;
+    v36 = v6;
+    do
+    {
+      if ( *v4 )
+      {
+        if ( *((float *)v4 - 553) < 1.5
+          || this->physicsState.speed.value <= 1.0
+          || *edx2 <= 0.89999998
+          || *((float *)v4 - 549) <= v6 )
+        {
+          SkidMarkBuffer::split(*v4);
+        }
+        else
+        {
+          v7 = this->suspensionAvatar->getWheelTransform(this->suspensionAvatar, v3);
+          v8 = (int)v7->getWorldMatrix(v7, &v44);
+          LODWORD(v9) = *((_DWORD *)v5 - 1) ^ _xmm;
+          v10 = *(float *)(v8 + 56);
+          v40 = *(unsigned int *)(v8 + 48);
+          v11 = *(float *)&v40 - *(v5 - 2);
+          v41 = LODWORD(v10);
+          v12 = v10 - *v5;
+          if ( (float)((float)((float)(v9 * v9) + (float)(v11 * v11)) + (float)(v12 * v12)) > 0.040000003 )
+          {
+            v38.x = v11;
+            v38.y = v9;
+            v38.z = v12;
+            vec3f::normalize(&v38);
+            v13 = *(v5 - 485);
+            v14 = v13 * v38.y;
+            v15 = *(v5 - 483);
+            v16 = *v4;
+            *(float *)&v17 = (float)(v13 * v38.z) - (float)(v15 * v38.x);
+            v18 = (float)(*(v5 - 484) * v38.x) - v14;
+            v19 = (*v4)->heightFromGround;
+            *(float *)&v20 = (float)(v15 * v38.y) - (float)(*(v5 - 484) * v38.z);
+            v21 = *(float *)&v17;
+            v39 = __PAIR64__(v20, v17);
+            v22 = *(v5 - 496);
+            v37 = v18;
+            v23 = *((float *)v4 + 11);
+            v24 = (float)(*(float *)&v20 * v23) * 0.5;
+            v25 = *(v5 - 497);
+            v26 = *(v5 - 495);
+            v1.x = v24 + v25;
+            v1.y = (float)((float)((float)(v21 * v23) * 0.5) + v22) + v19;
+            v27 = *((float *)&v39 + 1) * v23;
+            v1.z = (float)((float)(v37 * v23) * 0.5) + v26;
+            v28 = v16->heightFromGround;
+            v29 = v41;
+            v30 = FLOAT_1_0;
+            v31 = (float)(v22 - (float)((float)(*(float *)&v39 * v23) * 0.5)) + v28;
+            *((_QWORD *)v5 - 1) = v40;
+            *(_DWORD *)v5 = v29;
+            v32 = *((float *)v4 - 553);
+            v2.y = v31;
+            v2.x = v25 - (float)(v27 * 0.5);
+            v2.z = v26 - (float)((float)(v37 * v23) * 0.5);
+            v33 = (float)(v32 - 1.5) * 0.30000001;
+            if ( v33 > 1.0 || (v30 = 0.0, v33 < 0.0) )
+              v33 = v30;
+            SkidMarkBuffer::addSegment(*v4, &v1, &v2, (const vec3f *)(v5 - 485), v33 * 0.60000002);
+          }
+        }
+        v6 = v36;
+        this = v35;
+      }
+      v34 += 47;
+      ++v3;
+      edx2 = v34;
+      v5 += 3;
+      ++v4;
+    }
+    while ( v3 < 4 );
+  }
 }

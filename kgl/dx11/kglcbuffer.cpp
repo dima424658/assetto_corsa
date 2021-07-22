@@ -1,40 +1,20 @@
-#include "kglcbuffer.h"
-
-KGLCBuffer::KGLCBuffer(ID3D11Device* device, unsigned int isize)
-    : size(isize), buffer(nullptr)
+#include "kglcbuffer.h
+void KGLCBuffer::KGLCBuffer(KGLCBuffer *this, ID3D11Device *device, unsigned int isize)
 {
-    D3D11_BUFFER_DESC cbDesc;
-    cbDesc.MiscFlags = 0;
-    cbDesc.ByteWidth = isize;
-    cbDesc.Usage = D3D11_USAGE_DEFAULT;
-    cbDesc.CPUAccessFlags = 0;
-    cbDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+  ID3D11Device *v3; // edx
+  ID3D11Buffer **v5; // esi
+  D3D11_BUFFER_DESC cbDesc; // [esp+0h] [ebp-1Ch] BYREF
 
-    device->CreateBuffer(&cbDesc, nullptr, &buffer);
-
-    if (!buffer)
-        printf("ERROR: CBuffer CreateBuffer failed size=%d\n", size);
-}
-
-KGLCBuffer* kglCreateCBuffer(unsigned int size)
-{
-    ID3D11Device* device;
-
-    return new KGLCBuffer(device, size);
-}
-
-void kglCBufferMap(KGLCBuffer* cb, void* data)
-{
-    ID3D11DeviceContext* immediateContext;
-
-    immediateContext->UpdateSubresource(cb->GetBuffer(), 0, nullptr, data, 0, 0);
-}
-
-void kglCBufferBind(KGLCBuffer* cb, unsigned int slot)
-{
-    ID3D11DeviceContext* immediateContext;
-
-    auto buffer = cb->GetBuffer();
-    immediateContext->VSSetConstantBuffers(slot, 1u, &buffer);
-    immediateContext->PSSetConstantBuffers(slot, 1u, &buffer);
+  v3 = ::device;
+  *(_QWORD *)&cbDesc.MiscFlags = 0i64;
+  v5 = &this->buffer;
+  cbDesc.ByteWidth = isize;
+  this->size = isize;
+  this->buffer = 0;
+  cbDesc.Usage = D3D11_USAGE_DEFAULT;
+  cbDesc.CPUAccessFlags = 0;
+  cbDesc.BindFlags = 4;
+  v3->CreateBuffer(v3, &cbDesc, 0, &this->buffer);
+  if ( !*v5 )
+    _printf("ERROR: CBuffer CreateBuffer failed size=%d\n", this->size);
 }

@@ -1,70 +1,50 @@
 #pragma once
 
-#include <string>
-#include <functional>
-
-#include "physicsavatar.h"
-#include "systemmessage.h"
-
 class Sim
 {
-public:
-	int getCarsCount();
-	void displayLeaderboard(bool value);
-	bool isDisplayingResults();
-	bool isVrRoom();
-	// void __userpurge Sim::Sim(Sim *this@<ecx>, unsigned int a2@<ebx>, __m128 a3@<xmm3>, __m128 a4@<xmm4>, Game *igame);
-	
-	~Sim();
-	void activateEscMenu();
-	void activateGameGui();
-	void activatePauseMenu();
-	// CarAvatar *__userpurge Sim::addCar@<eax>(Sim *this@<ecx>, __m128 a2@<xmm3>, __m128 a3@<xmm4>, const std::wstring *model, const std::wstring *config, const std::wstring *skin);
-	void addForm(ksgui::Form* aForm, bool isInDevMode);
-	CarAvatar* addNetCar(ClientRemoteCarDef* desc, ACClient* client);
-	void applyCustomWeather(const std::wstring* name);
-	StereoCameraForward* createCamera(INIReaderDocuments* videoIni, float useBlur);
+int Sim::getCarsCount();
+void Sim::displayLeaderboard(BOOL value);
+bool Sim::isDisplayingResults();
+bool Sim::isVrRoom();
+// void __userpurge Sim::Sim(@<ecx>, unsigned int a2@<ebx>, __m128 a3@<xmm3>, __m128 a4@<xmm4>, Game *igame);
+void Sim::~Sim();
+void Sim::activateEscMenu();
+void Sim::activateGameGui();
+void Sim::activatePauseMenu();
+// CarAvatar *__userpurge Sim::addCar@<eax>(@<ecx>, __m128 a2@<xmm3>, __m128 a3@<xmm4>, const std::wstring *model, const std::wstring *config, const std::wstring *skin);
+void Sim::addForm(ksgui::Form *aForm, bool isInDevMode);
+CarAvatar *Sim::addNetCar(ClientRemoteCarDef *desc, ACClient *client);
+void Sim::applyCustomWeather(const std::wstring *name);
+StereoCameraForward *Sim::createCamera(INIReaderDocuments *videoIni, float useBlur);
+void Sim::executeOnMainThread(std::function<void __cdecl(void)> f);
+CarAvatar *Sim::getCar(unsigned int index);
+Console *Sim::getConsole();
+unsigned int Sim::getFocusedCarIndex();
+Texture *Sim::getNationFlag(const std::wstring *nationCode);
+CameraForward *Sim::getSceneCamera();
+TrackData *Sim::getTrackData(TrackData *result);
+void Sim::initCubemaps();
+void Sim::initHDRLevels();
+void Sim::initSceneGraph();
+void Sim::initStaticCubemap();
+bool Sim::isInTripleScreenMode();
+// void __userpurge Sim::loadTrack(@<ecx>, __m128 a2@<xmm0>, __m128 a3@<xmm3>, __m128 a4@<xmm4>, const std::wstring *tname, const std::wstring *config, int playerPitPosition);
+unsigned int Sim::nextCar(const unsigned int anIndex);
+void Sim::onKeyDown(const OnKeyEvent *message);
+void Sim::onPostLoad();
+void Sim::onReplayModeChanged(const OnReplayStatusChanged *message);
+unsigned int Sim::previousCar(const unsigned int anIndex);
+void Sim::render(float deltaT);
+void Sim::renderHUD(float deltaT);
+// void __userpurge Sim::renderScene(@<ecx>, __int64 a2@<esi:edi>, float deltaT);
+void Sim::setFocusedCarIndex(unsigned int aCarIndex);
+void Sim::setPauseMode(bool mode);
+void Sim::setSplashLoadingCar(const std::wstring *carUnixName);
+void Sim::setSplashMessage(const std::wstring *msg);
+void Sim::shutdown();
+void Sim::startGame();
+void Sim::unloadMeshResources(Node *node);
+void Sim::update(float deltaT);
+void Sim::writeOutputJson();
 
-	void executeOnMainThread(std::function<void()> f);
-	CarAvatar* getCar(unsigned int index);
-	Console* getConsole();
-	unsigned int getFocusedCarIndex();
-	Texture* getNationFlag(const std::wstring* nationCode);
-	CameraForward* getSceneCamera();
-	TrackData* getTrackData(TrackData* result);
-	void initCubemaps();
-	void initHDRLevels();
-	void initSceneGraph();
-	void initStaticCubemap();
-	bool isInTripleScreenMode();
-	
-	// void __userpurge Sim::loadTrack(Sim *this@<ecx>, __m128 a2@<xmm0>, __m128 a3@<xmm3>, __m128 a4@<xmm4>, const std::wstring *tname, const std::wstring *config, int playerPitPosition);
-	unsigned int nextCar(const unsigned int anIndex);
-	void onKeyDown(const OnKeyEvent* message);
-	void onPostLoad();
-	void onReplayModeChanged(const OnReplayStatusChanged* message);
-	unsigned int previousCar(const unsigned int anIndex);
-	void render(float deltaT);
-	void renderHUD(float deltaT);
-	// void __userpurge Sim::renderScene(Sim *this@<ecx>, __int64 a2@<esi:edi>, float deltaT);
-	void setFocusedCarIndex(unsigned int aCarIndex);
-	void setPauseMode(bool mode);
-	
-	void setSplashLoadingCar(const std::wstring* carUnixName);
-	void setSplashMessage(const std::wstring* msg);
-	
-	void shutdown();
-	void startGame();
-
-	void stepPhysicsEvent(int a1, float colliderCategory);
-	void unloadMeshResources(Node* node);
-	void update(float deltaT);
-	void writeOutputJson();
-
-	std::wstring acVersionString;
-	bool benchmarkMode = false;
-	bool forceOnline = false;
-
-	PhysicsAvatar* physicsAvatar;
-	SystemMessage* systemMessage;
 };

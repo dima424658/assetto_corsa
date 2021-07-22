@@ -1,18 +1,12 @@
 #pragma once
 
-#include <utility>
-
-class Car;
-
 class ABS
 {
-public:
-	void cycleMode(int value); // idb
-	std::pair<unsigned int, unsigned int> getCurrentMode();
-	void init(Car* acar);
-	bool isInAction();
-	void step(float td);
+void ABS::~ABS();
+void ABS::cycleMode(int value);
+std::pair<unsigned int,unsigned int> *ABS::getCurrentMode(std::pair<unsigned int,unsigned int> *result);
+void ABS::init(Car *acar);
+bool ABS::isInAction();
+void ABS::step(float td);
 
-	bool isPresent;
-	std::pair<unsigned int, unsigned int> currentMode;
 };

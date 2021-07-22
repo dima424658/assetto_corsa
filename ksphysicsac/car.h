@@ -1,13 +1,77 @@
 #pragma once
 
-#include "abs.h"
-
 class Car
 {
-public:
+// void __userpurge Car::Car(@<ecx>, __m128 a2@<xmm3>, __m128 a3@<xmm4>, PhysicsEngine *iengine, const std::wstring *iunixName, const std::wstring *config);
+void Car::~Car();
+Car *Car::`vector deleting destructor'(unsigned int a2);
+void Car::addPenalty(long double ptime);
+double Car::calcBodyMass();
+void Car::clearPenalty();
+void Car::forcePosition(const vec3f *pos, bool invalidateTransponder);
+void Car::forceRotation(const vec3f *ihed);
+void Car::getAIState(AIState *state);
+double Car::getBackDistanceFromCar(Car *car);
+double Car::getCGHeight();
+std::wstring *Car::getConfigPath(std::wstring *result, const std::wstring *filename);
+ICarControlsProvider *Car::getControlsProvider();
+void Car::getEngagement(const float engagement_length, float *left, float *right);
+double Car::getFinalFF();
+double Car::getFrontWheelAngle();
+double Car::getFuelPerLap();
+plane4f *Car::getGroundPlane(plane4f *result);
+vec3f *Car::getGroundWindVector(vec3f *result);
+vec3f *Car::getLocalAngularVelocity(vec3f *result);
+vec3f *Car::getLocalVelocity(vec3f *result);
+long double Car::getPenaltyTime();
+void Car::getPhysicsState(CarPhysicsState *state);
+PitStopTime *Car::getPitstopTime(PitStopTime *result, float fuel_to_add, bool changeTyres, bool repairBody, bool repairEngine, bool repairSus, bool useRandomizer);
+float Car::getRestrictor();
+Speed *Car::getSpeed(Speed *result);
+double Car::getSteerFF();
+mat44f *Car::getSuspensionMatrix(mat44f *result, unsigned int index);
+long double Car::getTotalKM();
+double Car::getTotalMass(bool withFuel);
+mat44f *Car::getTyreMatrix(mat44f *result, int index);
+void Car::getTyreThermalState(int index, TyreThermalState *state);
+vec3f *Car::getVelocity(vec3f *result);
+double Car::getWheelSterAngleDEG(int index);
+void Car::getWingState(std::vector<WingState> *ws);
+void Car::initAeroMap();
+void Car::initCarData();
+void Car::initCarDataPath();
+void Car::initColliderMesh(Mesh *mesh, mat44f *bodyMatrix);
+void Car::initHeaveSprings();
+void Car::initPitstopTimings();
+char Car::isInPitLane();
+BOOL Car::isInPits();
+bool Car::isMinSpeedPenaltyClearDisabled();
+BOOL Car::isSleeping();
+void Car::lockControls(bool lock);
+void Car::lockControlsUntil(long double time, long double start);
+// void __userpurge Car::onCollisionCallBack(@<ecx>, int a2@<edi>, void *userData0, void *shape0, void *userData1, void *shape1, vec3f normal, __int128 pos, int a9);
+void Car::onNewSession(const SessionInfo *si);
+void Car::onTyresStepCompleted();
+void Car::pollControls(float dt);
+void Car::postStep(float dt);
+void Car::reset();
+void Car::resetSplineLocator();
+void Car::resetSuspensionDamageLevel();
+void Car::setBallastKG(float kg);
+void Car::setBlackFlag(bool isflagged, PenaltyDescription type);
+void Car::setControllerProvider(ICarControlsProvider *cp);
+void Car::setDamageLevel(float v);
+void Car::setDamageLevel(float v, int index);
+int Car::setFuelForLaps(int laps, float mult);
+void Car::setRequestedFuel(float value, bool changeValue);
+void Car::setRestrictor(float value);
+void Car::setSlipStreamEffects(float receive, float generationSpeedFactor);
+// void __userpurge Car::step(@<ecx>, int a2@<esi>, float dt);
+void Car::stepComponents(float dt);
+void Car::stepJumpStart(float dt);
+void Car::stepPreCacheValues(float dt);
+void Car::stepThermalObjects(float dt);
+void Car::updateAirPressure();
+void Car::updateColliderStatus(float dt);
 
-	TimeTransponder* transponder;
-	BrakeSystem* brakeSystem;
-	ABS abs;
-	ERS ers;
 };
