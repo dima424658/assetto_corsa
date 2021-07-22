@@ -1,4 +1,4 @@
-#include "drivernamedisplayer.h
+#include "drivernamedisplayer.h"
 void __userpurge DriverNameDisplayer::DriverNameDisplayer(DriverNameDisplayer *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   char v4; // bl

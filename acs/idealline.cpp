@@ -1,4 +1,4 @@
-#include "idealline.h
+#include "idealline.h"
 void IdealLine::IdealLine(IdealLine *this, AISpline *spline, GraphicsManager *graphics, IRayTrackCollisionProvider *collisionProvider)
 {
   unsigned int v5; // ebx

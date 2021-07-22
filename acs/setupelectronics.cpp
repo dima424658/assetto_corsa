@@ -1,4 +1,4 @@
-#include "setupelectronics.h
+#include "setupelectronics.h"
 void SetupElectronics::SetupElectronics(SetupElectronics *this, CarAvatar *aCar)
 {
   CarAvatar *v3; // eax

@@ -1,4 +1,4 @@
-#include "brakediscgraphics.h
+#include "brakediscgraphics.h"
 void BrakeDiscGraphics::BrakeDiscGraphics(BrakeDiscGraphics *this, CarAvatar *car)
 {
   std::wstring *v3; // eax

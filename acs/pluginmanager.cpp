@@ -1,4 +1,4 @@
-#include "pluginmanager.h
+#include "pluginmanager.h"
 void PluginManager::PluginManager(PluginManager *this, Sim *isim)
 {
   std::wstring v3; // [esp-1Ch] [ebp-38h] BYREF

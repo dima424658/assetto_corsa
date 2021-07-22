@@ -1,4 +1,4 @@
-#include "sharedfileout.h
+#include "sharedfileout.h"
 void SharedFileOut::SharedFileOut(SharedFileOut *this, Sim *isim)
 {
   HANDLE v3; // eax

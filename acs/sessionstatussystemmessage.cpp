@@ -1,4 +1,4 @@
-#include "sessionstatussystemmessage.h
+#include "sessionstatussystemmessage.h"
 void SessionStatusSystemMessage::SessionStatusSystemMessage(SessionStatusSystemMessage *this, Sim *aSim)
 {
   int *v3; // ebp

@@ -1,4 +1,4 @@
-#include "keyboardcarcontrol.h
+#include "keyboardcarcontrol.h"
 void __userpurge KeyboardCarControl::KeyboardCarControl(KeyboardCarControl *this@<ecx>, unsigned int a2@<ebx>, Car *carPointer)
 {
   std::wstring v4; // [esp-1Ch] [ebp-48h] BYREF

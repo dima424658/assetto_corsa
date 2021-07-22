@@ -1,4 +1,4 @@
-#include "weathermanager.h
+#include "weathermanager.h"
 std::wstring *WeatherManager::getLastWeatherName(WeatherManager *this, std::wstring *result)
 {
   result->_Myres = 7;

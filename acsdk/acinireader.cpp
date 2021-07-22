@@ -1,4 +1,4 @@
-#include "acinireader.h
+#include "acinireader.h"
 void ACINIReader::ACINIReader(ACINIReader *this)
 {
   this->__vftable = (ACINIReader_vtbl *)&ACINIReader::`vftable';

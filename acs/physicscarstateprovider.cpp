@@ -1,4 +1,4 @@
-#include "physicscarstateprovider.h
+#include "physicscarstateprovider.h"
 ICarPhysicsStateProvider *PhysicsCarStateProvider::`scalar deleting destructor'(ICarPhysicsStateProvider *this, unsigned int a2)
 {
   this->__vftable = (ICarPhysicsStateProvider_vtbl *)&ICarPhysicsStateProvider::`vftable';

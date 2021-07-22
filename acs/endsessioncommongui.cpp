@@ -1,4 +1,4 @@
-#include "endsessioncommongui.h
+#include "endsessioncommongui.h"
 void __userpurge EndSessionCommonGui::EndSessionCommonGui(EndSessionCommonGui *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   Game *v4; // eax

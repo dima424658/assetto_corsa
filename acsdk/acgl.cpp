@@ -1,4 +1,4 @@
-#include "acgl.h
+#include "acgl.h"
 void ACGL::ACGL(ACGL *this, GLRenderer *glRenderer)
 {
   this->gl = glRenderer;

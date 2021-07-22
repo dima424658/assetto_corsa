@@ -1,4 +1,4 @@
-#include "caranimations.h
+#include "caranimations.h"
 void CarAnimations::CarAnimations(CarAnimations *this, CarAvatar *aCar)
 {
   std::unique_ptr<CarAnimation> *v3; // ebp

@@ -1,4 +1,4 @@
-#include "endsessiondisplayer.h
+#include "endsessiondisplayer.h"
 void __userpurge EndSessionDisplayer::EndSessionDisplayer(EndSessionDisplayer *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   std::_Ref_count_base *v4; // eax

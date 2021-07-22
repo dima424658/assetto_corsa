@@ -1,4 +1,4 @@
-#include "lapinvalidatoravatar.h
+#include "lapinvalidatoravatar.h"
 void LapInvalidatorAvatar::LapInvalidatorAvatar(LapInvalidatorAvatar *this, Sim *sim)
 {
   Game *v3; // eax

@@ -1,4 +1,4 @@
-#include "dicontrolaxis.h
+#include "dicontrolaxis.h"
 void DIControlAxis::DIControlAxis(DIControlAxis *this, std::wstring iname, DirectInput *di)
 {
   bool v4; // cf

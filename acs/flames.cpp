@@ -1,4 +1,4 @@
-#include "flames.h
+#include "flames.h"
 void Flames::Flames(Flames *this, CarAvatar *a_car)
 {
   std::wstring *v3; // eax

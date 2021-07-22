@@ -1,4 +1,4 @@
-#include "actexture.h
+#include "actexture.h"
 void ACTexture::ACTexture(ACTexture *this, const std::wstring *filename, GraphicsManager *graphics)
 {
   ResourceStore *v4; // ecx

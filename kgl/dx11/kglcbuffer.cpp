@@ -1,4 +1,4 @@
-#include "kglcbuffer.h
+#include "kglcbuffer.h"
 void KGLCBuffer::KGLCBuffer(KGLCBuffer *this, ID3D11Device *device, unsigned int isize)
 {
   ID3D11Device *v3; // edx

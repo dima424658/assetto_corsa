@@ -1,1 +1,1 @@
-#include "imagegeneratorcamera.h
+#include "imagegeneratorcamera.h"

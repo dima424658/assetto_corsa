@@ -1,4 +1,4 @@
-#include "lockcontrolstimeavatar.h
+#include "lockcontrolstimeavatar.h"
 void LockControlsTimeAvatar::LockControlsTimeAvatar(LockControlsTimeAvatar *this, Sim *sim)
 {
   char v3; // bl

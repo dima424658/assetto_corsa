@@ -1,4 +1,4 @@
-#include "netcarstateprovider.h
+#include "netcarstateprovider.h"
 void NetCarStateProvider::NetCarStateProvider(NetCarStateProvider *this, const NetCarStateProviderDef *def)
 {
   NetCarState *v3; // esi

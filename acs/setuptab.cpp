@@ -1,4 +1,4 @@
-#include "setuptab.h
+#include "setuptab.h"
 void SetupTab::SetupTab(SetupTab *this, std::wstring aname, ksgui::GUI *aGui, Sim *sim)
 {
   std::wstring *v5; // edi

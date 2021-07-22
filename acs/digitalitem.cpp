@@ -1,4 +1,4 @@
-#include "digitalitem.h
+#include "digitalitem.h"
 void DigitalItem::DigitalItem(DigitalItem *this, CarAvatar *a_car, INIReader *ini, const std::wstring *section, std::vector<DigitalItem *> *items)
 {
   INIReader *v6; // ebx

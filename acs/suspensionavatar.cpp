@@ -1,4 +1,4 @@
-#include "suspensionavatar.h
+#include "suspensionavatar.h"
 void SuspensionAvatar::SuspensionAvatar(SuspensionAvatar *this, CarAvatar *car)
 {
   int v3; // ebx

@@ -1,4 +1,4 @@
-#include "postprocesseffectsupdater.h
+#include "postprocesseffectsupdater.h"
 void PostProcessEffectsUpdater::PostProcessEffectsUpdater(PostProcessEffectsUpdater *this, Sim *aSim, CameraForwardYebis *aCamera)
 {
   std::wstring *v4; // edi

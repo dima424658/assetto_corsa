@@ -1,4 +1,4 @@
-#include "acclientvotingmanager.h
+#include "acclientvotingmanager.h"
 void ACClientVotingManager::ACClientVotingManager(ACClientVotingManager *this, Sim *aSim, ACClient *aClient)
 {
   Console *v4; // eax

@@ -1,4 +1,4 @@
-#include "carlodmanager.h
+#include "carlodmanager.h"
 void CarLodManager::CarLodManager(CarLodManager *this, CarAvatar *car)
 {
   int v3; // edi

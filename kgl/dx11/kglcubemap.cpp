@@ -1,4 +1,4 @@
-#include "kglcubemap.h
+#include "kglcubemap.h"
 void KGLCubeMap::KGLCubeMap(KGLCubeMap *this, ID3D11Device *device, unsigned int size, unsigned int format, unsigned int mips)
 {
   KGLCubeMap *v5; // esi

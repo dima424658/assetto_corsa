@@ -1,4 +1,4 @@
-#include "rotatingobjects.h
+#include "rotatingobjects.h"
 void RotatingObjects::RotatingObjects(RotatingObjects *this, CarAvatar *a_car)
 {
   int v3; // ebx

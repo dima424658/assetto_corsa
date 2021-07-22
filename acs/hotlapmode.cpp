@@ -1,4 +1,4 @@
-#include "hotlapmode.h
+#include "hotlapmode.h"
 void HotlapMode::HotlapMode(HotlapMode *this, Sim *aSim)
 {
   CarAvatar *v3; // eax

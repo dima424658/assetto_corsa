@@ -1,4 +1,4 @@
-#include "consolecommandlambda.h
+#include "consolecommandlambda.h"
 void ConsoleCommandLambda::ConsoleCommandLambda(ConsoleCommandLambda *this, Console *console, const std::wstring *name, std::function<bool __cdecl(std::wstring)> executeFun, std::function<std::wstring __cdecl(void)> helpFun)
 {
   std::wstring *v6; // ebp

@@ -1,4 +1,4 @@
-#include "escmenu.h
+#include "escmenu.h"
 void __userpurge ESCMenu::ESCMenu(ESCMenu *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim, ksgui::GUI *gui)
 {
   ksgui::Control *v5; // eax

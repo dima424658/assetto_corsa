@@ -1,4 +1,4 @@
-#include "carfakeshadow.h
+#include "carfakeshadow.h"
 void __userpurge CarFakeShadow::CarFakeShadow(CarFakeShadow *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *acar)
 {
   Game *v4; // ecx

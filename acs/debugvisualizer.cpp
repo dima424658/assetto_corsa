@@ -1,4 +1,4 @@
-#include "debugvisualizer.h
+#include "debugvisualizer.h"
 void DebugVisualizer::DebugVisualizer(DebugVisualizer *this, Sim *aSim)
 {
   Game *v3; // eax

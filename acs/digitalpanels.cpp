@@ -1,4 +1,4 @@
-#include "digitalpanels.h
+#include "digitalpanels.h"
 void DigitalPanels::DigitalPanels(DigitalPanels *this, CarAvatar *a_car)
 {
   std::wstring *v3; // eax

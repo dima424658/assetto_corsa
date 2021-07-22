@@ -1,4 +1,4 @@
-#include "racecontrolsessionserver.h
+#include "racecontrolsessionserver.h"
 void RaceControlSessionServer::RaceControlSessionServer(RaceControlSessionServer *this, Sim *aSim)
 {
   Game *v3; // eax

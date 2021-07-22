@@ -1,4 +1,4 @@
-#include "jsonoutputfile.h
+#include "jsonoutputfile.h"
 void JsonOutputFile::JsonOutputFile(JsonOutputFile *this, Sim *aSim)
 {
   RaceManager *v3; // ecx

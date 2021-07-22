@@ -1,4 +1,4 @@
-#include "gamemode.h
+#include "gamemode.h"
 void GameMode::GameMode(GameMode *this, std::wstring name, Game *aGame)
 {
   int v4; // ebx

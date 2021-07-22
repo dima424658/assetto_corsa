@@ -1,4 +1,4 @@
-#include "setuptyresmanager.h
+#include "setuptyresmanager.h"
 void SetupTyresManager::resetToDefaultValues(SetupFuelManager *this)
 {
   ksgui::Spinner *v2; // ecx

@@ -1,4 +1,4 @@
-#include "setupscreen.h
+#include "setupscreen.h"
 void SetupScreen::SetupScreen(SetupScreen *this, Sim *sim)
 {
   int v3; // edi

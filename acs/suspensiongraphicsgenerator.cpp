@@ -1,4 +1,4 @@
-#include "suspensiongraphicsgenerator.h
+#include "suspensiongraphicsgenerator.h"
 void SuspensionGraphicsGenerator::SuspensionGraphicsGenerator(SuspensionGraphicsGenerator *this, CarAvatar *acar)
 {
   this->car = acar;

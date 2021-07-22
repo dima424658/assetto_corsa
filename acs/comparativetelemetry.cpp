@@ -1,4 +1,4 @@
-#include "comparativetelemetry.h
+#include "comparativetelemetry.h"
 void __userpurge ComparativeTelemetry::ComparativeTelemetry(ComparativeTelemetry *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   Game *v4; // eax

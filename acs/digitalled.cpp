@@ -1,4 +1,4 @@
-#include "digitalled.h
+#include "digitalled.h"
 DigitalLed *DigitalLed::`scalar deleting destructor'(DigitalLed *this, unsigned int a2)
 {
   DigitalLed::~DigitalLed(this);

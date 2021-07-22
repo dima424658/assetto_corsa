@@ -1,1 +1,1 @@
-#include "trophymanager.h
+#include "trophymanager.h"

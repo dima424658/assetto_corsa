@@ -1,4 +1,4 @@
-#include "cameracarmanager.h
+#include "cameracarmanager.h"
 void CameraCarManager::CameraCarManager(CameraCarManager *this, Sim *a_sim, CameraForward *a_camera)
 {
   std::wstring v4; // [esp-1Ch] [ebp-24h] BYREF

@@ -1,4 +1,4 @@
-#include "kglindexbuffer.h
+#include "kglindexbuffer.h"
 void KGLIndexBuffer::KGLIndexBuffer(KGLIndexBuffer *this, ID3D11Device *device, unsigned int size, unsigned __int16 *data)
 {
   ID3D11Device *v4; // edx

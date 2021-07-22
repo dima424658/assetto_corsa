@@ -1,4 +1,4 @@
-#include "setupgearmanager.h
+#include "setupgearmanager.h"
 void SetupGearManager::SetupGearManager(SetupGearManager *this, CarAvatar *aCar)
 {
   std::_Tree_node<std::pair<std::wstring const ,GearSetDef>,void *> *v3; // eax

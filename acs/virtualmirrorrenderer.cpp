@@ -1,4 +1,4 @@
-#include "virtualmirrorrenderer.h
+#include "virtualmirrorrenderer.h"
 void VirtualMirrorRenderer::VirtualMirrorRenderer(VirtualMirrorRenderer *this, Sim *aSim)
 {
   unsigned int v3; // ebx

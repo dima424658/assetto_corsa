@@ -1,4 +1,4 @@
-#include "optionsmanager.h
+#include "optionsmanager.h"
 void OptionsManager::OptionsManager(OptionsManager *this)
 {
   std::_Tree_node<std::pair<std::wstring const ,float>,void *> *v2; // eax

@@ -1,4 +1,4 @@
-#include "caravatar.h
+#include "caravatar.h"
 std::wstring *CarAvatar::getCurrentSkin(CarAvatar *this, std::wstring *result)
 {
   result->_Myres = 7;

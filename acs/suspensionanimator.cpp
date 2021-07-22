@@ -1,4 +1,4 @@
-#include "suspensionanimator.h
+#include "suspensionanimator.h"
 void SuspensionAnimator::SuspensionAnimator(SuspensionAnimator *this, CarAvatar *acar)
 {
   Animation *v3; // edi

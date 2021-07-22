@@ -1,4 +1,4 @@
-#include "comparativetelemetryrecorder.h
+#include "comparativetelemetryrecorder.h"
 void ComparativeTelemetryRecorder::ComparativeTelemetryRecorder(ComparativeTelemetryRecorder *this, CarAvatar *aCar)
 {
   std::wstring *v3; // esi

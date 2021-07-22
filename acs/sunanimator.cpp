@@ -1,4 +1,4 @@
-#include "sunanimator.h
+#include "sunanimator.h"
 void SunAnimator::SunAnimator(SunAnimator *this, Sim *aSim, float baseAngle, float velocityMult, float cloudSpeed)
 {
   double v6; // st7

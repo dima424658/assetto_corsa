@@ -1,4 +1,4 @@
-#include "overlayleaderboard.h
+#include "overlayleaderboard.h"
 void OverlayLeaderboard::OverlayLeaderboard(OverlayLeaderboard *this, Sim *aSim)
 {
   std::vector<OverlayLeaderboard::DriverName> *v3; // esi

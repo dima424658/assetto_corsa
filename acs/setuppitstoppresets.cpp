@@ -1,4 +1,4 @@
-#include "setuppitstoppresets.h
+#include "setuppitstoppresets.h"
 void SetupPitstopPresets::SetupPitstopPresets(SetupPitstopPresets *this, CarAvatar *aCar, QuickMenuPitstop *aPit)
 {
   int v4; // ebx

@@ -1,4 +1,4 @@
-#include "lollipopcrew.h
+#include "lollipopcrew.h"
 void __userpurge LollipopCrew::LollipopCrew(LollipopCrew *this@<ecx>, int a2@<ebp>, int a3@<edi>, int a4@<esi>, CarAvatar *aCar, mat44f matrix, float side, std::wstring skin)
 {
   Sim *v9; // eax

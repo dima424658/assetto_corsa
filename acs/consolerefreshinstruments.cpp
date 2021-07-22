@@ -1,4 +1,4 @@
-#include "consolerefreshinstruments.h
+#include "consolerefreshinstruments.h"
 void ConsoleRefreshInstruments::ConsoleRefreshInstruments(ConsoleRefreshInstruments *this, Console *con)
 {
   std::wstring *v3; // ecx

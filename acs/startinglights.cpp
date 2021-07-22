@@ -1,4 +1,4 @@
-#include "startinglights.h
+#include "startinglights.h"
 void StartingLights::StartingLights(StartingLights *this, Sim *sim)
 {
   Sim *v3; // edi

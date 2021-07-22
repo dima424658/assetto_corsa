@@ -1,4 +1,4 @@
-#include "drivethroughpenaltyavatar.h
+#include "drivethroughpenaltyavatar.h"
 void DriveThroughPenaltyAvatar::DriveThroughPenaltyAvatar(DriveThroughPenaltyAvatar *this, Sim *sim)
 {
   char v3; // bl

@@ -1,4 +1,4 @@
-#include "accameramanager.h
+#include "accameramanager.h"
 void ACCameraManager::ACCameraManager(ACCameraManager *this, Sim *isim, CameraForward *icamera)
 {
   std::vector<int> *v4; // ebx

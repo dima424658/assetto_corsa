@@ -1,4 +1,4 @@
-#include "trackobject.h
+#include "trackobject.h"
 void TrackObject::TrackObject(TrackObject *this, std::wstring iname, Sim *isim, Node *iroot)
 {
   Sim *v5; // esi

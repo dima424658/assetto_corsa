@@ -1,4 +1,4 @@
-#include "dicarcontrol.h
+#include "dicarcontrol.h"
 void __usercall DICarControl::DICarControl(DICarControl *this@<ecx>, char a2@<bl>)
 {
   DirectInput *v3; // eax

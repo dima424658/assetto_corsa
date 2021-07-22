@@ -1,4 +1,4 @@
-#include "appform.h
+#include "appform.h"
 void __userpurge AppForm::AppForm(AppForm *this@<ecx>, unsigned int a2@<ebx>, ACOperatingSystem *iacos, std::wstring form_name)
 {
   bool v5; // cf

@@ -1,4 +1,4 @@
-#include "mousehider.h
+#include "mousehider.h"
 void MouseHider::MouseHider(MouseHider *this, Sim *aSim)
 {
   int v3; // eax

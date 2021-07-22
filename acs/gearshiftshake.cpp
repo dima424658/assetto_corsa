@@ -1,4 +1,4 @@
-#include "gearshiftshake.h
+#include "gearshiftshake.h"
 void __userpurge GearShiftShake::GearShiftShake(GearShiftShake *this@<ecx>, __m128 a2@<xmm0>, CarAvatar *icar)
 {
   CarAvatar *v4; // eax

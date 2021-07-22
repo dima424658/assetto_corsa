@@ -1,4 +1,4 @@
-#include "cinematicfreecamera.h
+#include "cinematicfreecamera.h"
 void __userpurge CinematicFreeCamera::CinematicFreeCamera(CinematicFreeCamera *this@<ecx>, unsigned int a2@<ebx>, std::wstring name, Camera *aCamera, Game *aGame)
 {
   Camera *v6; // esi

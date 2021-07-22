@@ -1,4 +1,4 @@
-#include "animatedlights.h
+#include "animatedlights.h"
 void __userpurge AnimatedLights::AnimatedLights(AnimatedLights *this@<ecx>, unsigned int a2@<ebx>, CarBrakeLights *lightsManager)
 {
   GameObject *v4; // eax

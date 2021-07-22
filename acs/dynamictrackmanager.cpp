@@ -1,4 +1,4 @@
-#include "dynamictrackmanager.h
+#include "dynamictrackmanager.h"
 void DynamicTrackManager::DynamicTrackManager(DynamicTrackManager *this, Sim *aSim, const std::wstring *trackDataFolder)
 {
   unsigned int v4; // ebx

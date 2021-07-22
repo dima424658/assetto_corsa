@@ -1,4 +1,4 @@
-#include "carmirrormanager.h
+#include "carmirrormanager.h"
 void CarMirrorManager::CarMirrorManager(CarMirrorManager *this, CarAvatar *icar, const Texture *mirrorTexture)
 {
   CarMirrorManager *v3; // edi

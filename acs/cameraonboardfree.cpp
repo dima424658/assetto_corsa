@@ -1,4 +1,4 @@
-#include "cameraonboardfree.h
+#include "cameraonboardfree.h"
 void __userpurge CameraOnBoardFree::CameraOnBoardFree(CameraOnBoardFree *this@<ecx>, unsigned int a2@<ebx>, std::wstring name, Camera *a_camera, Sim *a_sim)
 {
   Sim *v6; // edi

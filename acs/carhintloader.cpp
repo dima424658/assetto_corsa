@@ -1,4 +1,4 @@
-#include "carhintloader.h
+#include "carhintloader.h"
 void CarHintLoader::CarHintLoader(CarHintLoader *this, const std::wstring *unixName, const std::wstring *config)
 {
   char v4; // bl

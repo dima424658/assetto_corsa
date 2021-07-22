@@ -1,4 +1,4 @@
-#include "setupfuelmanager.h
+#include "setupfuelmanager.h"
 void SetupFuelManager::SetupFuelManager(SetupFuelManager *this, CarAvatar *aCar)
 {
   char v3; // bl

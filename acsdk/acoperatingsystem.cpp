@@ -1,4 +1,4 @@
-#include "acoperatingsystem.h
+#include "acoperatingsystem.h"
 void ACOperatingSystem::ACOperatingSystem(ACOperatingSystem *this, Sim *isim)
 {
   Game *v3; // eax

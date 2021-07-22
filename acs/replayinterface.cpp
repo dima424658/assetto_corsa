@@ -1,4 +1,4 @@
-#include "replayinterface.h
+#include "replayinterface.h"
 void ReplayInterface::ReplayInterface(ReplayInterface *this, ReplayManager *aReplayManager, Sim *aSim)
 {
   int v4; // ebx

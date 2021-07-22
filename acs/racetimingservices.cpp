@@ -1,4 +1,4 @@
-#include "racetimingservices.h
+#include "racetimingservices.h"
 void RaceTimingServices::RaceTimingServices(RaceTimingServices *this, Sim *asim)
 {
   std::_Tree_node<std::pair<CarAvatar * const,Lap>,void *> *v3; // eax

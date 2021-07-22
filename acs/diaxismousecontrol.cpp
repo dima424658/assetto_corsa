@@ -1,1 +1,1 @@
-#include "diaxismousecontrol.h
+#include "diaxismousecontrol.h"

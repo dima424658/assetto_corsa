@@ -1,4 +1,4 @@
-#include "ghostcar.h
+#include "ghostcar.h"
 void GhostCar::GhostCar(GhostCar *this, CarAvatar *a_car, GhostCarRecorder *gcr)
 {
   std::wstring v4; // [esp-1Ch] [ebp-44h] BYREF

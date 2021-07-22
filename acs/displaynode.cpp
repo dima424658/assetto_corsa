@@ -1,4 +1,4 @@
-#include "displaynode.h
+#include "displaynode.h"
 void DisplayNode::DisplayNode(DisplayNode *this, std::wstring a_name)
 {
   bool v3; // cf

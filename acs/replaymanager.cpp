@@ -1,4 +1,4 @@
-#include "replaymanager.h
+#include "replaymanager.h"
 void ReplayManager::ReplayManager(ReplayManager *this, Sim *a_sim, PhysicsAvatar *physicsAvatar)
 {
   std::_Tree_node<std::pair<CarAvatar * const,std::vector<ReplayLap> >,void *> *v4; // eax

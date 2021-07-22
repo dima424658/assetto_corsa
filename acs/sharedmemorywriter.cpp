@@ -1,4 +1,4 @@
-#include "sharedmemorywriter.h
+#include "sharedmemorywriter.h"
 void __userpurge SharedMemoryWriter::SharedMemoryWriter(SharedMemoryWriter *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   Sim *v4; // eax

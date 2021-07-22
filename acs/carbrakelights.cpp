@@ -1,4 +1,4 @@
-#include "carbrakelights.h
+#include "carbrakelights.h"
 void CarBrakeLights::CarBrakeLights(CarBrakeLights *this, CarAvatar *acar)
 {
   std::wstring *v3; // eax

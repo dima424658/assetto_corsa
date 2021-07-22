@@ -1,4 +1,4 @@
-#include "racemanager.h
+#include "racemanager.h"
 void RaceManager::RaceManager(RaceManager *this, Sim *isim)
 {
   GameObject **v3; // esi

@@ -1,4 +1,4 @@
-#include "trackir.h
+#include "trackir.h"
 void TrackIR::TrackIR(TrackIR *this, HWND__ *hwnd)
 {
   bool v3; // bl

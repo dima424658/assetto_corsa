@@ -1,4 +1,4 @@
-#include "benchmarkmode.h
+#include "benchmarkmode.h"
 void BenchmarkMode::BenchmarkMode(BenchmarkMode *this, Sim *sim)
 {
   Game *v3; // eax

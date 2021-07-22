@@ -1,4 +1,4 @@
-#include "fanatecupdater.h
+#include "fanatecupdater.h"
 void FanatecUpdater::FanatecUpdater(FanatecUpdater *this, CarAvatar *carAvatar)
 {
   void **v3; // ebx

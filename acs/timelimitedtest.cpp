@@ -1,4 +1,4 @@
-#include "timelimitedtest.h
+#include "timelimitedtest.h"
 void __userpurge TimeLimitedTest::TimeLimitedTest(TimeLimitedTest *this@<ecx>, unsigned int a2@<ebx>, Sim *isim)
 {
   bool v4; // zf

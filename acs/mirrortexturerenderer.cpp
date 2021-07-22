@@ -1,4 +1,4 @@
-#include "mirrortexturerenderer.h
+#include "mirrortexturerenderer.h"
 void __userpurge MirrorTextureRenderer::MirrorTextureRenderer(MirrorTextureRenderer *this@<ecx>, unsigned int a2@<ebx>, Sim *sim)
 {
   int v4; // eax

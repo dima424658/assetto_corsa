@@ -1,4 +1,4 @@
-#include "carcolliderrenderer.h
+#include "carcolliderrenderer.h"
 void CarColliderRenderer::CarColliderRenderer(CarColliderRenderer *this, CarAvatar *acar)
 {
   CarAvatar *v3; // eax

@@ -1,4 +1,4 @@
-#include "blurredobjects.h
+#include "blurredobjects.h"
 void BlurredObjects::BlurredObjects(BlurredObjects *this, CarAvatar *acar)
 {
   std::vector<DRSWingConnection> *v3; // edi

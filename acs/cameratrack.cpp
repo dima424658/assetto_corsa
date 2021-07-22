@@ -1,4 +1,4 @@
-#include "cameratrack.h
+#include "cameratrack.h"
 std::wstring *CameraTrack::getCameraSetName(CameraTrack *this, std::wstring *result, unsigned int i)
 {
   std::wstring *v4; // [esp-10h] [ebp-14h]

@@ -1,4 +1,4 @@
-#include "tyresmoke.h
+#include "tyresmoke.h"
 void TyreSmoke::TyreSmoke(TyreSmoke *this, CarAvatar *a_car, int a_tyreIndex)
 {
   int v4; // ebx

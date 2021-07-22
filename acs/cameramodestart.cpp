@@ -1,4 +1,4 @@
-#include "cameramodestart.h
+#include "cameramodestart.h"
 void CameraModeStart::CameraModeStart(CameraModeStart *this, Sim *sim, CameraTrack *cameraTrack, CameraForward *camera, const std::wstring *trackName, const std::wstring *trackConfig)
 {
   std::wstring *v7; // eax

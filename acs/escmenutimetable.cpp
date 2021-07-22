@@ -1,4 +1,4 @@
-#include "escmenutimetable.h
+#include "escmenutimetable.h"
 void __userpurge EscMenuTimeTable::EscMenuTimeTable(EscMenuTimeTable *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   Game *v4; // eax

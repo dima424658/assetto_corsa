@@ -1,4 +1,4 @@
-#include "driftmode.h
+#include "driftmode.h"
 void DriftMode::DriftMode(DriftMode *this, CarAvatar *car)
 {
   CarAvatar *v3; // ebx

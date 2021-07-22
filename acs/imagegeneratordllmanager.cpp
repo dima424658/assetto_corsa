@@ -1,1 +1,1 @@
-#include "imagegeneratordllmanager.h
+#include "imagegeneratordllmanager.h"

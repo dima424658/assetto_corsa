@@ -1,4 +1,4 @@
-#include "enginesmoke.h
+#include "enginesmoke.h"
 void EngineSmoke::EngineSmoke(EngineSmoke *this, CarAvatar *a_car)
 {
   Event<OnReplayStatusChanged> *v3; // ecx

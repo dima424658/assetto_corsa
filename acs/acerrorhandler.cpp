@@ -1,4 +1,4 @@
-#include "acerrorhandler.h
+#include "acerrorhandler.h"
 void ACErrorHandler::ACErrorHandler(ACErrorHandler *this, Console *aconsole)
 {
   this->console = aconsole;

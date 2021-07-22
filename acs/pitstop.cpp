@@ -1,4 +1,4 @@
-#include "pitstop.h
+#include "pitstop.h"
 double PitStop::getPitStopTyrePercentage(PitStop *this)
 {
   float v1; // xmm2_4

@@ -1,4 +1,4 @@
-#include "pyplugin.h
+#include "pyplugin.h"
 void PyPlugin::PyPlugin(PyPlugin *this, const std::shared_ptr<PyModule> *module, Sim *sim)
 {
   INIReader *v4; // ecx

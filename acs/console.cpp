@@ -1,4 +1,4 @@
-#include "console.h
+#include "console.h"
 void __userpurge Console::Console(Console *this@<ecx>, unsigned int a2@<ebx>, Sim *isim)
 {
   Font *v4; // eax

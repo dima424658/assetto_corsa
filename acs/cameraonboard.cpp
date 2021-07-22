@@ -1,4 +1,4 @@
-#include "cameraonboard.h
+#include "cameraonboard.h"
 void __userpurge CameraOnBoard::CameraOnBoard(CameraOnBoard *this@<ecx>, char a2@<bl>, __m128 a3@<xmm0>, Game *igame, CameraForward *cam, Sim *aSim)
 {
   Game *v7; // eax

@@ -1,4 +1,4 @@
-#include "vivemanager.h
+#include "vivemanager.h"
 void ViveManager::ViveManager(ViveManager *this, Sim *aSim, StereoCameraVive *aStereoCamera)
 {
   Game *v4; // eax

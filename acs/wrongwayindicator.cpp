@@ -1,4 +1,4 @@
-#include "wrongwayindicator.h
+#include "wrongwayindicator.h"
 void __userpurge WrongWayIndicator::WrongWayIndicator(WrongWayIndicator *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *car)
 {
   Event<OnReplayStatusChanged> *v4; // ecx

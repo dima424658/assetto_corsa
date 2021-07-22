@@ -1,4 +1,4 @@
-#include "oculusmanager.h
+#include "oculusmanager.h"
 void __userpurge OculusManager::OculusManager(OculusManager *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim, StereoCameraForward *aStereoCamera)
 {
   Game *v5; // eax

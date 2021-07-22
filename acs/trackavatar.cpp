@@ -1,4 +1,4 @@
-#include "trackavatar.h
+#include "trackavatar.h"
 void __userpurge TrackAvatar::TrackAvatar(TrackAvatar *this@<ecx>, __m128 a2@<xmm0>, __m128 a3@<xmm3>, __m128 a4@<xmm4>, Sim *isim, const std::wstring *iunixName, const std::wstring *config)
 {
   TrackAvatar *v7; // ebx

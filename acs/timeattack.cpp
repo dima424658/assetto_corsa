@@ -1,4 +1,4 @@
-#include "timeattack.h
+#include "timeattack.h"
 void __userpurge TimeAttack::TimeAttack(TimeAttack *this@<ecx>, char a2@<bl>, __m128 a3@<xmm3>, __m128 a4@<xmm4>, CarAvatar *aCar)
 {
   CarAvatar *v6; // eax

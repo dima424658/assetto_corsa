@@ -1,4 +1,4 @@
-#include "carnodesorter.h
+#include "carnodesorter.h"
 void CarNodeSorter::CarNodeSorter(CarNodeSorter *this, const std::wstring *name, Sim *sim)
 {
   std::_Tree_node<std::pair<Node * const,CarAvatar *>,void *> *v4; // eax

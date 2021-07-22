@@ -1,1 +1,1 @@
-#include "pysetupappcontroller.h
+#include "pysetupappcontroller.h"

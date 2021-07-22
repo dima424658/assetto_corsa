@@ -1,4 +1,4 @@
-#include "splashscreen.h
+#include "splashscreen.h"
 void __userpurge SplashScreen::SplashScreen(SplashScreen *this@<ecx>, unsigned int a2@<ebx>, Game *igame)
 {
   int v4; // eax

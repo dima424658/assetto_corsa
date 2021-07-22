@@ -1,4 +1,4 @@
-#include "pausemenu.h
+#include "pausemenu.h"
 void PauseMenu::PauseMenu(PauseMenu *this, Sim *isim, ksgui::GUI *gui)
 {
   double v4; // st7

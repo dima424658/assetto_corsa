@@ -1,4 +1,4 @@
-#include "proximityindicator.h
+#include "proximityindicator.h"
 void ProximityIndicator::ProximityIndicator(ProximityIndicator *this, Sim *sim)
 {
   int v3; // eax

@@ -1,4 +1,4 @@
-#include "accontrol.h
+#include "accontrol.h"
 void ACControl::ACControl(ACControl *this, ksgui::GUI *igui)
 {
   std::wstring iname; // [esp+Ch] [ebp-28h] BYREF

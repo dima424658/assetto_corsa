@@ -1,4 +1,4 @@
-#include "nkutils.h
+#include "nkutils.h"
 void NKUtils::NKUtils(NKUtils *this)
 {
   this->__vftable = (NKUtils_vtbl *)&NKUtils::`vftable';

@@ -1,4 +1,4 @@
-#include "acchat.h
+#include "acchat.h"
 void ACChat::ACChat(ACChat *this, Sim *aSim)
 {
   Game *v3; // eax

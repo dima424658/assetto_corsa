@@ -1,4 +1,4 @@
-#include "surfacesmanager.h
+#include "surfacesmanager.h"
 void SurfacesManager::SurfacesManager(SurfacesManager *this, TrackAvatar *track)
 {
   std::_Tree_node<std::pair<std::wstring const ,SurfaceDef>,void *> *v3; // eax

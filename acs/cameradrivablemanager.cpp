@@ -1,4 +1,4 @@
-#include "cameradrivablemanager.h
+#include "cameradrivablemanager.h"
 void __userpurge CameraDrivableManager::CameraDrivableManager(CameraDrivableManager *this@<ecx>, unsigned int a2@<ebx>, Sim *sim, CameraForward *camera)
 {
   CameraDrivableManager *v4; // edi

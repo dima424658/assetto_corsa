@@ -1,4 +1,4 @@
-#include "setupiomanager.h
+#include "setupiomanager.h"
 void SetupIOManager::SetupIOManager(SetupIOManager *this, Sim *aSim)
 {
   unsigned int v3; // ebx

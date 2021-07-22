@@ -1,4 +1,4 @@
-#include "digitalinstruments.h
+#include "digitalinstruments.h"
 void DigitalInstruments::DigitalInstruments(DigitalInstruments *this, CarAvatar *a_car)
 {
   std::wstring *v3; // eax

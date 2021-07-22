@@ -1,4 +1,4 @@
-#include "caraudiofmod.h
+#include "caraudiofmod.h"
 void CarAudioFMOD::CarAudioFMOD(CarAudioFMOD *this, CarAvatar *car)
 {
   std::wstring *v3; // eax

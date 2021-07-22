@@ -1,4 +1,4 @@
-#include "sim.h
+#include "sim.h"
 int Sim::getCarsCount(Sim *this)
 {
   return this->cars._Mylast - this->cars._Myfirst;

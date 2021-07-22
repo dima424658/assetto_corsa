@@ -1,4 +1,4 @@
-#include "trackaudio.h
+#include "trackaudio.h"
 void TrackAudio::TrackAudio(TrackAudio *this, TrackAvatar *track, Sim *sim)
 {
   TrackAvatar *v4; // ebx

@@ -1,1 +1,1 @@
-#include "customguiactionprovider.h
+#include "customguiactionprovider.h"

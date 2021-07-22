@@ -1,4 +1,4 @@
-#include "sessionresultprocessor.h
+#include "sessionresultprocessor.h"
 void SessionResultProcessor::fetchBasicResults(SessionResultProcessor *this)
 {
   SessionResultProcessor *v1; // edi

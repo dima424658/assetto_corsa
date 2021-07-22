@@ -1,4 +1,4 @@
-#include "consoleset.h
+#include "consoleset.h"
 void ConsoleSet::ConsoleSet(ConsoleSet *this, Console *con)
 {
   std::wstring *v3; // ecx

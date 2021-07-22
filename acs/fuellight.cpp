@@ -1,4 +1,4 @@
-#include "fuellight.h
+#include "fuellight.h"
 void FuelLight::FuelLight(FuelLight *this, Sim *aSim)
 {
   Game *v3; // eax

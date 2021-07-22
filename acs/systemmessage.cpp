@@ -1,4 +1,4 @@
-#include "systemmessage.h
+#include "systemmessage.h"
 void SystemMessage::SystemMessage(SystemMessage *this, Sim *aSim)
 {
   std::_Tree_node<std::pair<enum SystemMessageType const ,bool>,void *> *v3; // eax

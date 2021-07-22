@@ -1,4 +1,4 @@
-#include "quickmenupitstop.h
+#include "quickmenupitstop.h"
 void QuickMenuPitstop::QuickMenuPitstop(QuickMenuPitstop *this, Sim *isim)
 {
   int v3; // ebx

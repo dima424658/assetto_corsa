@@ -1,4 +1,4 @@
-#include "dicommandmanager.h
+#include "dicommandmanager.h"
 void DICommandManager::DICommandManager(DICommandManager *this, Game *game)
 {
   int v3; // esi

@@ -1,4 +1,4 @@
-#include "physicsavatar.h
+#include "physicsavatar.h"
 void PhysicsAvatar::PhysicsAvatar(PhysicsAvatar *this, Sim *isim)
 {
   Event<OnNewSessionEvent> *v3; // ecx

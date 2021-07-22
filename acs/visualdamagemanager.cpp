@@ -1,4 +1,4 @@
-#include "visualdamagemanager.h
+#include "visualdamagemanager.h"
 void VisualDamageManager::VisualDamageManager(VisualDamageManager *this, CarAvatar *car)
 {
   CarAvatar *v3; // esi

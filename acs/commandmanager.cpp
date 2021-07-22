@@ -1,4 +1,4 @@
-#include "commandmanager.h
+#include "commandmanager.h"
 void __usercall CommandManager::CommandManager(CommandManager *this@<ecx>, unsigned int a2@<ebx>)
 {
   std::_Tree_node<std::pair<std::wstring const ,CommandItem>,void *> *v3; // eax

@@ -1,4 +1,4 @@
-#include "qosoverlay.h
+#include "qosoverlay.h"
 void QOSOverlay::QOSOverlay(QOSOverlay *this, ACClient *client)
 {
   ACClient *v3; // esi

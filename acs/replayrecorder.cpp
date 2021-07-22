@@ -1,4 +1,4 @@
-#include "replayrecorder.h
+#include "replayrecorder.h"
 void ReplayRecorder::ReplayRecorder(ReplayRecorder *this, CarAvatar *iavatar, ICarPhysicsStateProvider *aPhysics)
 {
   std::wstring *v4; // eax

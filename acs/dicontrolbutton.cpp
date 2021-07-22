@@ -1,4 +1,4 @@
-#include "dicontrolbutton.h
+#include "dicontrolbutton.h"
 void DIControlButton::DIControlButton(DIControlButton *this, std::wstring iname, DirectInput *di)
 {
   bool v4; // cf

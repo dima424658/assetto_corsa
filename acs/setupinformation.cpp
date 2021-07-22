@@ -1,4 +1,4 @@
-#include "setupinformation.h
+#include "setupinformation.h"
 void SetupInformation::SetupInformation(SetupInformation *this, Sim *aSim)
 {
   Game *v3; // eax

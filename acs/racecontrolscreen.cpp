@@ -1,4 +1,4 @@
-#include "racecontrolscreen.h
+#include "racecontrolscreen.h"
 void RaceControlScreen::RaceControlScreen(RaceControlScreen *this, Sim *aSim)
 {
   Game *v3; // eax

@@ -1,4 +1,4 @@
-#include "carraceinfo.h
+#include "carraceinfo.h"
 void CarRaceInfo::CarRaceInfo(CarRaceInfo *this)
 {
   std::_Tree_node<std::pair<std::wstring const ,int>,void *> *v2; // eax

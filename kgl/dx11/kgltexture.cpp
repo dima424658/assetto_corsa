@@ -1,4 +1,4 @@
-#include "kgltexture.h
+#include "kgltexture.h"
 KGLTexture *KGLTexture::`scalar deleting destructor'(KGLTexture *this, unsigned int a2)
 {
   ID3D11ShaderResourceView *v3; // ecx

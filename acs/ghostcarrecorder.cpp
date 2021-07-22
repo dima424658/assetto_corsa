@@ -1,4 +1,4 @@
-#include "ghostcarrecorder.h
+#include "ghostcarrecorder.h"
 void GhostCarRecorder::GhostCarRecorder(GhostCarRecorder *this, CarAvatar *iavatar, Car *icar, bool isRecording, bool isPlaying)
 {
   Event<OnNewSessionEvent> *v6; // ecx

@@ -1,4 +1,4 @@
-#include "damagedisplayer.h
+#include "damagedisplayer.h"
 void __userpurge DamageDisplayer::DamageDisplayer(DamageDisplayer *this@<ecx>, Font *a2@<ebx>, Sim *aSim)
 {
   double v4; // st7

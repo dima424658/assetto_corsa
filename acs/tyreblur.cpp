@@ -1,4 +1,4 @@
-#include "tyreblur.h
+#include "tyreblur.h"
 void TyreBlur::TyreBlur(TyreBlur *this, CarAvatar *acar)
 {
   std::wstring v3; // [esp-1Ch] [ebp-38h] BYREF

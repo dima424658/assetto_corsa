@@ -1,4 +1,4 @@
-#include "acplugin.h
+#include "acplugin.h"
 void ACPlugin::ACPlugin(ACPlugin *this, Sim *aSim, HINSTANCE__ *module)
 {
   CarAvatar *v4; // eax

@@ -1,4 +1,4 @@
-#include "racecontrolspsession.h
+#include "racecontrolspsession.h"
 void RaceControlSPSession::RaceControlSPSession(RaceControlSPSession *this, Sim *aSim)
 {
   Game *v3; // eax

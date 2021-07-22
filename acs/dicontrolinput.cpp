@@ -1,4 +1,4 @@
-#include "dicontrolinput.h
+#include "dicontrolinput.h"
 void DIControlInput::DIControlInput(DIControlInput *this, std::wstring iname, DirectInput *di)
 {
   DIControlInput *v3; // esi

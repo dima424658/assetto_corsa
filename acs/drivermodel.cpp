@@ -1,4 +1,4 @@
-#include "drivermodel.h
+#include "drivermodel.h"
 void DriverModel::DriverModel(DriverModel *this, CarAvatar *car, GraphicsManager *graphics, bool a_isHR)
 {
   CarAvatar *v5; // edi

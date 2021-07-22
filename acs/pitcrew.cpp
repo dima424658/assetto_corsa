@@ -1,4 +1,4 @@
-#include "pitcrew.h
+#include "pitcrew.h"
 void PitCrew::PitCrew(PitCrew *this, CarAvatar *aCar, std::wstring skin)
 {
   int v4; // ebx

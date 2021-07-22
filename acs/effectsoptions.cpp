@@ -1,1 +1,1 @@
-#include "effectsoptions.h
+#include "effectsoptions.h"

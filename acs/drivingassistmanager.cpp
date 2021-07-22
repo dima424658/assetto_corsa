@@ -1,4 +1,4 @@
-#include "drivingassistmanager.h
+#include "drivingassistmanager.h"
 void DrivingAssistManager::DrivingAssistManager(DrivingAssistManager *this, Sim *sim)
 {
   int v3; // ebx

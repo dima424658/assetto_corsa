@@ -1,4 +1,4 @@
-#include "camerafacing.h
+#include "camerafacing.h"
 void CameraFacing::CameraFacing(CameraFacing *this, TrackAvatar *track, Sim *sim)
 {
   Sim *v4; // ebp

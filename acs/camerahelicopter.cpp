@@ -1,4 +1,4 @@
-#include "camerahelicopter.h
+#include "camerahelicopter.h"
 void CameraHelicopter::CameraHelicopter(CameraHelicopter *this, Sim *a_sim, CameraForward *a_camera)
 {
   std::wstring v4; // [esp-1Ch] [ebp-24h] BYREF

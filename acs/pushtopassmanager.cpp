@@ -1,4 +1,4 @@
-#include "pushtopassmanager.h
+#include "pushtopassmanager.h"
 void PushToPassManager::PushToPassManager(PushToPassManager *this, Sim *isim)
 {
   Event<OnNewSessionEvent> *v3; // ecx

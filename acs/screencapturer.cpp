@@ -1,4 +1,4 @@
-#include "screencapturer.h
+#include "screencapturer.h"
 void ScreenCapturer::ScreenCapturer(ScreenCapturer *this, std::wstring name, Sim *aSim)
 {
   Sim *v4; // esi

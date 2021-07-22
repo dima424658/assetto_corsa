@@ -1,4 +1,4 @@
-#include "warningreporter.h
+#include "warningreporter.h"
 void __userpurge WarningReporter::WarningReporter(WarningReporter *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   double v4; // st7

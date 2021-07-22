@@ -1,4 +1,4 @@
-#include "analoginstruments.h
+#include "analoginstruments.h"
 void AnalogInstruments::AnalogInstruments(AnalogInstruments *this, CarAvatar *car)
 {
   std::wstring *v3; // eax

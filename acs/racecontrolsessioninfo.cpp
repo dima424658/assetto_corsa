@@ -1,4 +1,4 @@
-#include "racecontrolsessioninfo.h
+#include "racecontrolsessioninfo.h"
 void RaceControlSessionInfo::RaceControlSessionInfo(RaceControlSessionInfo *this, Sim *aSim)
 {
   Game *v3; // eax

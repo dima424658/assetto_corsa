@@ -1,4 +1,4 @@
-#include "constrainedobjectsmanager.h
+#include "constrainedobjectsmanager.h"
 void ConstrainedObjectsManager::ConstrainedObjectsManager(ConstrainedObjectsManager *this, CarAvatar *car)
 {
   Event<float> *v3; // ecx

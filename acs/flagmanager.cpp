@@ -1,4 +1,4 @@
-#include "flagmanager.h
+#include "flagmanager.h"
 void FlagManager::FlagManager(FlagManager *this, Sim *aSim)
 {
   int v3; // ebx

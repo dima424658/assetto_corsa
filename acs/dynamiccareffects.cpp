@@ -1,4 +1,4 @@
-#include "dynamiccareffects.h
+#include "dynamiccareffects.h"
 void DynamicCarEffects::DynamicCarEffects(DynamicCarEffects *this, CarAvatar *aCar)
 {
   CarAvatar *v3; // ecx

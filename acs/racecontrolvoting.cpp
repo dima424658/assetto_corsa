@@ -1,4 +1,4 @@
-#include "racecontrolvoting.h
+#include "racecontrolvoting.h"
 void RaceControlVoting::RaceControlVoting(RaceControlVoting *this, Sim *aSim)
 {
   Game *v3; // eax

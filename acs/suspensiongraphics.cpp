@@ -1,4 +1,4 @@
-#include "suspensiongraphics.h
+#include "suspensiongraphics.h"
 void SuspensionGraphics::SuspensionGraphics(SuspensionGraphics *this, CarAvatar *acar, SuspensionGraphicsDesc *desc)
 {
   CarAvatar *v4; // eax

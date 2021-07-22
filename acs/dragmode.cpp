@@ -1,4 +1,4 @@
-#include "dragmode.h
+#include "dragmode.h"
 void DragMode::DragMode(DragMode *this, Sim *aSim)
 {
   std::_Tree_node<std::pair<CarAvatar * const,std::vector<Lap> >,void *> *v3; // eax

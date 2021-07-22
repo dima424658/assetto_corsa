@@ -1,4 +1,4 @@
-#include "kglshader.h
+#include "kglshader.h"
 void KGLShader::KGLShader(KGLShader *this, const std::wstring *filename, ID3D11Device *device)
 {
   KGLShader *v3; // ebx

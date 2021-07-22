@@ -1,4 +1,4 @@
-#include "steaminterface.h
+#include "steaminterface.h"
 void SteamInterface::SteamInterface(SteamInterface *this, Sim *aSim)
 {
   std::_Tree_node<std::pair<std::wstring const ,Achievement>,void *> *v3; // eax

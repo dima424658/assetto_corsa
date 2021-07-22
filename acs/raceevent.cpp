@@ -1,4 +1,4 @@
-#include "raceevent.h
+#include "raceevent.h"
 void __userpurge RaceEvent::RaceEvent(RaceEvent *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   CarAvatar *v4; // eax

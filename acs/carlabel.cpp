@@ -1,4 +1,4 @@
-#include "carlabel.h
+#include "carlabel.h"
 void CarLabel::CarLabel(CarLabel *this, int id, float maxDist, CarLabel::eLabelType type, Sim *aSim)
 {
   int v6; // ebp

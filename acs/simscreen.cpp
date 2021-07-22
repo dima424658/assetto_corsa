@@ -1,4 +1,4 @@
-#include "simscreen.h
+#include "simscreen.h"
 void SimScreen::SimScreen(SimScreen *this, Sim *isim)
 {
   Game *v3; // eax
