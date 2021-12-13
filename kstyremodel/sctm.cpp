@@ -1,4 +1,4 @@
-#include "sctm.h
+#include "sctm.h"
 void SCTM::SCTM(SCTM *this)
 {
   this->__vftable = (SCTM_vtbl *)&SCTM::`vftable';

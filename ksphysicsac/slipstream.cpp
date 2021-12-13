@@ -1,4 +1,4 @@
-#include "slipstream.h
+#include "slipstream.h"
 double SlipStream::getSlipEffect(SlipStream *this, const vec3f *p)
 {
   __m128 v2; // xmm3

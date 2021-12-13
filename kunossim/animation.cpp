@@ -1,4 +1,4 @@
-#include "animation.h
+#include "animation.h"
 void Animation::load(Animation *this, const std::wstring *filename)
 {
   const std::wstring *v3; // eax

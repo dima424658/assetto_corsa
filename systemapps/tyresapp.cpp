@@ -1,4 +1,4 @@
-#include "tyresapp.h
+#include "tyresapp.h"
 void __userpurge TyresApp::TyresApp(TyresApp *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *icar)
 {
   Game *v4; // eax

@@ -1,4 +1,4 @@
-#include "dynamicbuffer.h
+#include "dynamicbuffer.h"
 void DynamicBuffer::DynamicBuffer(DynamicBuffer *this, unsigned int isize)
 {
   int v3; // eax

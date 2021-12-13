@@ -1,4 +1,4 @@
-#include "formballast.h
+#include "formballast.h"
 void FormBallast::FormBallast(FormBallast *this, CarAvatar *aCar)
 {
   int v3; // ebx

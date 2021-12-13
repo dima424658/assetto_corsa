@@ -1,4 +1,4 @@
-#include "debuglog.h
+#include "debuglog.h"
 void DebugLog::DebugLog(DebugLog *this)
 {
   std::locale::_Locimp *v2; // eax

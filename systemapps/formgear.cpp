@@ -1,4 +1,4 @@
-#include "formgear.h
+#include "formgear.h"
 void __userpurge FormGear::FormGear(FormGear *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *acar)
 {
   const std::wstring *v4; // eax

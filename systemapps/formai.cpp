@@ -1,4 +1,4 @@
-#include "formai.h
+#include "formai.h"
 void FormAI::FormAI(FormAI *this, Sim *isim)
 {
   int v3; // ebx

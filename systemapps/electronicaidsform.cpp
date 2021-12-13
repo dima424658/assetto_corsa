@@ -1,4 +1,4 @@
-#include "electronicaidsform.h
+#include "electronicaidsform.h"
 void ElectronicAidsForm::ElectronicAidsForm(ElectronicAidsForm *this, CarAvatar *acar)
 {
   int v3; // ebx

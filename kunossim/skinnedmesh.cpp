@@ -1,4 +1,4 @@
-#include "skinnedmesh.h
+#include "skinnedmesh.h"
 void SkinnedMesh::SkinnedMesh(SkinnedMesh *this, const SkinnedMesh *mesh)
 {
   std::_Ref_count_base *v3; // edx

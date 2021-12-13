@@ -1,4 +1,4 @@
-#include "spline.h
+#include "spline.h"
 void Spline::Spline(Spline *this)
 {
   this->__vftable = (Spline_vtbl *)&Spline::`vftable';

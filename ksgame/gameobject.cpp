@@ -1,4 +1,4 @@
-#include "gameobject.h
+#include "gameobject.h"
 TimeLimitedTest *GameObject::getGameObject<TimeLimitedTest>(GameObject *this)
 {
   GameObject **v2; // esi

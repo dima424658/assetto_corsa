@@ -1,4 +1,4 @@
-#include "autoshifter.h
+#include "autoshifter.h"
 void AutoShifter::init(AutoShifter *this, Car *car)
 {
   this->car = car;

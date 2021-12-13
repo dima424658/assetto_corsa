@@ -1,4 +1,4 @@
-#include "splinestripbuilder.h
+#include "splinestripbuilder.h"
 void SplineStripBuilder::SplineStripBuilder(SplineStripBuilder *this, GraphicsManager *graphics)
 {
   this->lastPoint.x = 0.0;

@@ -1,4 +1,4 @@
-#include "pvsprocessor.h
+#include "pvsprocessor.h"
 void PvsProcessor::PvsProcessor(PvsProcessor *this)
 {
   int v2; // edx

@@ -1,4 +1,4 @@
-#include "trigger.h
+#include "trigger.h"
 void Trigger::Trigger(Trigger *this)
 {
   this->accumulator = 0.0;

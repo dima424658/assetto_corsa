@@ -1,4 +1,4 @@
-#include "animationplayer.h
+#include "animationplayer.h"
 void AnimationPlayer::AnimationPlayer(AnimationPlayer *this, Animation *animation, Node *nodeRoot, AnimationPlayer::AnimationAddingMode addmode)
 {
   AnimationSet *v4; // edi

@@ -1,4 +1,4 @@
-#include "rigidbodyode.h
+#include "rigidbodyode.h"
 void RigidBodyODE::RigidBodyODE(RigidBodyODE *this, PhysicsCore *core)
 {
   int v3; // edx

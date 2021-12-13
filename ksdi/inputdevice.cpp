@@ -1,4 +1,4 @@
-#include "inputdevice.h
+#include "inputdevice.h"
 void InputDevice::InputDevice(InputDevice *this, _GUID guid, const std::wstring *name, DirectInput *di)
 {
   IDirectInputDevice8W **v5; // ebp

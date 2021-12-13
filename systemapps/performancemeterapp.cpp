@@ -1,4 +1,4 @@
-#include "performancemeterapp.h
+#include "performancemeterapp.h"
 void __userpurge PerformanceMeterApp::PerformanceMeterApp(PerformanceMeterApp *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *car)
 {
   const std::wstring *v4; // eax

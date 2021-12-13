@@ -1,4 +1,4 @@
-#include "leaderboardapp.h
+#include "leaderboardapp.h"
 void LeaderboardApp::LeaderboardApp(LeaderboardApp *this, Sim *aSim)
 {
   const std::wstring *v3; // eax

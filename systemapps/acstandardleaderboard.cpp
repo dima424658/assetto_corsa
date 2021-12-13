@@ -1,4 +1,4 @@
-#include "acstandardleaderboard.h
+#include "acstandardleaderboard.h"
 void ACStandardLeaderboard::ACStandardLeaderboard(ACStandardLeaderboard *this, Sim *aSim, int numberOfRows, bool aFocusOnPlayer)
 {
   std::_Tree_node<std::pair<CarAvatar * const,Texture>,void *> *v5; // eax

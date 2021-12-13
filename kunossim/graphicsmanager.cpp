@@ -1,4 +1,4 @@
-#include "graphicsmanager.h
+#include "graphicsmanager.h"
 void __userpurge GraphicsManager::GraphicsManager(GraphicsManager *this@<ecx>, __m128 a2@<xmm1>, const VideoSettings *ivideoSettings)
 {
   PvsProcessor *v4; // eax

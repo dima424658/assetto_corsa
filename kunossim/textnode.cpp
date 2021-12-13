@@ -1,4 +1,4 @@
-#include "textnode.h
+#include "textnode.h"
 void TextNode::TextNode(TextNode *this, std::wstring a_name, StringBlitter3D *a_blitter)
 {
   bool v4; // cf

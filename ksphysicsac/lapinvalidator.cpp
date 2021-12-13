@@ -1,4 +1,4 @@
-#include "lapinvalidator.h
+#include "lapinvalidator.h"
 void LapInvalidator::init(LapInvalidator *this, Car *car)
 {
   this->car = car;

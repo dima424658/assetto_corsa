@@ -1,4 +1,4 @@
-#include "directinput.h
+#include "directinput.h"
 void DirectInput::DirectInput(DirectInput *this)
 {
   IDirectInput8W **v2; // edi

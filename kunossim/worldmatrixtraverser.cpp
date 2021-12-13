@@ -1,4 +1,4 @@
-#include "worldmatrixtraverser.h
+#include "worldmatrixtraverser.h"
 void WorldMatrixTraverser::traverse(WorldMatrixTraverser *this, Node *node)
 {
   Node *v3; // eax

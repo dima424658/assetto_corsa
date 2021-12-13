@@ -1,4 +1,4 @@
-#include "camera.h
+#include "camera.h"
 void Camera::Camera(Camera *this, const std::wstring *iname, GraphicsManager *rm)
 {
   const mat44f *v4; // eax

@@ -1,1 +1,1 @@
-#include "taskbaricon.h
+#include "taskbaricon.h"

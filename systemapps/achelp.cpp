@@ -1,4 +1,4 @@
-#include "achelp.h
+#include "achelp.h"
 void __userpurge ACHelp::ACHelp(ACHelp *this@<ecx>, unsigned int a2@<ebx>, ksgui::GUI *aGui)
 {
   const std::wstring *v4; // eax

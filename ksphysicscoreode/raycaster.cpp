@@ -1,4 +1,4 @@
-#include "raycaster.h
+#include "raycaster.h"
 void __userpurge RayCaster::RayCaster(RayCaster *this@<ecx>, int a2@<xmm2>, PhysicsCore *core)
 {
   int (__cdecl *v5)(int); // eax

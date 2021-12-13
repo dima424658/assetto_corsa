@@ -1,4 +1,4 @@
-#include "tabbar.h
+#include "tabbar.h"
 void TabBar::TabBar(TabBar *this, std::wstring name, ksgui::GUI *igui)
 {
   ksgui::Control *v4; // eax

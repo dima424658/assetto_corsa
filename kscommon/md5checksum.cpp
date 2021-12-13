@@ -1,4 +1,4 @@
-#include "md5checksum.h
+#include "md5checksum.h"
 MD5CheckSum *MD5CheckSum::finalize(MD5CheckSum *this)
 {
   unsigned int v2; // edx

@@ -1,4 +1,4 @@
-#include "driftmodecomponent.h
+#include "driftmodecomponent.h"
 BOOL DriftModeComponent::checkExtremeDrifting(DriftModeComponent *this)
 {
   Car *v1; // eax

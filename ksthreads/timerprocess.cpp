@@ -1,4 +1,4 @@
-#include "timerprocess.h
+#include "timerprocess.h"
 void TimerProcess::TimerProcess(TimerProcess *this, int interval, std::function<void __cdecl(void)> callback)
 {
   std::function<void __cdecl(void)> *v4; // esi

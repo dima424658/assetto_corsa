@@ -1,1 +1,1 @@
-#include "localizationmanager.h
+#include "localizationmanager.h"

@@ -1,4 +1,4 @@
-#include "sinsignalgenerator.h
+#include "sinsignalgenerator.h"
 void SinSignalGenerator::SinSignalGenerator(SinSignalGenerator *this)
 {
   SignalGenerator::SignalGenerator(this);

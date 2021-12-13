@@ -1,4 +1,4 @@
-#include "suspensionstrut.h
+#include "suspensionstrut.h"
 mat44f *SuspensionStrut::getHubWorldMatrix(SuspensionStrut *this, mat44f *result)
 {
   int v3; // ecx

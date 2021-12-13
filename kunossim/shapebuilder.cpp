@@ -1,4 +1,4 @@
-#include "shapebuilder.h
+#include "shapebuilder.h"
 Mesh *__cdecl ShapeBuilder::buildHemiSphere(float radius, int subs, std::wstring name)
 {
   Mesh *v3; // esi

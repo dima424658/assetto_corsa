@@ -1,4 +1,4 @@
-#include "brushtyremodel.h
+#include "brushtyremodel.h"
 void BrushTyreModel::BrushTyreModel(BrushTyreModel *this)
 {
   this->data.Fz0 = 2000.0;

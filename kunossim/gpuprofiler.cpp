@@ -1,4 +1,4 @@
-#include "gpuprofiler.h
+#include "gpuprofiler.h"
 void GPUProfiler::GPUProfiler(GPUProfiler *this, GraphicsManager *gm)
 {
   this->graphics = gm;

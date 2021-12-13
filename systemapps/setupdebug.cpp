@@ -1,4 +1,4 @@
-#include "setupdebug.h
+#include "setupdebug.h"
 void __userpurge SetupDebug::SetupDebug(SetupDebug *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   Font *v4; // eax

@@ -1,4 +1,4 @@
-#include "path.h
+#include "path.h"
 void __cdecl Path::createFolder(const std::wstring *folder)
 {
   const std::wstring *v1; // esi

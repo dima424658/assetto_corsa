@@ -1,4 +1,4 @@
-#include "cbuffer.h
+#include "cbuffer.h"
 void CBuffer::CBuffer(CBuffer *this, int islot, int isize)
 {
   unsigned __int8 *v4; // eax

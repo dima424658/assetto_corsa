@@ -1,4 +1,4 @@
-#include "scenegraphcloner.h
+#include "scenegraphcloner.h"
 void SceneGraphCloner::SceneGraphCloner(SceneGraphCloner *this)
 {
   this->__vftable = (SceneGraphCloner_vtbl *)&SceneGraphCloner::`vftable';

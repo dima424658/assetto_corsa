@@ -1,4 +1,4 @@
-#include "renderable.h
+#include "renderable.h"
 void Renderable::Renderable(Renderable *this, std::wstring iname)
 {
   bool v3; // cf

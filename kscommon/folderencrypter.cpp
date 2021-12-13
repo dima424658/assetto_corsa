@@ -1,4 +1,4 @@
-#include "folderencrypter.h
+#include "folderencrypter.h"
 void FolderEncrypter::FolderEncrypter(std::_Wrap_alloc<std::allocator<std::_Tree_node<std::pair<std::wstring const ,std::map<std::wstring,INISection> >,void *> > > *this)
 {
   ;

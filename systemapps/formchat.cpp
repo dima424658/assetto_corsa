@@ -1,4 +1,4 @@
-#include "formchat.h
+#include "formchat.h"
 void FormChat::FormChat(FormChat *this, Sim *a_sim)
 {
   unsigned int v3; // ebx

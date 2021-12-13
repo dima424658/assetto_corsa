@@ -1,4 +1,4 @@
-#include "kn5io.h
+#include "kn5io.h"
 void KN5IO::KN5IO(KN5IO *this, GraphicsManager *graphics)
 {
   this->__vftable = (KN5IO_vtbl *)&KN5IO::`vftable';

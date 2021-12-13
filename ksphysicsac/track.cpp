@@ -1,4 +1,4 @@
-#include "track.h
+#include "track.h"
 std::wstring *Track::getDataFolder(Track *this, std::wstring *result)
 {
   result->_Myres = 7;

@@ -1,4 +1,4 @@
-#include "interpolatingspline.h
+#include "interpolatingspline.h"
 void InterpolatingSpline::InterpolatingSpline(InterpolatingSpline *this)
 {
   Spline::Spline(this);

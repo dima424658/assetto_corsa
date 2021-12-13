@@ -1,4 +1,4 @@
-#include "heavespring.h
+#include "heavespring.h"
 void HeaveSpring::HeaveSpring(HeaveSpring *this)
 {
   this->isPresent = 0;

@@ -1,4 +1,4 @@
-#include "modelboundaries.h
+#include "modelboundaries.h"
 ModelBoundariesCoordinates *__cdecl ModelBoundaries::computeAAModelBoundaries(ModelBoundariesCoordinates *result, Node *base)
 {
   __m128i v2; // xmm0

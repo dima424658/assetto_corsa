@@ -1,4 +1,4 @@
-#include "acdriverperformance.h
+#include "acdriverperformance.h"
 void __userpurge ACDriverPerformance::ACDriverPerformance(ACDriverPerformance *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *aCar)
 {
   std::wstring *v4; // ebx

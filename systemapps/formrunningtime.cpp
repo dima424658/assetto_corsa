@@ -1,4 +1,4 @@
-#include "formrunningtime.h
+#include "formrunningtime.h"
 void __userpurge FormRunningTime::FormRunningTime(FormRunningTime *this@<ecx>, unsigned int a2@<ebx>, Sim *isim)
 {
   Font *v4; // eax

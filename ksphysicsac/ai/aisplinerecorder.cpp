@@ -1,4 +1,4 @@
-#include "aisplinerecorder.h
+#include "aisplinerecorder.h"
 InterpolatingSpline *AISplineRecorder::getLeftSpline(AISplineRecorder *this)
 {
   return &this->leftSpline;

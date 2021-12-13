@@ -1,4 +1,4 @@
-#include "filechangeobserver.h
+#include "filechangeobserver.h"
 void FileChangeObserver::FileChangeObserver(FileChangeObserver *this, const std::wstring *a_filename)
 {
   this->filename._Myres = 7;

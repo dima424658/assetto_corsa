@@ -1,4 +1,4 @@
-#include "dynamiccontroller.h
+#include "dynamiccontroller.h"
 bool DynamicController::isReady(DynamicController *this)
 {
   return this->ready;

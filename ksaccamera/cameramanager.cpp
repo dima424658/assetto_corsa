@@ -1,4 +1,4 @@
-#include "cameramanager.h
+#include "cameramanager.h"
 void CameraManager::CameraManager(CameraManager *this, const std::wstring *filename)
 {
   std::wstring v3; // [esp-1Ch] [ebp-38h] BYREF

@@ -1,4 +1,4 @@
-#include "aidriverdrag.h
+#include "aidriverdrag.h"
 bool AIDriverDrag::isDeviceConnected(AIDriver *this)
 {
   return 0;

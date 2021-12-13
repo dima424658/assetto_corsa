@@ -1,4 +1,4 @@
-#include "setupmanager.h
+#include "setupmanager.h"
 void SetupManager::~SetupManager(SetupManager *this)
 {
   if ( this->gearSettings._Myfirst )

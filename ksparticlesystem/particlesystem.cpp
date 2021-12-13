@@ -1,4 +1,4 @@
-#include "particlesystem.h
+#include "particlesystem.h"
 std::vector<unsigned short> *ParticleSystem::generateIndexBuffer(ParticleSystem *this, std::vector<unsigned short> *result, int pcount)
 {
   int v3; // eax

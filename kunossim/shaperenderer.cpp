@@ -1,4 +1,4 @@
-#include "shaperenderer.h
+#include "shaperenderer.h"
 void ShapeRenderer::ShapeRenderer(ShapeRenderer *this, GLRenderer *agl)
 {
   this->__vftable = (ShapeRenderer_vtbl *)&ShapeRenderer::`vftable';

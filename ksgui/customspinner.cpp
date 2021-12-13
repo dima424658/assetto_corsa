@@ -1,1 +1,1 @@
-#include "customspinner.h
+#include "customspinner.h"

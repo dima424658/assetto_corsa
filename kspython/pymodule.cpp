@@ -1,4 +1,4 @@
-#include "pymodule.h
+#include "pymodule.h"
 void PyModule::PyModule(PyModule *this, const std::wstring *name)
 {
   const std::wstring *v3; // esi

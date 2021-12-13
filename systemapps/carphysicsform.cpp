@@ -1,4 +1,4 @@
-#include "carphysicsform.h
+#include "carphysicsform.h"
 RaceFuelMonitor *CarPhysicsForm::`scalar deleting destructor'(RaceFuelMonitor *this, unsigned int a2)
 {
   this->__vftable = (RaceFuelMonitor_vtbl *)&ksgui::Form::`vftable';

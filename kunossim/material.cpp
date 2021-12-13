@@ -1,4 +1,4 @@
-#include "material.h
+#include "material.h"
 void Material::Material(Material *this, const std::wstring *iname, GraphicsManager *graphics)
 {
   this->name._Myres = 7;

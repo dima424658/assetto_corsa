@@ -1,4 +1,4 @@
-#include "splinelocator.h
+#include "splinelocator.h"
 void SplineLocator::getSides(SplineLocator *this, float *sides, float nsplinepos)
 {
   AISpline *v4; // esi

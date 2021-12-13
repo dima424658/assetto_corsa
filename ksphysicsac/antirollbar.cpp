@@ -1,4 +1,4 @@
-#include "antirollbar.h
+#include "antirollbar.h"
 void AntirollBar::AntirollBar(AntirollBar *this)
 {
   this->carBody = 0;

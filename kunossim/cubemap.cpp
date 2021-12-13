@@ -1,4 +1,4 @@
-#include "cubemap.h
+#include "cubemap.h"
 void CubeMap::CubeMap(CubeMap *this, unsigned int size, unsigned int format, unsigned int mips)
 {
   void *v5; // eax

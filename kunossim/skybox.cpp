@@ -1,4 +1,4 @@
-#include "skybox.h
+#include "skybox.h"
 void __userpurge SkyBox::SkyBox(SkyBox *this@<ecx>, unsigned int a2@<ebx>, GraphicsManager *graphics)
 {
   std::shared_ptr<Material> *v4; // eax

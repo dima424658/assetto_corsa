@@ -1,4 +1,4 @@
-#include "shadervariable.h
+#include "shadervariable.h"
 void ShaderVariable::ShaderVariable(ShaderVariable *this, std::wstring iname, CBuffer *cbuffer, int ioffset, int isize)
 {
   std::wstring *v6; // edi

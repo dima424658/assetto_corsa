@@ -1,4 +1,4 @@
-#include "chasecameditor.h
+#include "chasecameditor.h"
 void ChaseCamEditor::ChaseCamEditor(ChaseCamEditor *this, Sim *sim)
 {
   int v3; // ebx

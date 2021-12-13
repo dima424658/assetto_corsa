@@ -1,4 +1,4 @@
-#include "tyrewearingdebug.h
+#include "tyrewearingdebug.h"
 void TyreWearingDebug::TyreWearingDebug(TyreWearingDebug *this, Sim *aSim)
 {
   const std::wstring *v3; // eax

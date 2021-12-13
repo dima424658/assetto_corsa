@@ -1,4 +1,4 @@
-#include "cameratriplescreen.h
+#include "cameratriplescreen.h"
 void CameraTripleScreen::CameraTripleScreen(CameraTripleScreen *this, const std::wstring *name, GraphicsManager *graphics, int numberOfParticleManagers)
 {
   __m128i v5; // xmm1

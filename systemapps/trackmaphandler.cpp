@@ -1,4 +1,4 @@
-#include "trackmaphandler.h
+#include "trackmaphandler.h"
 void __userpurge TrackMapHandler::TrackMapHandler(TrackMapHandler *this@<ecx>, unsigned int a2@<ebx>, Sim *sim)
 {
   TrackAvatar *v4; // eax

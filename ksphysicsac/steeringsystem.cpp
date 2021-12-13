@@ -1,4 +1,4 @@
-#include "steeringsystem.h
+#include "steeringsystem.h"
 void __userpurge SteeringSystem::init(SteeringSystem *this@<ecx>, unsigned int a2@<ebx>, Car *car)
 {
   int v4; // eax

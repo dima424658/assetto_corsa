@@ -1,4 +1,4 @@
-#include "achideall.h
+#include "achideall.h"
 void ACHideAll::ACHideAll(ACHideAll *this, Sim *aSim)
 {
   const std::wstring *v3; // eax

@@ -1,4 +1,4 @@
-#include "tyretesterform.h
+#include "tyretesterform.h"
 void TyreTesterForm::TyreTesterForm(TyreTesterForm *this, CarAvatar *acar, ksgui::GUI *agui)
 {
   int v4; // ebx

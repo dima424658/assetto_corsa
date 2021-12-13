@@ -1,4 +1,4 @@
-#include "node.h
+#include "node.h"
 bool Node::getActive(Node *this)
 {
   return this->isActive;

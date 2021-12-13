@@ -1,4 +1,4 @@
-#include "ipaddress.h
+#include "ipaddress.h"
 void IPAddress::IPAddress(IPAddress *this)
 {
   *this = 0i64;

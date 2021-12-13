@@ -1,4 +1,4 @@
-#include "particlegenerator.h
+#include "particlegenerator.h"
 void __userpurge ParticleGenerator::ParticleGenerator(ParticleGenerator *this@<ecx>, __m128 a2@<xmm0>, ParticleSystem *a_particleSystem, std::wstring a_filename, float aFrequency)
 {
   ParticleGenerator *v5; // esi

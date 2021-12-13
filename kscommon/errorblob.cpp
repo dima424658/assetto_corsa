@@ -1,4 +1,4 @@
-#include "errorblob.h
+#include "errorblob.h"
 void ErrorBlob::ErrorBlob(ErrorBlob *this)
 {
   this->__vftable = (ErrorBlob_vtbl *)&ErrorBlob::`vftable';

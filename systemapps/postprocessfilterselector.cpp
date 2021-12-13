@@ -1,4 +1,4 @@
-#include "postprocessfilterselector.h
+#include "postprocessfilterselector.h"
 void __userpurge PostProcessFilterSelector::PostProcessFilterSelector(PostProcessFilterSelector *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   ksgui::Form *v3; // ebp

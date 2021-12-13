@@ -1,4 +1,4 @@
-#include "threadpool.h
+#include "threadpool.h"
 void ThreadPool::ThreadPool(ThreadPool *this, int inumThreads, std::function<void __cdecl(int)> initFun)
 {
   std::deque<Task *> *v4; // esi

@@ -1,4 +1,4 @@
-#include "resourcestore.h
+#include "resourcestore.h"
 void ResourceStore::ResourceStore(ResourceStore *this, GraphicsManager *rm)
 {
   std::_Tree_alloc<0,std::_Tree_base_types<std::pair<std::wstring const ,TagDocumentText>> > *v3; // ecx

@@ -1,4 +1,4 @@
-#include "tcpsocket.h
+#include "tcpsocket.h"
 void TCPSocket::TCPSocket(TCPSocket *this)
 {
   Concurrency::details::_Concurrent_queue_base_v4::_Concurrent_queue_base_v4(&this->chNewConnections.queue, 4u);

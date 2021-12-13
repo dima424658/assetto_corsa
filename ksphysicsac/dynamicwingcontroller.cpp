@@ -1,4 +1,4 @@
-#include "dynamicwingcontroller.h
+#include "dynamicwingcontroller.h"
 void DynamicWingController::~DynamicWingController(DynamicWingController *this)
 {
   Curve::~Curve(&this->lut);

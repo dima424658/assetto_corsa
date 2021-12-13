@@ -1,4 +1,4 @@
-#include "camerameshfilter.h
+#include "camerameshfilter.h"
 void CameraMeshFilter::CameraMeshFilter(CameraMeshFilter *this, Camera *icamera, RenderPassID passid, int amaxLayer)
 {
   this->camera = icamera;

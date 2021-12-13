@@ -1,4 +1,4 @@
-#include "formgamestats.h
+#include "formgamestats.h"
 void FormGameStats::FormGameStats(FormGameStats *this, Game *igame)
 {
   int v3; // ebx

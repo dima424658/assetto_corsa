@@ -1,4 +1,4 @@
-#include "triplescreenmanager.h
+#include "triplescreenmanager.h"
 void TripleScreenManager::TripleScreenManager(TripleScreenManager *this, Sim *sim)
 {
   int v3; // ebx

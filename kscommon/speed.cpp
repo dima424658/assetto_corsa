@@ -1,4 +1,4 @@
-#include "speed.h
+#include "speed.h"
 double Speed::kmh(Speed *this)
 {
   return this->value * 3.5999999;

@@ -1,4 +1,4 @@
-#include "keyboardcontrolsdebug.h
+#include "keyboardcontrolsdebug.h"
 void KeyboardControlsDebug::KeyboardControlsDebug(KeyboardControlsDebug *this, CarAvatar *aCar)
 {
   int v3; // ebx

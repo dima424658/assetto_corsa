@@ -1,4 +1,4 @@
-#include "formtelemetry.h
+#include "formtelemetry.h"
 void FormTelemetry::FormTelemetry(FormTelemetry *this, CarAvatar *car_avatar)
 {
   Game *v3; // eax

@@ -1,4 +1,4 @@
-#include "activeactuator.h
+#include "activeactuator.h"
 void ActiveActuator::~ActiveActuator(CarControlsInput *this)
 {
   dxtemplateThreadingImplementation<dxtemplateJobListContainer<dxFakeLull,dxFakeMutex,dxFakeAtomicsProvider>,dxtemplateJobListSelfHandler<dxSelfWakeup,dxtemplateJobListContainer<dxFakeLull,dxFakeMutex,dxFakeAtomicsProvider>>>::CleanupForRestart((TyreTester *)&this->speed);

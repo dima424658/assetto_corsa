@@ -1,4 +1,4 @@
-#include "netmonitorform.h
+#include "netmonitorform.h"
 void __userpurge NetMonitorForm::NetMonitorForm(NetMonitorForm *this@<ecx>, unsigned int a2@<ebx>, Sim *sim)
 {
   ACClient *v4; // eax

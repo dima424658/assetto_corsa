@@ -1,4 +1,4 @@
-#include "cameraforwardyebis.h
+#include "cameraforwardyebis.h"
 void __usercall CameraForwardYebis::initPostProcessing(CameraForwardYebis *this@<ecx>, PPFX::CTextureUtil *a2@<edx>, const char *a3@<esi>)
 {
   PPFX::IPfxContext_Dx11 *v4; // eax

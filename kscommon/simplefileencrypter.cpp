@@ -1,4 +1,4 @@
-#include "simplefileencrypter.h
+#include "simplefileencrypter.h"
 std::vector<char> *__usercall SimpleFileEncrypter::decryptFile@<eax>(unsigned int a1@<edi>, std::vector<char> *result, const std::wstring *filename, const std::wstring *password)
 {
   int *v4; // ebp

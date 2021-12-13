@@ -1,4 +1,4 @@
-#include "rendertarget.h
+#include "rendertarget.h"
 void RenderTarget::RenderTarget(RenderTarget *this, GraphicsManager *graphics, eRenderTargetFormat fmt, unsigned int iwidth, unsigned int iheight, bool hasColor, bool hasDepth, int mips)
 {
   unsigned int v9; // eax

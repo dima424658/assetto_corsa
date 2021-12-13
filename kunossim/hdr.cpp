@@ -1,4 +1,4 @@
-#include "hdr.h
+#include "hdr.h"
 void __userpurge HDR::HDR(HDR *this@<ecx>, unsigned int a2@<ebx>, GraphicsManager *graphics)
 {
   Shader *v4; // eax

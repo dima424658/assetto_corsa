@@ -1,4 +1,4 @@
-#include "materialfilter.h
+#include "materialfilter.h"
 void MaterialFilter::MaterialFilter(MaterialFilter *this)
 {
   this->__vftable = (MaterialFilter_vtbl *)&MaterialFilter::`vftable';

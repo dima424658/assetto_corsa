@@ -1,4 +1,4 @@
-#include "game.h
+#include "game.h"
 void __userpurge Game::Game(Game *this@<ecx>, __m128 a2@<xmm1>, std::wstring name, VideoSettings *videoSettings)
 {
   VideoSettings *v5; // edi

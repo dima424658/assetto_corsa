@@ -1,4 +1,4 @@
-#include "weathergenerator.h
+#include "weathergenerator.h"
 char __cdecl WeatherGenerator::loadPreset(const std::wstring *name, GraphicsManager *graphics, float pp_off_mult)
 {
   const std::wstring *v3; // edi

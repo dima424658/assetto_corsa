@@ -1,4 +1,4 @@
-#include "fuellapevaluator.h
+#include "fuellapevaluator.h"
 long double FuelLapEvaluator::getFuelLaps(FuelLapEvaluator *this)
 {
   long double result; // st7

@@ -1,4 +1,4 @@
-#include "inireader.h
+#include "inireader.h"
 void INIReader::INIReader(INIReader *this, const INIReader *__that)
 {
   INIReader *v2; // edi

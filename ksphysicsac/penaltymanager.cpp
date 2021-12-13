@@ -1,4 +1,4 @@
-#include "penaltymanager.h
+#include "penaltymanager.h"
 void PenaltyManager::~PenaltyManager(PenaltyManager *this)
 {
   if ( this->penaltyRecords._Myfirst )

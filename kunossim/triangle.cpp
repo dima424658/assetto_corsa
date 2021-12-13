@@ -1,4 +1,4 @@
-#include "triangle.h
+#include "triangle.h"
 void Triangle::Triangle(Triangle *this)
 {
   this->points[0].x = 0.0;

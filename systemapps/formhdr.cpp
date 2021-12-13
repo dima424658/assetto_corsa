@@ -1,4 +1,4 @@
-#include "formhdr.h
+#include "formhdr.h"
 void FormHDR::FormHDR(FormHDR *this, ksgui::GUI *gui, CameraForwardYebis *cameraYebis, Sim *sim)
 {
   int v5; // ebx

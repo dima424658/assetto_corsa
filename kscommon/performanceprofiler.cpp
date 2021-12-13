@@ -1,1 +1,1 @@
-#include "performanceprofiler.h
+#include "performanceprofiler.h"

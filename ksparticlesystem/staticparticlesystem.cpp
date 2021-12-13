@@ -1,4 +1,4 @@
-#include "staticparticlesystem.h
+#include "staticparticlesystem.h"
 void StaticParticleSystem::StaticParticleSystem(StaticParticleSystem *this, const std::wstring *a_name, GraphicsManager *graphics, int a_maxParticleCount, const Texture *a_texture)
 {
   int v6; // ebx

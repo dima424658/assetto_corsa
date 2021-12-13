@@ -84,3 +84,8 @@ void KGLRenderTarget::KGLRenderTarget(KGLRenderTarget *this, ID3D11Device *devic
       _printf("CreateShaderResourceView failed\n");
   }
 }
+
+KGLRenderTarget::KGLRenderTarget(ID3D11Device* device, DXGI_FORMAT fmt, unsigned int iwidth, unsigned int iheight, bool isDepth, int aSamples, int mips)
+{
+
+}

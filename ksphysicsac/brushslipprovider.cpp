@@ -1,4 +1,4 @@
-#include "brushslipprovider.h
+#include "brushslipprovider.h"
 BrushSlipProvider *BrushSlipProvider::operator=(BrushSlipProvider *this, const BrushSlipProvider *__that)
 {
   *(__m128i *)&this->brushModel.data.CF = _mm_loadu_si128((const __m128i *)&__that->brushModel);

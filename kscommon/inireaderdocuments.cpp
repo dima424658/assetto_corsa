@@ -1,4 +1,4 @@
-#include "inireaderdocuments.h
+#include "inireaderdocuments.h"
 INIReaderDocuments *INIReaderDocuments::`vector deleting destructor'(INIReaderDocuments *this, unsigned int a2)
 {
   INIReaderDocuments::~INIReaderDocuments(this);

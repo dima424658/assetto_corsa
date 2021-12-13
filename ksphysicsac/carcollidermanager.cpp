@@ -1,4 +1,4 @@
-#include "carcollidermanager.h
+#include "carcollidermanager.h"
 void CarColliderManager::CarColliderManager(CarColliderManager *this)
 {
   std::wstring a_filename; // [esp+Ch] [ebp-28h] BYREF

@@ -1,4 +1,4 @@
-#include "raypicker.h
+#include "raypicker.h"
 void RayPicker::RayPicker(RayPicker *this, float sW, float sH)
 {
   this->__vftable = (RayPicker_vtbl *)&RayPicker::`vftable';

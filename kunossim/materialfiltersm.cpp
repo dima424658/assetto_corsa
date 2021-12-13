@@ -1,4 +1,4 @@
-#include "materialfiltersm.h
+#include "materialfiltersm.h"
 void __userpurge MaterialFilterSM::MaterialFilterSM(MaterialFilterSM *this@<ecx>, unsigned int a2@<ebx>, GraphicsManager *graphics)
 {
   Shader *v4; // eax

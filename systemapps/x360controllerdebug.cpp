@@ -1,4 +1,4 @@
-#include "x360controllerdebug.h
+#include "x360controllerdebug.h"
 void X360ControllerDebug::X360ControllerDebug(X360ControllerDebug *this, Sim *aSim)
 {
   char v3; // bl

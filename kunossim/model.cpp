@@ -1,4 +1,4 @@
-#include "model.h
+#include "model.h"
 void Model::Model(Model *this, std::wstring name)
 {
   Node::Node(this, &name);

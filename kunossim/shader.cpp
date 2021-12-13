@@ -1,4 +1,4 @@
-#include "shader.h
+#include "shader.h"
 void Shader::Shader(Shader *this, GraphicsManager *graphics, const std::wstring *ifilename)
 {
   std::wstring *v4; // edi

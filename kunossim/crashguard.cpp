@@ -1,4 +1,4 @@
-#include "crashguard.h
+#include "crashguard.h"
 void __userpurge CrashGuard::CrashGuard(CrashGuard *this@<ecx>, unsigned int a2@<ebx>, const std::wstring *pdbName)
 {
   this->__vftable = (CrashGuard_vtbl *)&CrashGuard::`vftable';

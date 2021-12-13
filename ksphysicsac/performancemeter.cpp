@@ -1,4 +1,4 @@
-#include "performancemeter.h
+#include "performancemeter.h"
 void PerformanceMeter::~PerformanceMeter(PerformanceMeter *this)
 {
   if ( this->bestLap._Myfirst )

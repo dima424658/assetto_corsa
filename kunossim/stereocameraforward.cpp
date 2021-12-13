@@ -1,4 +1,4 @@
-#include "stereocameraforward.h
+#include "stereocameraforward.h"
 void __userpurge StereoCameraForward::StereoCameraForward(StereoCameraForward *this@<ecx>, unsigned int a2@<ebx>, int a3@<ebp>, const std::wstring *iname, GraphicsManager *graphics, bool auseBlur, bool isYebis)
 {
   std::wstring *v8; // eax

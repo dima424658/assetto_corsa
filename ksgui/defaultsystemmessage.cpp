@@ -1,4 +1,4 @@
-#include "defaultsystemmessage.h
+#include "defaultsystemmessage.h"
 void DefaultSystemMessage::DefaultSystemMessage(DefaultSystemMessage *this, ksgui::GUI *gui)
 {
   Texture *v3; // eax

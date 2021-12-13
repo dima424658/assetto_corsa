@@ -1,4 +1,4 @@
-#include "suspension.h
+#include "suspension.h"
 void __userpurge Suspension::Suspension(Suspension *this@<ecx>, int a2@<ebx>, int a3@<ebp>, Car *car, int index)
 {
   float v6; // xmm1_4

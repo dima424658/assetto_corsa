@@ -1,4 +1,4 @@
-#include "drivereyespositioner.h
+#include "drivereyespositioner.h"
 void __userpurge DriverEyesPositioner::DriverEyesPositioner(DriverEyesPositioner *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *aCar)
 {
   Sim *v4; // eax

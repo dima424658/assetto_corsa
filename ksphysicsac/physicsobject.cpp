@@ -1,4 +1,4 @@
-#include "physicsobject.h
+#include "physicsobject.h"
 void PhysicsObject::PhysicsObject(PhysicsObject *this, PhysicsEngine *pe, PhysicsObjectDesc *desc, BufferedChannel<mat44f> *chOut)
 {
   IPhysicsCore *v5; // eax

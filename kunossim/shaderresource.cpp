@@ -1,4 +1,4 @@
-#include "shaderresource.h
+#include "shaderresource.h"
 void ShaderResource::ShaderResource(ShaderResource *this, std::wstring iname, int islot)
 {
   ShaderResource *v3; // esi

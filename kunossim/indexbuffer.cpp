@@ -1,4 +1,4 @@
-#include "indexbuffer.h
+#include "indexbuffer.h"
 void IndexBuffer::IndexBuffer(IndexBuffer *this, std::vector<unsigned short> *indices)
 {
   void *v3; // eax

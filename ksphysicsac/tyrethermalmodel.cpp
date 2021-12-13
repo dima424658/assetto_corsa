@@ -1,4 +1,4 @@
-#include "tyrethermalmodel.h
+#include "tyrethermalmodel.h"
 void TyreThermalModel::TyreThermalModel(TyreThermalModel *this)
 {
   this->elements = 0;

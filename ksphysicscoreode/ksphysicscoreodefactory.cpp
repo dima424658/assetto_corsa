@@ -1,4 +1,4 @@
-#include "ksphysicscoreodefactory.h
+#include "ksphysicscoreodefactory.h"
 void __cdecl ksPhysicsCoreODEFactory::create()
 {
   PhysicsCore *v0; // eax

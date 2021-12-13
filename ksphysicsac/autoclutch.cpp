@@ -1,4 +1,4 @@
-#include "autoclutch.h
+#include "autoclutch.h"
 void Autoclutch::Autoclutch(Autoclutch *this)
 {
   this->rpmMin = 0.0;

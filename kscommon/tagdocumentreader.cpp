@@ -1,4 +1,4 @@
-#include "tagdocumentreader.h
+#include "tagdocumentreader.h"
 void TagDocumentReader::TagDocumentReader(TagDocumentReader *this, std::wstring inputFile)
 {
   std::_Tree_node<std::pair<std::wstring const ,TagDocumentText>,void *> *v3; // eax

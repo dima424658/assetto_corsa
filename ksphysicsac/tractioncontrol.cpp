@@ -1,4 +1,4 @@
-#include "tractioncontrol.h
+#include "tractioncontrol.h"
 void TractionControl::~TractionControl(TractionControl *this)
 {
   Curve::~Curve(&this->valueCurve);

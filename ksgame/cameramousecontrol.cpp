@@ -1,4 +1,4 @@
-#include "cameramousecontrol.h
+#include "cameramousecontrol.h"
 void CameraMouseControl::CameraMouseControl(CameraMouseControl *this, std::wstring name, Camera *camera, Game *igame)
 {
   Camera *v5; // esi

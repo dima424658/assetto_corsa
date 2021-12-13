@@ -1,4 +1,4 @@
-#include "pidcontroller.h
+#include "pidcontroller.h"
 void PIDController::PIDController(PIDController *this)
 {
   this->P = 0.0;

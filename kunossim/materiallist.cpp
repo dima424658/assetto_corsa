@@ -1,4 +1,4 @@
-#include "materiallist.h
+#include "materiallist.h"
 void MaterialList::MaterialList(MaterialList *this)
 {
   this->__vftable = (MaterialList_vtbl *)&MaterialList::`vftable';

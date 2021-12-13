@@ -1,4 +1,4 @@
-#include "suspensionml.h
+#include "suspensionml.h"
 SuspensionStatus *SuspensionML::getStatus(SuspensionML *this)
 {
   return &this->status;

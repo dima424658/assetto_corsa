@@ -1,4 +1,4 @@
-#include "actimeflow.h
+#include "actimeflow.h"
 void __userpurge ACTimeFlow::ACTimeFlow(ACTimeFlow *this@<ecx>, unsigned int a2@<ebx>, Sim *aSim)
 {
   const std::wstring *v4; // eax

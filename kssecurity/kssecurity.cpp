@@ -1,4 +1,4 @@
-#include "kssecurity.h
+#include "kssecurity.h"
 void ksSecurity::ksSecurity(ksSecurity *this)
 {
   this->__vftable = (ksSecurity_vtbl *)&ksSecurity::`vftable';

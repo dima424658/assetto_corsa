@@ -1,4 +1,4 @@
-#include "trackmap.h
+#include "trackmap.h"
 void TrackMap::TrackMap(TrackMap *this, ksgui::GUI *a_gui, Sim *a_sim, bool zoomed)
 {
   std::wstring *v5; // edi

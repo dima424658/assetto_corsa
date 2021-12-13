@@ -1,4 +1,4 @@
-#include "virtualdisplay.h
+#include "virtualdisplay.h"
 void VirtualDisplay::VirtualDisplay(VirtualDisplay *this)
 {
   vec2f v; // [esp+18h] [ebp-14h] BYREF

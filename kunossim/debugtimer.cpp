@@ -1,4 +1,4 @@
-#include "debugtimer.h
+#include "debugtimer.h"
 void DebugTimer::DebugTimer(DebugTimer *this, const std::wstring *iname)
 {
   std::wstring *v3; // ecx

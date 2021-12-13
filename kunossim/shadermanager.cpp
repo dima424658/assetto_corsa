@@ -1,4 +1,4 @@
-#include "shadermanager.h
+#include "shadermanager.h"
 void ShaderManager::ShaderManager(ShaderManager *this, GraphicsManager *graphics)
 {
   this->graphics = graphics;

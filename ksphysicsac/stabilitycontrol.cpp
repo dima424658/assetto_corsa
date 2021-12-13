@@ -1,4 +1,4 @@
-#include "stabilitycontrol.h
+#include "stabilitycontrol.h"
 void StabilityControl::init(StabilityControl *this, Car *car)
 {
   this->car = car;

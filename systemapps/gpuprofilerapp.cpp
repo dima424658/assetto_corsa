@@ -1,4 +1,4 @@
-#include "gpuprofilerapp.h
+#include "gpuprofilerapp.h"
 void __userpurge GPUProfilerApp::GPUProfilerApp(GPUProfilerApp *this@<ecx>, unsigned int a2@<ebx>, GraphicsManager *graphics, ksgui::GUI *igui)
 {
   const std::wstring *v5; // eax

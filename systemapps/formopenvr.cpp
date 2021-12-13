@@ -1,4 +1,4 @@
-#include "formopenvr.h
+#include "formopenvr.h"
 void __userpurge FormOpenVR::FormOpenVR(FormOpenVR *this@<ecx>, double a2@<st0>, Sim *aSim)
 {
   Game *v4; // eax

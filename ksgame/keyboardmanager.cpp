@@ -1,4 +1,4 @@
-#include "keyboardmanager.h
+#include "keyboardmanager.h"
 void KeyboardManager::KeyboardManager(KeyboardManager *this, RenderWindow *arenderWindow)
 {
   Event<OnKeyEvent> *v3; // ecx

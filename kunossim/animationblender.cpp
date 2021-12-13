@@ -1,4 +1,4 @@
-#include "animationblender.h
+#include "animationblender.h"
 void AnimationBlender::addTargetNode(AnimationBlender *this, Node *n, bool recursive)
 {
   int v4; // edi

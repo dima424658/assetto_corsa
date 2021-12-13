@@ -1,4 +1,4 @@
-#include "glrenderer.h
+#include "glrenderer.h"
 void GLRenderer::GLRenderer(GLRenderer *this, GraphicsManager *r, unsigned int maxVertices, bool withFullScreenQuad)
 {
   std::vector<SplineIndexBound> *v5; // esi

@@ -1,4 +1,4 @@
-#include "accamera.h
+#include "accamera.h"
 void ACCamera::ACCamera(ACCamera *this)
 {
   this->__vftable = (ACCamera_vtbl *)&ACCamera::`vftable';

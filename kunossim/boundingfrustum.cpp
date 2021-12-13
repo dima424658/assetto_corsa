@@ -1,4 +1,4 @@
-#include "boundingfrustum.h
+#include "boundingfrustum.h"
 void BoundingFrustum::BoundingFrustum(BoundingFrustum *this, const mat44f *iviewProj)
 {
   this->__vftable = (BoundingFrustum_vtbl *)&BoundingFrustum::`vftable';

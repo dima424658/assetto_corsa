@@ -1,4 +1,4 @@
-#include "signalgenerator.h
+#include "signalgenerator.h"
 void SignalGenerator::SignalGenerator(SignalGenerator *this)
 {
   this->__vftable = (SignalGenerator_vtbl *)&SignalGenerator::`vftable';

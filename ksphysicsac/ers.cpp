@@ -1,4 +1,4 @@
-#include "ers.h
+#include "ers.h"
 void ERS::ERS(ERS *this)
 {
   this->ICoastGenerator::__vftable = (ICoastGenerator_vtbl *)&ICoastGenerator::`vftable';

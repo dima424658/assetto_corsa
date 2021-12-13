@@ -1,1 +1,1 @@
-#include "connectedlabel.h
+#include "connectedlabel.h"

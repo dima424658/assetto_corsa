@@ -1,4 +1,4 @@
-#include "thermalobject.h
+#include "thermalobject.h"
 void ThermalObject::ThermalObject(ThermalObject *this)
 {
   this->__vftable = (ThermalObject_vtbl *)&ThermalObject::`vftable';

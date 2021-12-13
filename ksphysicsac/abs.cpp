@@ -1,4 +1,4 @@
-#include "abs.h
+#include "abs.h"
 void ABS::~ABS(ABS *this)
 {
   Curve::~Curve(&this->valueCurve);

@@ -1,4 +1,4 @@
-#include "photomode.h
+#include "photomode.h"
 void PhotoMode::PhotoMode(PhotoMode *this, Sim *aSim)
 {
   Game *v3; // eax

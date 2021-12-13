@@ -1,4 +1,4 @@
-#include "timeline.h
+#include "timeline.h"
 TimeLine *TimeLine::`vector deleting destructor'(TimeLine *this, unsigned int a2)
 {
   TimeLine::~TimeLine(this);

@@ -1,4 +1,4 @@
-#include "cameramirror.h
+#include "cameramirror.h"
 void CameraMirror::CameraMirror(CameraMirror *this, const std::wstring *name, GraphicsManager *graphics)
 {
   Camera::Camera(this, name, graphics);

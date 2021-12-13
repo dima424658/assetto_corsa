@@ -1,4 +1,4 @@
-#include "font.h
+#include "font.h"
 void Font::Font(Font *this, const std::wstring *fontFamily, eFontType fontType, float size, int italic, int bold)
 {
   std::wstring v7; // [esp-20h] [ebp-24h] BYREF

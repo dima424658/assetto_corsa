@@ -1,4 +1,4 @@
-#include "nodeboundingsphere.h
+#include "nodeboundingsphere.h"
 void NodeBoundingSphere::NodeBoundingSphere(NodeBoundingSphere *this, std::wstring name, float radius)
 {
   bool v4; // cf

@@ -1,4 +1,4 @@
-#include "cameraforward.h
+#include "cameraforward.h"
 void CameraForward::CameraForward(CameraForward *this, const std::wstring *iname, GraphicsManager *graphics, bool auseBlur)
 {
   bool v5; // zf

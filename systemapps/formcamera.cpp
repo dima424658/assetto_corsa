@@ -1,4 +1,4 @@
-#include "formcamera.h
+#include "formcamera.h"
 void __userpurge FormCamera::FormCamera(FormCamera *this@<ecx>, unsigned int a2@<ebx>, Sim *a_sim, CameraForwardYebis *camera)
 {
   int v5; // esi

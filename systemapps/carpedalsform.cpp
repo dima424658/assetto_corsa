@@ -1,4 +1,4 @@
-#include "carpedalsform.h
+#include "carpedalsform.h"
 void __userpurge CarPedalsForm::CarPedalsForm(CarPedalsForm *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *icar)
 {
   Game *v4; // eax

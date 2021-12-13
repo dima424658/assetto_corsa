@@ -1,4 +1,4 @@
-#include "joypadmanager.h
+#include "joypadmanager.h"
 void JoypadManager::~JoypadManager(JoypadManager *this)
 {
   if ( this->joypad._Myptr )

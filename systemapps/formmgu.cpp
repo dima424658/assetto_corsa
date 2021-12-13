@@ -1,4 +1,4 @@
-#include "formmgu.h
+#include "formmgu.h"
 void __userpurge FormMGU::FormMGU(FormMGU *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *aCar)
 {
   const std::wstring *v4; // eax

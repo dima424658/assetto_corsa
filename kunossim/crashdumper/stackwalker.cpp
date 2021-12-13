@@ -1,4 +1,4 @@
-#include "stackwalker.h
+#include "stackwalker.h"
 void StackWalker::StackWalker(StackWalker *this, int options, const char *szSymPath, unsigned int dwProcessId, void *hProcess)
 {
   StackWalkerInternal *v6; // eax

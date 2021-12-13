@@ -1,4 +1,4 @@
-#include "cameramousecontrolbase.h
+#include "cameramousecontrolbase.h"
 void CameraMouseControlBase::CameraMouseControlBase(CameraMouseControlBase *this, Camera *camera)
 {
   this->target = camera;

@@ -1,4 +1,4 @@
-#include "curve.h
+#include "curve.h"
 Curve *Curve::operator=(Curve *this, const Curve *__that)
 {
   std::vector<float>::operator=(

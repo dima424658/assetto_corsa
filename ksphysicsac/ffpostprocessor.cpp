@@ -1,4 +1,4 @@
-#include "ffpostprocessor.h
+#include "ffpostprocessor.h"
 void __usercall FFPostProcessor::FFPostProcessor(FFPostProcessor *this@<ecx>, unsigned int a2@<ebx>)
 {
   int v3; // eax

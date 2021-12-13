@@ -1,4 +1,4 @@
-#include "raceposition.h
+#include "raceposition.h"
 void __userpurge RacePosition::RacePosition(RacePosition *this@<ecx>, unsigned int a2@<ebx>, Sim *sim)
 {
   const std::wstring *v4; // eax

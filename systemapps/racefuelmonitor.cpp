@@ -1,4 +1,4 @@
-#include "racefuelmonitor.h
+#include "racefuelmonitor.h"
 void __userpurge RaceFuelMonitor::RaceFuelMonitor(RaceFuelMonitor *this@<ecx>, unsigned int a2@<ebx>, Sim *sim)
 {
   const std::wstring *v4; // eax

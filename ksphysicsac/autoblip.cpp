@@ -1,4 +1,4 @@
-#include "autoblip.h
+#include "autoblip.h"
 void AutoBlip::init(AutoBlip *this, Car *acar)
 {
   Event<SessionInfo> *v3; // ecx

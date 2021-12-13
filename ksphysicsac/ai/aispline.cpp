@@ -1,4 +1,4 @@
-#include "aispline.h
+#include "aispline.h"
 InterpolatingSpline *AISpline::getBaseSpline(AISpline *this)
 {
   return &this->spline;

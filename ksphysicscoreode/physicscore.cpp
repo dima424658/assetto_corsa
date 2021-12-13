@@ -1,4 +1,4 @@
-#include "physicscore.h
+#include "physicscore.h"
 CoreCPUTimes *PhysicsCore::getCoreCPUTimes(PhysicsCore *this, CoreCPUTimes *result)
 {
   CoreCPUTimes *v2; // eax

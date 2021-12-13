@@ -1,4 +1,4 @@
-#include "wing.h
+#include "wing.h"
 void Wing::Wing(Wing *this, Car *a_car, INIReader *ini, int index, bool isVertical)
 {
   Wing *v5; // edi

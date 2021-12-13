@@ -1,4 +1,4 @@
-#include "yebispp.h
+#include "yebispp.h"
 void YebisPP::YebisPP(YebisPP *this, GraphicsManager *graphics, int width, int height, ID3D11RenderTargetView *rtv)
 {
   int v6; // eax

@@ -1,4 +1,4 @@
-#include "texture.h
+#include "texture.h"
 void Texture::Texture(Texture *this)
 {
   this->kid = 0;

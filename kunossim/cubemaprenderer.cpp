@@ -1,4 +1,4 @@
-#include "cubemaprenderer.h
+#include "cubemaprenderer.h"
 void CubeMapRenderer::CubeMapRenderer(CubeMapRenderer *this, GraphicsManager *graphics)
 {
   float v3; // xmm2_4

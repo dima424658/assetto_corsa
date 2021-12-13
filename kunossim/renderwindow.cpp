@@ -1,4 +1,4 @@
-#include "renderwindow.h
+#include "renderwindow.h"
 void RenderWindow::RenderWindow(RenderWindow *this, std::wstring name, VideoSettings *videoSettings)
 {
   VideoSettings *v3; // esi

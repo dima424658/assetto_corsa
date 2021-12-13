@@ -1,4 +1,4 @@
-#include "collisions.h
+#include "collisions.h"
 char __cdecl Collisions::rayMeshIntersect(const vec3f *rayOrg, const vec3f *rayDir, Mesh *m, float *t)
 {
   int v4; // esi

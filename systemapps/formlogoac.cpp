@@ -1,4 +1,4 @@
-#include "formlogoac.h
+#include "formlogoac.h"
 void __userpurge FormLogoAC::FormLogoAC(FormLogoAC *this@<ecx>, unsigned int a2@<ebx>, ksgui::GUI *a_gui)
 {
   const std::wstring *v4; // eax

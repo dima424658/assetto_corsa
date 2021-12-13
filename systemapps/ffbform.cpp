@@ -1,4 +1,4 @@
-#include "ffbform.h
+#include "ffbform.h"
 void __userpurge FFBForm::FFBForm(FFBForm *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *aCar)
 {
   Sim *v4; // eax

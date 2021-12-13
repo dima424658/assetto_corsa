@@ -1,4 +1,4 @@
-#include "stringblitter3d.h
+#include "stringblitter3d.h"
 double StringBlitter3D::getFontSize(StringBlitter3D *this)
 {
   return this->sizeY;

@@ -1,4 +1,4 @@
-#include "camerashadowmapped.h
+#include "camerashadowmapped.h"
 void CameraShadowMapped::CameraShadowMapped(CameraShadowMapped *this, const std::wstring *iname, GraphicsManager *gm)
 {
   std::vector<ShadowMapSettings> *v4; // ebx

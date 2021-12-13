@@ -1,4 +1,4 @@
-#include "nodeevent.h
+#include "nodeevent.h"
 void NodeEvent::NodeEvent(NodeEvent *this, std::wstring n)
 {
   bool v3; // cf

@@ -1,4 +1,4 @@
-#include "telemetryapp.h
+#include "telemetryapp.h"
 void __userpurge TelemetryApp::TelemetryApp(TelemetryApp *this@<ecx>, unsigned int a2@<ebx>, CarAvatar *car)
 {
   const std::wstring *v4; // eax

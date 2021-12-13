@@ -1,4 +1,4 @@
-#include "aeromap.h
+#include "aeromap.h"
 void AeroMap::AeroMap(AeroMap *this)
 {
   this->referenceArea = 0.0;

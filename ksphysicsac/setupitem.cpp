@@ -1,4 +1,4 @@
-#include "setupitem.h
+#include "setupitem.h"
 void SetupItem::SetupItem(SetupItem *this, const SetupItem *__that)
 {
   SetupItem *v2; // edi

@@ -1,3 +1,6 @@
 ac.*
 ext
 .vscode
+.vs
+assetto_corsa.sln
+assetto_corsa.vcxproj*

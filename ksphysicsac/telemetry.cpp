@@ -1,4 +1,4 @@
-#include "telemetry.h
+#include "telemetry.h"
 void Telemetry::Telemetry(Telemetry *this)
 {
   std::wstring *v2; // ecx
