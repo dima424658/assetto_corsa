@@ -5,6 +5,9 @@
 
 class KGLIndexBuffer
 {
-void KGLIndexBuffer(ID3D11Device *device, unsigned int size, uint16_t *data);
+public:
+    KGLIndexBuffer(ID3D11Device* device, unsigned int size, uint16_t* data);
 
+protected:
+    ID3D11Buffer* buffer;
 };

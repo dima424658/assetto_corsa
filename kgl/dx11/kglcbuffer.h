@@ -4,7 +4,10 @@
 
 class KGLCBuffer
 {
+public:
+    KGLCBuffer(ID3D11Device* device, unsigned int isize);
 
-	void KGLCBuffer(ID3D11Device *device, unsigned int isize);
-
+protected:
+    unsigned int size;
+    ID3D11Buffer* buffer;
 };

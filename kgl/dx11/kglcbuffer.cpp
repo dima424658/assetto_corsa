@@ -1,20 +1,17 @@
 #include "kglcbuffer.h"
-void KGLCBuffer::KGLCBuffer(KGLCBuffer *this, ID3D11Device *device, unsigned int isize)
-{
-  ID3D11Device *v3; // edx
-  ID3D11Buffer **v5; // esi
-  D3D11_BUFFER_DESC cbDesc; // [esp+0h] [ebp-1Ch] BYREF
 
-  v3 = ::device;
-  *(_QWORD *)&cbDesc.MiscFlags = 0i64;
-  v5 = &this->buffer;
+KGLCBuffer::KGLCBuffer(ID3D11Device* device, unsigned int isize)
+  : size{ isize }, buffer{ nullptr }
+{
+  D3D11_BUFFER_DESC cbDesc{};
   cbDesc.ByteWidth = isize;
-  this->size = isize;
-  this->buffer = 0;
   cbDesc.Usage = D3D11_USAGE_DEFAULT;
+  cbDesc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
   cbDesc.CPUAccessFlags = 0;
-  cbDesc.BindFlags = 4;
-  v3->CreateBuffer(v3, &cbDesc, 0, &this->buffer);
-  if ( !*v5 )
-    _printf("ERROR: CBuffer CreateBuffer failed size=%d\n", this->size);
+  cbDesc.MiscFlags = 0;
+  cbDesc.StructureByteStride = 0;
+
+  device->CreateBuffer(&cbDesc, nullptr, &buffer);
+  if (!buffer)
+    std::printf("ERROR: CBuffer CreateBuffer failed size=%d\n", size);
 }
