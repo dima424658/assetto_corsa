@@ -2,24 +2,24 @@
 
 #include <map>
 
-KGLShader::KGLShader(const std::wstring& filename, ID3D11Device* t_device)
-    : vs{ nullptr },
-    ps{ nullptr },
-    inputLayout{ nullptr },
-    ilType{ 0 },
-    device{ t_device }
+KGLShader::KGLShader(const std::wstring &filename, ID3D11Device *t_device)
+    : vs{nullptr},
+      ps{nullptr},
+      inputLayout{nullptr},
+      ilType{0},
+      device{t_device}
 {
     loadShaderBinary(filename);
 }
 
-void(const std::wstring& filename)
+void KGLShader::loadShaderBinary(const std::wstring &filename)
 {
     inputLayout = nullptr;
 
-    INIReader meta{ filename + L"_meta.ini" };
+    INIReader meta{filename + L"_meta.ini"};
 
     if (!meta.ready)
-        _printf("ERROR: Cannot find shader meta %S\n", std::wstring{ filename + L"_meta.ini" }.c_str());
+        printf("ERROR: Cannot find shader meta %S\n", std::wstring{filename + L"_meta.ini"}.c_str());
 
     isAlphaTested = meta.getInt(L"METADATA", L"ALPHATEST");
 
@@ -37,25 +37,25 @@ void(const std::wstring& filename)
     blob = readBlob(filename + L"_ps.fxo");
     reflectVars(blob, true);
 
-    if (device->CreatePixelShader(blob->GetBufferPointer(), blob->GetBufferSize(), &ps) < S_OK)
-        _printf("ERROR: CreatePixelShader failed (%s)\n", fileName.c_str());
+    if (device->CreatePixelShader(blob->GetBufferPointer(), blob->GetBufferSize(), nullptr, &ps) < S_OK)
+        printf("ERROR: CreatePixelShader failed (%s)\n", fileName.c_str());
 
     blob->Release();
 }
 
-void KGLShader::createVertexShader(ID3D10Blob* blob)
+void KGLShader::createVertexShader(ID3D10Blob *blob)
 {
     reflectVars(blob, false);
 
-    if (device->CreateVertexShader(blob->GetBufferPointer(), blob->GetBufferSize(), &vs) >= S_OK)
+    if (device->CreateVertexShader(blob->GetBufferPointer(), blob->GetBufferSize(), nullptr, &vs) >= S_OK)
         inputLayout = getInputLayout(device, blob->GetBufferPointer(), blob->GetBufferSize(), ilType);
     else
-        _printf("ERROR: CreateVertexShader failed (%S)\n", fileName.c_str());
+        printf("ERROR: CreateVertexShader failed (%S)\n", fileName.c_str());
 }
 
-void KGLShader::reflectVars(ID3D10Blob* blob, bool isPS)
+void KGLShader::reflectVars(ID3D10Blob *blob, bool isPS)
 {
-    ID3D11ShaderReflection* pReflector;
+    ID3D11ShaderReflection *pReflector;
 
     D3D11_SHADER_DESC desc;
     D3D11_SHADER_BUFFER_DESC cbDesc;
@@ -76,9 +76,8 @@ void KGLShader::reflectVars(ID3D10Blob* blob, bool isPS)
         {
             pReflector->GetConstantBufferByIndex(i)->GetVariableByIndex(j)->GetDesc(&vDesc);
 
-            auto varIt = std::find_if(vars.begin(), vars.end(), [&vDesc](const auto& var) {
-                return var.name.compare(string2wstring(vDesc.Name)) == 0; // var.cBufferName ???
-                });
+            auto varIt = std::find_if(vars.begin(), vars.end(), [&vDesc](const auto &var)
+                                      { return var.name.compare(string2wstring(vDesc.Name)) == 0; }); // var.cBufferName ??? });
 
             if (varIt != vars.end())
             {
@@ -99,7 +98,7 @@ void KGLShader::reflectVars(ID3D10Blob* blob, bool isPS)
     {
         pReflector->GetResourceBindingDesc(i, &rDesc);
 
-        if (rDesc.Type = D3D_SIT_TEXTURE && (rDesc.BindPoint < 6 || rDesc.BindPoint >= 0x14))
+        if (rDesc.Type == D3D_SIT_TEXTURE && (rDesc.BindPoint < 6 || rDesc.BindPoint >= 0x14))
         {
             KGLShaderTexture res;
             res.name = string2wstring(rDesc.Name);
@@ -109,14 +108,13 @@ void KGLShader::reflectVars(ID3D10Blob* blob, bool isPS)
         }
     }
 
-    pReflector->Release(pReflector);
+    pReflector->Release();
 }
 
-void KGLShader::addCBuffer(const std::wstring& name, unsigned int size, unsigned int slot)
+void KGLShader::addCBuffer(const std::wstring &name, unsigned int size, unsigned int slot)
 {
-    auto it = std::find_if(cBuffers.begin(), cBuffers.end(), [&name, slot](const auto& cBuffer) {
-        return cBuffer.cBufferName.compare(name) == 0 || cBuffer.slot == slot;
-        });
+    auto it = std::find_if(cBuffers.begin(), cBuffers.end(), [&name, slot](const auto &cBuffer)
+                           { return cBuffer.cBufferName.compare(name) == 0 || cBuffer.slot == slot; });
 
     if (it == cBuffers.end())
     {
@@ -129,39 +127,39 @@ void KGLShader::addCBuffer(const std::wstring& name, unsigned int size, unsigned
     }
 }
 
-std::map<int, ID3D11InputLayout*> inputLayouts;
+std::map<int, ID3D11InputLayout *> inputLayouts;
 
 void KGLShader::clearInputLayouts()
 {
-    for (const auto& [id, layout] : inputLayouts)
+    for (const auto &[id, layout] : inputLayouts)
         layout->Release();
 
     inputLayouts.clear();
 }
 
-ID3D10Blob* readBlob(const std::wstring& filename)
+ID3D10Blob *readBlob(const std::wstring &filename)
 {
-    ID3D10Blob* blob;
+    ID3D10Blob *blob;
 
-    std::ifstream stream{ Path::getPlatformSpecificPath(filename), ios::binary | ios::ate };
+    std::ifstream stream{Path::getPlatformSpecificPath(filename), std::ios::binary | std::ios::ate};
     auto size = stream.tellg();
-    stream.seekg(0, ios::beg);
+    stream.seekg(0, std::ios::beg);
 
     D3DCreateBlob(size, &blob);
 
-    stream.read(blob->GetBufferPointer(), blob->GetBufferSize());
+    stream.read(static_cast<char *>(blob->GetBufferPointer()), blob->GetBufferSize());
 
     return blob;
 }
 
-
-ID3D11InputLayout* getInputLayout(ID3D11Device* device, void* blob, unsigned int blobsize, const int ilType)
+ID3D11InputLayout *getInputLayout(ID3D11Device *device, void *blob, unsigned int blobsize, const int ilType)
 {
-    ID3D11InputLayout* inputLayout;
+    ID3D11InputLayout *inputLayout;
     D3D11_INPUT_ELEMENT_DESC layout[6];
 
-    if ((auto it = inputLayouts.find(ilType)) != inputLayouts.end())
-        return it->second;
+    auto foundLayout = inputLayouts.find(ilType);
+    if ((foundLayout) != inputLayouts.end())
+        return foundLayout->second;
 
     layout[0].SemanticName = "POSITION";
     layout[0].SemanticIndex = 0;
@@ -205,7 +203,7 @@ ID3D11InputLayout* getInputLayout(ID3D11Device* device, void* blob, unsigned int
     layout[3].Format = DXGI_FORMAT_R32G32B32_FLOAT;
     layout[3].InputSlot = 0;
     layout[3].AlignedByteOffset = 32;
-    layout[3].InputSlotClass = 0;
+    layout[3].InputSlotClass = D3D11_INPUT_PER_VERTEX_DATA;
     layout[3].InstanceDataStepRate = 0;
 
     layout[4].SemanticName = "TEXCOORD";
@@ -213,7 +211,7 @@ ID3D11InputLayout* getInputLayout(ID3D11Device* device, void* blob, unsigned int
     layout[4].Format = DXGI_FORMAT_R32G32B32A32_FLOAT;
     layout[4].InputSlot = 0;
     layout[4].AlignedByteOffset = 44;
-    layout[4].InputSlotClass = 0;
+    layout[4].InputSlotClass = D3D11_INPUT_PER_VERTEX_DATA;
     layout[4].InstanceDataStepRate = 0;
 
     layout[5].SemanticName = "TEXCOORD";
@@ -221,7 +219,7 @@ ID3D11InputLayout* getInputLayout(ID3D11Device* device, void* blob, unsigned int
     layout[5].Format = DXGI_FORMAT_R32G32B32A32_FLOAT;
     layout[5].InputSlot = 0;
     layout[5].AlignedByteOffset = 60;
-    layout[5].InputSlotClass = 0;
+    layout[5].InputSlotClass = D3D11_INPUT_PER_VERTEX_DATA;
     layout[5].InstanceDataStepRate = 0;
 
     int layoutCount = 3;

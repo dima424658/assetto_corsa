@@ -2,6 +2,11 @@
 
 #include <string>
 #include <vector>
+#include <fstream>
+
+#include <d3d11.h>
+#include <d3d11shader.h>
+#include <d3dcompiler.h>
 
 struct KGLShaderTexture
 {

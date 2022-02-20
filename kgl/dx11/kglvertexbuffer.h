@@ -1,7 +1,12 @@
 #pragma once
 
+#include <d3d11.h>
+
 class KGLVertexBuffer
 {
-// void __userpurge KGLVertexBuffer(@<ecx>, int a2@<edi>, int a3@<esi>, ID3D11Device *device, unsigned int size, unsigned int stride, void *data, bool isDynamic);
+    KGLVertexBuffer(ID3D11Device *device, unsigned int size, unsigned int stride, void *data, bool isDynamic);
 
+private:
+    ID3D11Buffer* buffer;
+    unsigned int stride;
 };

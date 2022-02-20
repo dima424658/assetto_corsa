@@ -1,6 +1,6 @@
 #include "kglrendertarget.h"
 
-KGLRenderTarget::KGLRenderTarget(ID3D11Device* DXGI_FORMAT fmt, unsigned int iwidth, unsigned int iheight, bool isDepth, int aSamples, int mips)
+KGLRenderTarget::KGLRenderTarget(ID3D11Device* device, DXGI_FORMAT fmt, unsigned int iwidth, unsigned int iheight, bool isDepth, int aSamples, int mips)
   : rtTexture{ nullptr },
   shaderResourceView{ nullptr },
   renderTargetViewDepth{ nullptr },
@@ -24,6 +24,7 @@ KGLRenderTarget::KGLRenderTarget(ID3D11Device* DXGI_FORMAT fmt, unsigned int iwi
   textureDesc.SampleDesc.Count = aSamples;
   textureDesc.SampleDesc.Quality = 0;
 
+  unsigned numQualityLevels;
   device->CheckMultisampleQualityLevels(fmt, aSamples, &numQualityLevels);
 
   textureDesc.Usage = D3D11_USAGE_DEFAULT;
@@ -48,28 +49,28 @@ KGLRenderTarget::KGLRenderTarget(ID3D11Device* DXGI_FORMAT fmt, unsigned int iwi
 
     D3D11_SHADER_RESOURCE_VIEW_DESC shaderResourceViewDesc{};
     shaderResourceViewDesc.Format = DXGI_FORMAT_R32_FLOAT;
-    shaderResourceViewDesc.ViewDimension = aSamples == 1 ? D3D11_DSV_DIMENSION_TEXTURE2D : D3D11_DSV_DIMENSION_TEXTURE2DMS;
+    shaderResourceViewDesc.ViewDimension = aSamples == 1 ? D3D11_SRV_DIMENSION_TEXTURE2D : D3D11_SRV_DIMENSION_TEXTURE2DMS;
     shaderResourceViewDesc.Texture2D.MostDetailedMip = 0;
     shaderResourceViewDesc.Texture2D.MipLevels = 1;
 
-    if (device->CreateTexture2D(&textureDesc, nullptr, &rtTexture) < S_OK)
-      _printf("ERROR: CreateTexture2D rtTextureDepth failed\n");
+    if (FAILED(device->CreateTexture2D(&textureDesc, nullptr, &rtTexture)))
+      printf("ERROR: CreateTexture2D rtTextureDepth failed\n");
 
-    if (device->CreateDepthStencilView(rtTexture, &depthStencilDesc, &renderTargetViewDepth) < S_OK)
-      _printf("ERROR: CreateDepthStencilView failed\n");
+    if (FAILED(device->CreateDepthStencilView(rtTexture, &depthStencilDesc, &renderTargetViewDepth)))
+      printf("ERROR: CreateDepthStencilView failed\n");
 
-    if (device->CreateShaderResourceView(rtTexture, &shaderResourceViewDesc, &shaderResourceView) < S_OK)
-      _printf("CreateShaderResourceView depth failed\n");
+    if (FAILED(device->CreateShaderResourceView(rtTexture, &shaderResourceViewDesc, &shaderResourceView)))
+      printf("CreateShaderResourceView depth failed\n");
   }
   else
   {
-    if (device->CreateTexture2D(&textureDesc, nullptr, &rtTexture) < S_OK)
-      _printf("ERROR: CreateTexture2D rtTexture failed\n");
+    if (FAILED(device->CreateTexture2D(&textureDesc, nullptr, &rtTexture)))
+      printf("ERROR: CreateTexture2D rtTexture failed\n");
 
-    if (device->CreateRenderTargetView(rtTexture, nullptr, &renderTargetView) < S_OK)
-      _printf("ERROR: CreateRenderTargetView failed\n");
+    if (FAILED(device->CreateRenderTargetView(rtTexture, nullptr, &renderTargetView)))
+      printf("ERROR: CreateRenderTargetView failed\n");
 
-    if (device->CreateShaderResourceView(rtTexture, nullptr, &shaderResourceView) < S_OK)
-      _printf("CreateShaderResourceView failed\n");
+    if (FAILED(device->CreateShaderResourceView(rtTexture, nullptr, &shaderResourceView)))
+      printf("CreateShaderResourceView failed\n");
   }
 }
